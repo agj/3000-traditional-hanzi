@@ -10,7 +10,7 @@ let notEmpty = R.pipe(
 	R.trim,
 	line => line.length > 0 && line[0] !== '#' && !/^\/\*/.test(line)
 );
-let unicodeToChar = code => String.fromCharCode(parseInt(code.replace('U+', '0x')));
+let unicodeToChar = code => String.fromCodePoint(parseInt(code.substring(2), 16));
 let getFile = filename =>
 	fs.readFileSync(filename, 'utf-8')
 	.split('\n')
@@ -38,7 +38,7 @@ let toStringEntry = o =>
 		R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
 		o['kMandarin'],
 		o['kDefinition'],
-		'[sound:pffy-mp3-chinese-pinyin-sound/' + pinyinToFile(o['kMandarin']) + '.mp3]',
+		'[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
 		o['frequency'],
 	].join('\t');
 
@@ -61,11 +61,11 @@ let readings = getUnihanFile('data/unihan/Unihan_Readings.txt');
 let variants = getUnihanFile('data/unihan/Unihan_Variants.txt');
 let otherData = getUnihanFile('data/unihan/Unihan_DictionaryLikeData.txt');
 
-log(characters['見']);
-log(readings['見']);
-log(otherData['見']);
-log(frequencies['見']);
-log(variants['見']);
+log(characters['人']);
+log(readings['人']);
+log(otherData['人']);
+log(frequencies['人']);
+log(variants['人']);
 
 let readableCharacters =
 	R.keys(characters)
