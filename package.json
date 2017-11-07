@@ -1,0 +1,17 @@
+{
+  "name": "hanzi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "dot-into": "^1.0.2",
+    "pinyin-utils": "^1.0.4",
+    "ramda": "^0.25.0"
+  }
+}
