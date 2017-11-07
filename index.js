@@ -10,6 +10,7 @@ let notEmpty = R.pipe(
 	R.trim,
 	line => line.length > 0 && line[0] !== '#' && !/^\/\*/.test(line)
 );
+let unicodeToChar = code => String.fromCharCode(parseInt(code.replace('U+', '0x')));
 let getFile = filename =>
 	fs.readFileSync(filename, 'utf-8')
 	.split('\n')
@@ -18,7 +19,7 @@ let getUnihanFile = filename =>
 	getFile(filename)
 	.map(R.split('\t'))
 	.reduce((obj, [code, key, value]) => {
-		let char = String.fromCharCode(parseInt(code.replace('U+', '0x')));
+		let char = unicodeToChar(code);
 		if (!R.has(char, obj)) obj[char] = {};
 		obj[char][key] = value;
 		return obj;
@@ -34,6 +35,7 @@ let toStringEntry = o =>
 	[
 		o['order'],
 		o['character'],
+		R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
 		o['kMandarin'],
 		o['kDefinition'],
 		'[sound:pffy-mp3-chinese-pinyin-sound/' + pinyinToFile(o['kMandarin']) + '.mp3]',
@@ -47,29 +49,31 @@ let characters =
 	.into(R.fromPairs)
 	.into(R.map(order => ({ order: parseInt(order) })));
 let frequencies =
-	getFile('data/CharFreq.txt')
+	getFile('data/frequency.txt')
 	.map(R.split('\t'))
-	.into(log)
-	.reduce((obj, [freq, char, ..._]) => {
+	.reduce((obj, [char, freq, ..._], index) => {
 		if (!R.has(char, obj)) obj[char] = {};
-		obj[char].frequency = parseInt(freq);
+		obj[char].frequency = index + 1;
+		obj[char].frequencyRaw = parseInt(freq);
 		return obj;
 	}, {});
 let readings = getUnihanFile('data/unihan/Unihan_Readings.txt');
+let variants = getUnihanFile('data/unihan/Unihan_Variants.txt');
 let otherData = getUnihanFile('data/unihan/Unihan_DictionaryLikeData.txt');
 
 log(characters['見']);
 log(readings['見']);
 log(otherData['見']);
 log(frequencies['見']);
+log(variants['見']);
 
 let readableCharacters =
 	R.keys(characters)
-	.filter(char => R.has(char, readings) && R.has('kMandarin', readings[char]) && (R.has(char, frequencies) && frequencies[char].frequency <= 5000));
+	.filter(char => R.has(char, readings) && R.has('kMandarin', readings[char]) && (R.has(char, frequencies) && frequencies[char].frequency <= 3000));
 
 readableCharacters
 .into(R.indexBy(R.identity))
-.into(R.map(char => R.mergeAll([ { character: char }, characters[char], readings[char], otherData[char], frequencies[char] ])))
+.into(R.map(char => R.mergeAll([ { character: char }, characters[char], readings[char], otherData[char], frequencies[char], variants[char] ])))
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {

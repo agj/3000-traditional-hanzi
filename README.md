@@ -9,4 +9,4 @@ https://github.com/pffy/mp3-chinese-pinyin-sound
 
 http://learnm.org/
 
-http://lingua.mtsu.edu/chinese-computing/statistics/index.html
+http://technology.chtsai.org/charfreq/
