@@ -27,7 +27,8 @@ let getUnihanFile = filename =>
 let pinyinToFile = py => {
 	let r =
 		pinyin.markToNumber(py)
-		.match(/^(\w+)/)[1];
+		.match(/^(\S+)/)[1]
+		.replace(/ü/g, 'uu');
 	if (/\D$/.test(r)) r = r + '1';
 	return r;
 };
@@ -66,6 +67,11 @@ log(readings['人']);
 log(otherData['人']);
 log(frequencies['人']);
 log(variants['人']);
+log(characters['女']);
+log(readings['女']);
+log(otherData['女']);
+log(frequencies['女']);
+log(variants['女']);
 
 let readableCharacters =
 	R.keys(characters)
