@@ -4,6 +4,7 @@ let R = require('ramda');
 let fs = require('fs');
 require('dot-into').install();
 let pinyin = require('pinyin-utils');
+let wanakana = require('wanakana');
 
 let log = R.tap(console.log);
 let notEmpty = R.pipe(
@@ -39,6 +40,8 @@ let toStringEntry = o =>
 		R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
 		o['kMandarin'],
 		o['kDefinition'],
+		R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
+		R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
 		'[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
 		o['frequency'],
 	].join('\t');
