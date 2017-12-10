@@ -33,18 +33,19 @@ let pinyinToFile = py => {
 	if (/\D$/.test(r)) r = r + '1';
 	return r;
 };
-let toStringEntry = o =>
-	[
-		o['order'],
-		o['character'],
-		R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
-		o['kMandarin'],
-		o['kDefinition'],
-		R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
-		R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
-		'[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
-		o['frequency'],
-	].join('\t');
+let toEntry = o =>
+	({
+		studyOrder:    o['order'],
+		traditional:   o['character'],
+		simplified:    R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
+		pinyin:        o['kMandarin'],
+		meaning:       o['kDefinition'],
+		japaneseKun:   R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
+		japaneseOn:    R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
+		soundFile:     '[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
+		frequencyRank: o['frequency'],
+	});
+let toStringEntry = o => [o.studyOrder, o.traditional, o.simplified, o.pinyin, o.meaning, o.japaneseKun, o.japaneseOn, o.soundFile, o.frequencyRank].join('\t');
 
 
 let characters =
@@ -65,16 +66,6 @@ let readings = getUnihanFile('data/unihan/Unihan_Readings.txt');
 let variants = getUnihanFile('data/unihan/Unihan_Variants.txt');
 let otherData = getUnihanFile('data/unihan/Unihan_DictionaryLikeData.txt');
 
-log(characters['人']);
-log(readings['人']);
-log(otherData['人']);
-log(frequencies['人']);
-log(variants['人']);
-log(characters['女']);
-log(readings['女']);
-log(otherData['女']);
-log(frequencies['女']);
-log(variants['女']);
 
 let readableCharacters =
 	R.keys(characters)
@@ -83,6 +74,7 @@ let readableCharacters =
 readableCharacters
 .into(R.indexBy(R.identity))
 .into(R.map(char => R.mergeAll([ { character: char }, characters[char], readings[char], otherData[char], frequencies[char], variants[char] ])))
+.into(R.map(toEntry))
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {
