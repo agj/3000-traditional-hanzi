@@ -13,6 +13,6 @@
     "dot-into": "^1.0.2",
     "pinyin-utils": "^1.0.4",
     "ramda": "^0.25.0",
-    "wanakana": "^2.3.1"
+    "wanakana": "^2.3.4"
   }
 }
