@@ -1,31 +1,31 @@
 
 
-let R = require('ramda');
-let fs = require('fs');
+const R = require('ramda');
+const fs = require('fs');
 require('dot-into').install();
-let pinyin = require('pinyin-utils');
-let wanakana = require('wanakana');
+const pinyin = require('pinyin-utils');
+const wanakana = require('wanakana');
 
-let log = R.tap(console.log);
-let notEmpty = R.pipe(
+const log = R.tap(console.log);
+const notEmptyLine = R.pipe(
 	R.trim,
 	line => line.length > 0 && line[0] !== '#' && !/^\/\*/.test(line)
 );
-let unicodeToChar = code => String.fromCodePoint(parseInt(code.substring(2), 16));
-let getFile = filename =>
+const unicodeToChar = code => String.fromCodePoint(parseInt(code.substring(2), 16));
+const getFile = filename =>
 	fs.readFileSync(filename, 'utf-8')
 	.split('\n')
-	.filter(notEmpty);
-let getUnihanFile = filename =>
+	.filter(notEmptyLine);
+const getUnihanFile = filename =>
 	getFile(filename)
 	.map(R.split('\t'))
 	.reduce((obj, [code, key, value]) => {
-		let char = unicodeToChar(code);
+		const char = unicodeToChar(code);
 		if (!R.has(char, obj)) obj[char] = {};
 		obj[char][key] = value;
 		return obj;
 	}, {});
-let pinyinToFile = py => {
+const pinyinToFile = py => {
 	let r =
 		pinyin.markToNumber(py)
 		.match(/^(\S+)/)[1]
@@ -33,48 +33,56 @@ let pinyinToFile = py => {
 	if (/\D$/.test(r)) r = r + '1';
 	return r;
 };
-let toEntry = o =>
+const toEntry = o =>
 	({
 		studyOrder:    o['order'],
 		traditional:   o['character'],
 		simplified:    R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
 		pinyin:        o['kMandarin'],
+		heisigKeyword: o['heisigKeyword'],
 		meaning:       o['kDefinition'],
 		japaneseKun:   R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
 		japaneseOn:    R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
 		soundFile:     '[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
 		frequencyRank: o['frequency'],
 	});
-let toStringEntry = o => [o.studyOrder, o.traditional, o.simplified, o.pinyin, o.meaning, o.japaneseKun, o.japaneseOn, o.soundFile, o.frequencyRank].join('\t');
+const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches) ? R.merge(entry, patches[entry.traditional]) : entry);
+const toStringEntry = o => [o.studyOrder, o.traditional, o.simplified, o.pinyin, o.heisigKeyword, o.meaning, o.japaneseKun, o.japaneseOn, o.soundFile, o.frequencyRank].join('\t');
 
 
-let characters =
+const characters =
 	getFile('data/DNWorderT.txt')
 	.map(R.split(','))
 	.into(R.fromPairs)
 	.into(R.map(order => ({ order: parseInt(order) })));
-let frequencies =
+const readings = getUnihanFile('data/unihan/Unihan_Readings.txt');
+const otherData = getUnihanFile('data/unihan/Unihan_DictionaryLikeData.txt');
+const frequencies =
 	getFile('data/frequency.txt')
 	.map(R.split('\t'))
-	.reduce((obj, [char, freq, ..._], index) => {
-		if (!R.has(char, obj)) obj[char] = {};
-		obj[char].frequency = index + 1;
-		obj[char].frequencyRaw = parseInt(freq);
-		return obj;
-	}, {});
-let readings = getUnihanFile('data/unihan/Unihan_Readings.txt');
-let variants = getUnihanFile('data/unihan/Unihan_Variants.txt');
-let otherData = getUnihanFile('data/unihan/Unihan_DictionaryLikeData.txt');
+	.reduce((obj, [char, freq, ..._], index) => R.merge(obj, { [char]: { frequency: index + 1,
+	                                                                     frequencyRaw: parseInt(freq) } }),
+	        {});
+const variants = getUnihanFile('data/unihan/Unihan_Variants.txt');
+const heisig =
+	getFile('data/heisig-keywords.txt')
+	.map(R.split('\t'))
+	.reduce((obj, [tc, sc, tk, sk]) => R.merge(obj, { [tc]: { heisigKeyword: tk } }), {});
+const patches =
+	getFile('data/meaning-patches.txt')
+	.map(R.split('\t'))
+	.reduce((obj, [char, meaning]) => R.merge(obj, { [char]: { meaning } }), {});
 
 
-let readableCharacters =
+const readableCharacters =
 	R.keys(characters)
 	.filter(char => R.has(char, readings) && R.has('kMandarin', readings[char]) && (R.has(char, frequencies) && frequencies[char].frequency <= 3000));
 
 readableCharacters
 .into(R.indexBy(R.identity))
-.into(R.map(char => R.mergeAll([ { character: char }, characters[char], readings[char], otherData[char], frequencies[char], variants[char] ])))
+.into(R.map(char => R.mergeAll([ { character: char }, characters[char], readings[char], otherData[char], frequencies[char], variants[char], heisig[char] ])))
 .into(R.map(toEntry))
+.into(R.map(patchEntry(patches)))
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {

@@ -1,0 +1,3137 @@
+# Source: http://rtkwiki.koohii.com/wiki/Remembering_Simplified_Hanzi,_Traditional_Hanzi_and_Kanji_spreadsheet
+# TH - SH - RTH Keyword - RSH Keyword
+
+一	一	one	one
+二	二	two	two
+三	三	three	three
+四	四	four	four
+五	五	five	five
+六	六	six	six
+七	七	seven	seven
+八	八	eight	eight
+九	九	nine	nine
+十	十	ten	ten
+口	口	mouth	mouth
+日	日	day	day
+月	月	month	month
+田	田	rice field	rice field
+目	目	eye	eye
+古	古	ancient	ancient
+胡	胡	recklessly	recklessly
+吾	吾	I (literary)	I (literary)
+朋	朋	companion	companion
+明	明	bright	bright
+唱	唱	sing	sing
+晶	晶	sparkling	sparkling
+品	品	goods	goods
+昌	昌	prosperous	prosperous
+早	早	early	early
+旭	旭	rising sun	rising sun
+世	世	generation	generation
+胃	胃	stomach	stomach
+旦	旦	daybreak	daybreak
+凹	凹	concave	concave
+凸	凸	convex	convex
+自	自	oneself	oneself
+白	白	white	white
+百	百	hundred	hundred
+皂	皂	soap	soap
+中	中	middle	middle
+千	千	thousand	thousand
+舌	舌	tongue	tongue
+升	升	liter	liter
+昇	升	rise up	
+丸	丸	pill	pill
+卜	卜	divination	divination
+占	占	tell fortunes	tell fortunes
+上	上	above	above
+下	下	below	below
+卡	卡	card	card
+卓	卓	eminent	eminent
+朝	朝	dynasty	dynasty
+嘲	嘲	ridicule	ridicule
+只	只	only	only
+貝	贝	shellfish	shellfish
+貼	贴	paste	paste
+貞	贞	chaste	chaste
+員	员	employee	employee
+見	见	see	see
+元	元	beginning	beginning
+頁	页	page	page
+頑	顽	stubborn	stubborn
+凡	凡	ordinary	ordinary
+肌	肌	muscle	muscle
+負	负	defeated	defeated
+勻	匀	uniform	uniform
+句	句	sentence	sentence
+旬	旬	decameron	decameron
+勺	勺	ladle	ladle
+的	的	bull's eye	bull's eye
+首	首	heads	heads
+直	直	straight	straight
+置	置	set up	set up
+具	具	tool	tool
+真	真	true	true
+工	工	work	work
+左	左	left	left
+右	右	right	right
+有	有	possess	possess
+賄	贿	bribe	bribe
+貢	贡	tribute	tribute
+項	项	item	item
+刀	刀	sword	sword
+刃	刃	blade	blade
+切	切	cut	cut
+召	召	summon	summon
+昭	昭	evident	evident
+則	则	rule	rule
+副	副	vice-	vice-
+丁	丁	fourth	fourth
+叮	叮	sting	sting
+可	可	can	can
+哥	哥	older brother	older brother
+頂	顶	crest	crest
+乙	乙	second	second
+子	子	child	child
+孔	孔	cavity	cavity
+吼	吼	roar	roar
+了	了	(-ed)	(-ed)
+女	女	woman	woman
+好	好	good	good
+如	如	be like	be like
+母	母	mother	mother
+貫	贯	pierce	pierce
+兄	兄	elder brother	elder brother
+克	克	overcome	overcome
+小	小	small	small
+少	少	few	few
+吵	吵	noisy	noisy
+大	大	large	large
+尖	尖	tip	tip
+夕	夕	evening	evening
+多	多	many	many
+夠	够	enough	enough
+外	外	outside	outside
+名	名	name	name
+厚	厚	thick	thick
+石	石	stone	stone
+砂	砂	gravel	gravel
+妙	妙	wonderful	wonderful
+肖	肖	resemble	resemble
+削	削	peel	peel
+光	光	ray	ray
+太	太	overly	overly
+省	省	economize	economize
+奇	奇	strange	strange
+川	川	stream	stream
+州	州	state	state
+順	顺	obey	obey
+水	水	water	water
+永	永	eternity	eternity
+求	求	request	request
+泉	泉	spring	spring
+原	原	flatlands	flatlands
+願	愿	wish	wish
+沖	冲	wash away	
+泳	泳	swim	swim
+洲	洲	continent	continent
+沼	沼	marsh	marsh
+沙	沙	sand	sand
+江	江	Yangtze	Yangtze
+汁	汁	juice	juice
+潮	潮	tide	tide
+源	源	source	source
+活	活	lively	lively
+消	消	extinguish	extinguish
+況	况	situation	situation
+河	河	river	river
+湖	湖	lake	lake
+測	测	fathom	fathom
+土	土	soil	soil
+均	均	equal	equal
+肚	肚	belly	belly
+填	填	fill in	fill in
+吐	吐	spit	spit
+哇	哇	waaah!	waaah!
+寸	寸	Chinese inch	Chinese inch
+封	封	seal	seal
+寺	寺	Buddhist temple	Buddhist temple
+時	时	time	time
+火	火	fire	fire
+灰	灰	ashes	ashes
+煩	烦	vexed	vexed
+炎	炎	inflammation	inflammation
+淡	淡	thin	thin
+災	灾	disaster	disaster
+照	照	illuminate	illuminate
+魚	鱼	fish	fish
+漁	渔	fishing	fishing
+堯	尧	Yao	Yao
+燒	烧	fever	fever
+曉	晓	dawn	dawn
+里	里	li	li
+量	量	quantity	quantity
+埋	埋	bury	bury
+黑	黑	black	black
+點	点	spot	spot
+墨	墨	black ink	black ink
+冒	冒	risk	risk
+同	同	same	same
+洞	洞	cave	cave
+向	向	orientation	orientation
+尚	尚	esteem	esteem
+字	字	character	character
+守	守	guard	guard
+完	完	finish	finish
+實	实	reality	reality
+宣	宣	proclaim	proclaim
+宵	宵	nighttime	nighttime
+安	安	peaceful	peaceful
+宴	宴	banquet	banquet
+寄	寄	mail	mail
+富	富	wealthy	wealthy
+貯	贮	store up	store up
+木	木	tree	tree
+林	林	woods	woods
+森	森	forest	forest
+植	植	plant	plant
+杏	杏	apricot	apricot
+呆	呆	dim-witted	dim-witted
+枯	枯	withered	withered
+村	村	village	village
+相	相	one another	one another
+本	本	notebook	notebook
+案	案	case	case
+未	未	not yet	not yet
+末	末	last	last
+沫	沫	foam	foam
+味	味	flavor	flavor
+妹	妹	younger sister	younger sister
+查	查	investigate	investigate
+渣	渣	sediment	sediment
+染	染	dye	dye
+李	李	plum	plum
+桌	桌	table	table
+若	若	as if	as if
+草	草	grass	grass
+苦	苦	suffering	suffering
+寬	宽	wide	wide
+葉	叶	leaf	leaf
+莫	莫	nobody	nobody
+模	模	imitate	imitate
+漠	漠	desert	desert
+墓	墓	grave	grave
+苗	苗	seedling	seedling
+瞄	瞄	aim	aim
+兆	兆	portent	portent
+桃	桃	peach	peach
+犬	犬	pooch	pooch
+尤	尤	remarkable	remarkable
+默	默	silent	silent
+然	然	sort of thing	sort of thing
+哭	哭	cry	cry
+器	器	utensil	utensil
+臭	臭	stinking	stinking
+狗	狗	dog	dog
+厭	厌	detest	detest
+壓	压	pressure	pressure
+牛	牛	cow	cow
+特	特	special	special
+告	告	declare	declare
+浩	浩	vast	vast
+先	先	before	before
+洗	洗	wash	wash
+介	介	introduce	introduce
+界	界	world	world
+茶	茶	tea	tea
+會	会	meeting	meeting
+合	合	fit	fit
+哈	哈	ha!	ha!
+塔	塔	pagoda	pagoda
+王	王	king	king
+玉	玉	jade	jade
+球	球	ball	ball
+現	现	present	present
+玩	玩	play	play
+狂	狂	crazy	crazy
+皇	皇	emperor	emperor
+煌	煌	resplendent	resplendent
+呈	呈	submit	submit
+全	全	whole	whole
+理	理	logic	logic
+主	主	lord	lord
+注	注	pour	pour
+金	金	gold	gold
+銅	铜	copper	copper
+釣	钓	go fishin'	go fishin'
+針	针	needle	needle
+釘	钉	nail	nail
+銘	铭	inscription	inscription
+鎮	镇	at ease	at ease
+道	道	way	way
+導	导	guide	guide
+迅	迅	speedy	speedy
+造	造	create	create
+巡	巡	patrol	patrol
+逛	逛	stroll	stroll
+車	车	car	car
+連	连	one after another	one after another
+蓮	莲	lotus	lotus
+前	前	in front	in front
+剪	剪	shears	shears
+輸	输	transport	transport
+逾	逾	exceed	exceed
+各	各	each	each
+格	格	pattern	pattern
+客	客	guest	guest
+額	额	forehead	forehead
+夏	夏	summer	summer
+洛	洛	L.A.	L.A.
+落	落	fall	fall
+冗	冗	superfluous	superfluous
+沉	沉	profound	profound
+軍	军	army	army
+輝	辉	radiance	radiance
+運	运	carry	carry
+冠	冠	crown	crown
+夢	梦	dream	dream
+坑	坑	pit	pit
+高	高	tall	tall
+享	享	enjoy	enjoy
+熟	熟	ripe	ripe
+亭	亭	pavilion	pavilion
+亮	亮	shiny	shiny
+京	京	capital	capital
+涼	凉	cool	cool
+景	景	scenery	scenery
+就	就	at once	at once
+周	周	circumference	circumference
+週	周	week	
+士	士	soldier	soldier
+吉	吉	lucky	lucky
+買	买	buy	buy
+賣	卖	sell	sell
+書	书	book	book
+畫	画	drawing	drawing
+劃	划	scratch	scratch
+攻	攻	attack	attack
+敗	败	fail	fail
+故	故	deliberately	deliberately
+救	救	rescue	rescue
+敬	敬	revere	revere
+敞	敞	spacious	spacious
+言	言	say	say
+警	警	police	police
+計	计	plan	plan
+獄	狱	prison	prison
+討	讨	condemn	condemn
+訓	训	instruction	instruction
+話	话	talk	talk
+詩	诗	poem	poem
+語	语	language	language
+讀	读	read	read
+調	调	tune	tune
+談	谈	discuss	discuss
+這	这	this	this
+式	式	style	style
+試	试	test	test
+戈	戈	halberd	halberd
+或	或	or	or
+賊	贼	burglar	burglar
+載	载	laden	laden
+鐵	铁	iron	iron
+茂	茂	lush	lush
+成	成	turn into	turn into
+城	城	city	city
+誠	诚	sincere	sincere
+威	威	might	might
+滅	灭	destroy	destroy
+咸	咸	everybody	
+減	减	reduce	reduce
+單	单	list	list
+戰	战	war	war
+錢	钱	coin	coin
+淺	浅	shallow	shallow
+賤	贱	cheap	cheap
+止	止	stop	stop
+步	步	footstep	footstep
+涉	涉	ford	ford
+頻	频	repeatedly	repeatedly
+肯	肯	agree	agree
+企	企	look forward to	look forward to
+歲	岁	years of age	years of age
+武	武	military	military
+賦	赋	levy	levy
+正	正	correct	correct
+政	政	politics	politics
+定	定	settle on	settle on
+走	走	walk	walk
+超	超	transcend	transcend
+越	越	surpass	surpass
+是	是	be	be
+題	题	topic	topic
+建	建	build	build
+延	延	prolong	prolong
+誕	诞	nativity	nativity
+楚	楚	clear	clear
+礎	础	foundation	foundation
+衣	衣	clothing	clothing
+裡	里	inside	
+哀	哀	grief	grief
+袁	袁	Yuan	Yuan
+遠	远	distant	distant
+壞	坏	bad	bad
+初	初	elementary	elementary
+巾	巾	towel	towel
+布	布	cloth	cloth
+帽	帽	hat	hat
+幕	幕	curtain	curtain
+棉	棉	cotton	cotton
+幫	帮	help	help
+市	市	market	market
+肺	肺	lungs	lungs
+帶	带	sash	sash
+滯	滞	stagnant	stagnant
+刺	刺	thorn	thorn
+制	制	system	system
+製	制	manufacture	
+云	云	utter	
+雨	雨	rain	rain
+雲	云	cloud	cloud
+雷	雷	thunder	thunder
+電	电	electricity	electricity
+霜	霜	frost	frost
+冰	冰	ice	ice
+冬	冬	winter	winter
+天	天	heavens	heavens
+夭	夭	die young	die young
+喬	乔	pretend	pretend
+橋	桥	bridge	bridge
+嬌	娇	attractive	attractive
+立	立	standing up	standing up
+泣	泣	weep	weep
+站	站	station	station
+章	章	chapter	chapter
+競	竞	compete	compete
+帝	帝	sovereign	sovereign
+童	童	juvenile	juvenile
+鐘	钟	bell	bell
+商	商	salesman	salesman
+適	适	suitable	suitable
+敵	敌	enemy	enemy
+匕	匕	ancient spoon	ancient spoon
+北	北	north	north
+背	背	back	back
+比	比	compare	compare
+昆	昆	descendants	descendants
+混	混	mix	mix
+皆	皆	all	all
+此	此	this (literary)	this (literary)
+些	些	somewhat	somewhat
+它	它	it	it
+旨	旨	purpose	purpose
+脂	脂	grease	grease
+每	每	every	every
+梅	梅	small plum	small plum
+海	海	sea	sea
+乞	乞	beg	beg
+吃	吃	eat	eat
+乾	干	dry	dry
+複	复	duplicate	duplicate
+腹	腹	abdomen	abdomen
+欠	欠	lack	lack
+吹	吹	blow	blow
+歌	歌	song	song
+軟	软	soft	soft
+次	次	next	next
+資	资	assets	assets
+姿	姿	looks	looks
+諮	咨	consult with	consult with
+賠	赔	compensate	compensate
+培	培	cultivate	cultivate
+音	音	sound	sound
+暗	暗	dark	dark
+韻	韵	rhyme	rhyme
+識	识	knowledge	knowledge
+幟	帜	streamer	streamer
+竟	竟	unexpectedly	unexpectedly
+鏡	镜	mirror	mirror
+境	境	boundary	boundary
+亡	亡	deceased	deceased
+盲	盲	blind	blind
+妄	妄	absurd	absurd
+望	望	expect	expect
+方	方	direction	direction
+妨	妨	hinder	hinder
+放	放	release	release
+激	激	excite	excite
+於	于	(all-purpose preposition)	
+旁	旁	side	side
+兌	兑	convert	convert
+脫	脱	undress	undress
+說	说	speak	speak
+曾	曾	formerly	formerly
+增	增	increase	increase
+贈	赠	make a present of	make a present of
+東	东	east	east
+棟	栋	building	building
+凍	冻	freeze	freeze
+也	也	also	also
+她	她	she	she
+地	地	ground	ground
+池	池	pond	pond
+蟲	虫	insects	insect
+蛇	蛇	serpent	serpent
+蛋	蛋	egg	egg
+風	风	wind	wind
+諷	讽	mock	mock
+己	己	self	self
+改	改	alter	alter
+記	记	remember	remember
+已	已	already	already
+包	包	wrap	wrap
+泡	泡	bubbles	bubbles
+起	起	begin	begin
+家	家	house	house
+場	场	site	site
+湯	汤	soup	soup
+羊	羊	sheep	sheep
+美	美	beautiful	beautiful
+洋	洋	ocean	ocean
+鮮	鲜	fresh	fresh
+達	达	reach	reach
+樣	样	appearance	appearance
+差	差	fall short of	fall short of
+集	集	gather	gather
+進	进	advance	advance
+準	准	standard	standard
+誰	谁	who?	who?
+售	售	vend	vend
+雖	虽	although	although
+確	确	reliable	reliable
+午	午	noon	noon
+許	许	permit	permit
+羽	羽	feathers	feathers
+習	习	learn	learn
+翔	翔	soar	soar
+困	困	trapped	trapped
+固	固	solid	solid
+國	国	country	country
+圓	圆	round	round
+因	因	cause	cause
+園	园	park	park
+回	回	return	return
+迴	回	revolve	
+圖	图	picture	picture
+店	店	store	store
+庫	库	warehouse	warehouse
+褲	裤	trousers	trousers
+廠	厂	factory	factory
+床	床	bed	bed
+麻	麻	hemp	hemp
+心	心	heart	heart
+忘	忘	forget	forget
+忍	忍	endure	endure
+認	认	recognize	recognize
+志	志	aspiration	aspiration
+誌	志	annals	
+思	思	consider	consider
+意	意	idea	idea
+想	想	think	think
+息	息	breath	breath
+恐	恐	fear	fear
+感	感	feel	feel
+憾	憾	regret	regret
+憂	忧	worried	worried
+怕	怕	dread	dread
+忙	忙	busy	busy
+慣	惯	accustomed to	accustomed to
+懷	怀	cherish	cherish
+必	必	certainly	certainly
+手	手	hand	hand
+看	看	look at	look at
+拿	拿	hold	hold
+我	我	I	I
+義	义	righteousness	righteousness
+議	议	deliberate	deliberate
+蟻	蚁	ant	ant
+抱	抱	embrace	embrace
+抗	抗	combat	combat
+批	批	criticize	criticize
+招	招	beckon	beckon
+打	打	strike	strike
+指	指	finger	finger
+持	持	support	support
+括	括	include	include
+提	提	bring up	bring up
+揮	挥	brandish	brandish
+推	推	push	push
+接	接	welcome	welcome
+掛	挂	hang	hang
+按	按	press down on	press down on
+掉	掉	drop	drop
+拉	拉	pull	pull
+啦	啦	!!	!!
+找	找	look for	look for
+研	研	grind away	grind away
+弄	弄	play with	play with
+鼻	鼻	nose	nose
+刑	刑	punishment	punishment
+型	型	mold	mold
+才	才	genius	genius
+財	财	riches	riches
+存	存	deposit	deposit
+在	在	at	at
+乃	乃	only then	only then
+奶	奶	milk	milk
+及	及	catch up with	catch up with
+吸	吸	inhale	inhale
+史	史	history	history
+更	更	even more	even more
+硬	硬	hard	hard
+又	又	again	again
+友	友	friend	friend
+雙	双	pair	pair
+隻	只	one of a pair	
+護	护	protect	protect
+獲	获	seize	seize
+觀	观	observe	observe
+歡	欢	joyous	joyous
+投	投	throw	throw
+沒	没	not have	not have
+設	设	establish	establish
+股	股	thigh	thigh
+支	支	offshoot	offshoot
+技	技	skill	skill
+枝	枝	branch	branch
+叔	叔	uncle	uncle
+督	督	superintend	superintend
+寂	寂	lonely	lonely
+反	反	against	against
+板	板	plank	plank
+返	返	go back	go back
+派	派	faction	faction
+脈	脉	blood vessels	blood vessels
+爪	爪	claw	claw
+抓	抓	grab	grab
+采	采	pluck	
+採	采	pick	pick
+菜	菜	vegetable	vegetable
+受	受	accept	accept
+授	授	confer	confer
+愛	爱	love	love
+雄	雄	grand	grand
+台	台	platform	platform
+治	治	govern	govern
+始	始	commence	commence
+去	去	go	go
+法	法	method	method
+至	至	until	until
+室	室	room	room
+到	到	arrive	arrive
+互	互	mutual	mutual
+充	充	sufficient	sufficient
+育	育	education	education
+流	流	flow	flow
+梳	梳	comb	comb
+山	山	mountain	mountain
+出	出	exit	exit
+擊	击	beat	beat
+密	密	secret	secret
+入	入	enter	enter
+內	内	internal	internal
+吶	呐	holler	holler
+分	分	part	part
+貧	贫	impoverished	impoverished
+公	公	public	public
+松	松	pine tree	pine tree
+谷	谷	valley	valley
+浴	浴	bathe	bathe
+欲	欲	desire	desire
+慾	欲	lust	
+容	容	contain	contain
+溶	溶	dissolve	dissolve
+當	当	work as	work as
+檔	档	files	files
+黨	党	political party	political party
+常	常	often	often
+堂	堂	main room	main room
+皮	皮	covering	covering
+波	波	waves	waves
+婆	婆	old woman	old woman
+破	破	break	break
+被	被	quilt	quilt
+歹	歹	malicious	malicious
+列	列	line up	line up
+烈	烈	intense	intense
+死	死	death	death
+葬	葬	inter	inter
+耳	耳	ear	ear
+取	取	take	take
+趣	趣	interest	interest
+最	最	most	most
+職	职	job	job
+聖	圣	holy	holy
+敢	敢	brave	brave
+嚴	严	strict	strict
+曼	曼	drawn out	drawn out
+慢	慢	slow	slow
+漫	漫	overflow	overflow
+環	环	ring	ring
+還	还	give back	give back
+夫	夫	husband	husband
+規	规	regulations	regulations
+替	替	replace	replace
+失	失	lose	lose
+臣	臣	feudal official	feudal official
+臨	临	be about to	be about to
+賢	贤	worthy	worthy
+堅	坚	firm	firm
+力	力	power	power
+另	另	another	another
+別	别	don't	don't
+拐	拐	turn	turn
+男	男	male	male
+功	功	achievement	achievement
+奴	奴	slave	slave
+努	努	toil	toil
+加	加	add	add
+賀	贺	congratulate	congratulate
+架	架	shelf	shelf
+協	协	cooperate	cooperate
+行	行	line of business	line of business
+律	律	law	law
+復	复	recover	
+得	得	must	must
+待	待	treat	treat
+往	往	toward	toward
+微	微	tiny	tiny
+街	街	street	street
+德	德	morality	morality
+聽	听	listen	listen
+廳	厅	hall	hall
+禾	禾	standing grain	standing grain
+程	程	journey	journey
+和	和	harmony	harmony
+移	移	shift	shift
+秋	秋	autumn	autumn
+愁	愁	gloomy	gloomy
+利	利	profit	profit
+香	香	perfume	perfume
+季	季	seasons	seasons
+委	委	committee	committee
+秀	秀	elegant	elegant
+透	透	penetrate	penetrate
+誘	诱	entice	entice
+歷	历	experience	experience
+米	米	rice	rice
+迷	迷	lost	lost
+謎	谜	riddle	riddle
+類	类	kind	kind
+竹	竹	bamboo	bamboo
+笑	笑	laugh	laugh
+箱	箱	box	box
+筆	笔	pen	pen
+等	等	etc.	etc.
+算	算	calculate	calculate
+答	答	answer	answer
+策	策	strategy	strategy
+人	人	person	person
+囚	囚	prisoner	prisoner
+份	份	portion	portion
+佔	占	occupy	
+傢	家	furniture	
+你	你	you	you
+您	您	you (respectful)	you (respectful)
+什	什	what?	what?
+條	条	strip	strip
+值	值	value	value
+做	做	make	make
+但	但	however	however
+住	住	dwell	dwell
+位	位	position	position
+件	件	piece	piece
+仍	仍	still	still
+他	他	he	he
+休	休	rest	rest
+信	信	faith	faith
+依	依	depend on	depend on
+例	例	example	example
+個	个	individual	individual
+健	健	healthy	healthy
+停	停	halt	halt
+倒	倒	upside down	upside down
+仁	仁	benevolence	benevolence
+優	优	excellent	excellent
+傷	伤	wound	wound
+保	保	safeguard	safeguard
+堡	堡	fort	fort
+付	付	pay	pay
+府	府	government office	government office
+俯	俯	bow one's head	bow one's head
+代	代	substitute for	substitute for
+袋	袋	bag	bag
+化	化	transform	transform
+花	花	flower	flower
+貨	货	commodities	commodities
+何	何	whatwhichwhowherewhy?	whatwhichwhowherewhy?
+便	便	convenient	convenient
+丈	丈	100 Chinese Inches	100 Chinese inches
+使	使	use	use
+久	久	long time	long time
+畝	亩	Chinese acre	Chinese acre
+丙	丙	third	third
+柄	柄	handle	handle
+肉	肉	meat	meat
+腐	腐	rotten	rotten
+眾	众	multitude	multitude
+坐	坐	sit	sit
+座	座	seat	seat
+檢	检	examine	examine
+臉	脸	face	face
+來	来	come	come
+麥	麦	wheat	wheat
+喝	喝	drink	drink
+渴	渴	thirsty	thirsty
+任	任	appoint	appoint
+廷	廷	royal court	royal court
+庭	庭	court of law	court of law
+以	以	by means of	by means of
+似	似	similar	similar
+併	并	combine	combine
+拼	拼	piece together	piece together
+呂	吕	spine	spine
+侶	侣	associate	associate
+榮	荣	glory	glory
+勞	劳	labor	labor
+營	营	camp	camp
+善	善	virtuous	virtuous
+年	年	year	year
+夜	夜	night	night
+液	液	liquid	liquid
+喚	唤	call out	call out
+換	换	exchange	exchange
+旅	旅	travel	travel
+施	施	execute	execute
+游	游	go swimming	go swimming
+遊	游	tour	
+勿	勿	not	not
+忽	忽	suddenly	suddenly
+物	物	thing	thing
+易	易	easy	easy
+賜	赐	grant	grant
+屍	尸	corpse	corpse
+尼	尼	nun	nun
+呢	呢	woolen cloth	woolen cloth
+泥	泥	mud	mud
+屋	屋	habitation	habitation
+握	握	grip	grip
+居	居	reside	reside
+鋸	锯	saw	saw
+層	层	story	story
+局	局	bureau	bureau
+戶	户	door	door
+房	房	domicile	domicile
+雇	雇	hire	hire
+顧	顾	look back	look back
+示	示	show	show
+社	社	society	society
+視	视	inspect	inspect
+福	福	happiness	happiness
+禁	禁	prohibit	prohibit
+襟	襟	front of a garment	front of a garment
+宗	宗	religion	religion
+崇	崇	worship	worship
+祭	祭	offer sacrifice	offer sacrifice
+察	察	scrutinize	scrutinize
+擦	擦	scrub	scrub
+由	由	wherefore	wherefore
+抽	抽	take out	take out
+油	油	oil	oil
+甲	甲	first	first
+押	押	pawn	pawn
+申	申	express	express
+伸	伸	extend	extend
+神	神	gods	gods
+果	果	fruit	fruit
+課	课	lesson	lesson
+顆	颗	granule	granule
+斤	斤	catty	catty
+所	所	place	place
+近	近	near	near
+斬	斩	hew	hew
+暫	暂	temporary	temporary
+漸	渐	gradually	gradually
+質	质	quality	quality
+斥	斥	reprimand	reprimand
+訴	诉	accuse	accuse
+乍	乍	for the first time	for the first time
+怎	怎	how?	how?
+昨	昨	yesterday	yesterday
+作	作	do	do
+雪	雪	snow	snow
+急	急	anxious	anxious
+尋	寻	seek	seek
+婦	妇	married woman	married woman
+掃	扫	sweep	sweep
+錄	录	record	record
+碌	碌	commonplace	commonplace
+爭	争	contend	contend
+淨	净	clean	clean
+事	事	matter	matter
+唐	唐	Tang	Tang
+糖	糖	sugar	sugar
+康	康	hale	hale
+尹	尹	overseer	overseer
+伊	伊	Queen Elizabeth	Queen Elizabeth
+君	君	monarch	monarch
+裙	裙	skirt	skirt
+群	群	crowd	crowd
+而	而	and	and
+需	需	need	need
+儒	儒	Confucian	Confucian
+瑞	瑞	auspicious	auspicious
+端	端	upright	upright
+曲	曲	bent	bent
+斗	斗	big dipper	big dipper
+料	料	material	material
+科	科	academic discipline	academic discipline
+用	用	utilize	utilize
+昔	昔	times past	times past
+借	借	borrow	borrow
+錯	错	mistaken	mistaken
+散	散	scattered	scattered
+撒	撒	scatter	scatter
+備	备	prepare	prepare
+廿	廿	twenty	twenty
+席	席	mat	mat
+度	度	degrees	degrees
+渡	渡	ferry	ferry
+半	半	half	half
+伴	伴	partner	partner
+胖	胖	fat	fat
+判	判	judge	judge
+眷	眷	dependents	dependents
+拳	拳	boxing	boxing
+勝	胜	victory	victory
+片	片	slice	slice
+版	版	printing plate	printing plate
+妝	妆	put on makeup	put on makeup
+壯	壮	robust	robust
+莊	庄	hamlet	hamlet
+裝	装	attire	attire
+將	将	General	General
+之	之	of	of
+乏	乏	weary	weary
+眨	眨	blink	blink
+不	不	no	no
+否	否	negate	negate
+杯	杯	cup	cup
+矢	矢	dart	dart
+族	族	tribe	tribe
+知	知	know	know
+智	智	wisdom	wisdom
+矛	矛	spear	spear
+柔	柔	gentle	gentle
+揉	揉	knead	knead
+務	务	tasks	tasks
+霧	雾	fog	fog
+予	予	bestow	bestow
+序	序	preface	preface
+預	预	beforehand	beforehand
+野	野	wild	wild
+班	班	class	class
+弓	弓	bow	bow
+引	引	draw	draw
+強	强	strong	strong
+弱	弱	weak	weak
+彈	弹	bullet	bullet
+佛	佛	Buddha	Buddha
+費	费	expense	expense
+弟	弟	younger brother	younger brother
+第	第	No.	No.
+巧	巧	adroit	adroit
+身	身	somebody	somebody
+射	射	shoot	shoot
+謝	谢	thank	thank
+老	老	old man	old man
+考	考	take an exam	take an exam
+烤	烤	roast	roast
+孝	孝	filial piety	filial piety
+教	教	teach	teach
+者	者	someone	someone
+著	着	-ing	-ing
+豬	猪	pig	pig
+追	追	chase	chase
+帥	帅	commander	commander
+師	师	teacher	teacher
+獅	狮	lion	lion
+官	官	bureaucrat	bureaucrat
+管	管	pipe	pipe
+父	父	father	father
+交	交	mingle	mingle
+效	效	effect	effect
+較	较	relatively	relatively
+校	校	school	school
+足	足	lower leg	lower leg
+跑	跑	run	run
+跳	跳	jump	jump
+路	路	path	path
+露	露	dew	dew
+骨	骨	skeleton	skeleton
+滑	滑	slippery	slippery
+過	过	cross	cross
+阿	阿	Apollo	Apollo
+啊	啊	aah!	aah!
+際	际	occasion	occasion
+險	险	perilous	perilous
+隨	随	as you wish	as you wish
+陽	阳	Yang	Yang
+陳	陈	exhibit	exhibit
+防	防	ward off	ward off
+附	附	attach	attach
+院	院	Inst.	Inst.
+陣	阵	battle formation	battle formation
+隊	队	team	team
+降	降	descend	descend
+階	阶	stairs	stairs
+穴	穴	hole	hole
+究	究	research	research
+突	突	abruptly	abruptly
+空	空	empty	empty
+控	控	control	control
+邊	边	border	border
+深	深	deep	deep
+探	探	spy	spy
+丘	丘	hill	hill
+兵	兵	troops	troops
+絲	丝	silk	silk
+線	线	line	line
+維	维	maintain	maintain
+羅	罗	silk gauze	silk gauze
+續	续	continue	continue
+統	统	continuum	continuum
+給	给	give	give
+結	结	tie	tie
+終	终	end	end
+級	级	rank	rank
+紀	纪	epoch	epoch
+紅	红	red	red
+約	约	make an appointment	make an appointment
+細	细	fine	fine
+緊	紧	tight	tight
+織	织	weave	weave
+網	网	net	net
+綠	绿	green	green
+彎	弯	curved	curved
+灣	湾	bay	bay
+戀	恋	be enamored of	be enamored of
+變	变	change	change
+經	经	scripture	scripture
+輕	轻	lightweight	lightweight
+後	后	behind	behind
+幾	几	how many?	how many?
+機	机	machine	machine
+斷	断	sever	sever
+繼	继	carry on	carry on
+顯	显	obvious	obvious
+樂	乐	music	music
+藥	药	medicine	medicine
+雞	鸡	chicken	chicken
+麼	么	(suffix)	(suffix)
+系	系	lineage	lineage
+係	系	relate to	
+孫	孙	grandchild	grandchild
+卻	却	withdraw	withdraw
+腳	脚	foot	foot
+服	服	apparel	apparel
+命	命	fate	fate
+留	留	stay	stay
+溜	溜	slide	slide
+聊	聊	chat	chat
+柳	柳	willow	willow
+令	令	orders	orders
+冷	冷	cold	cold
+零	零	zero	zero
+領	领	collar	collar
+通	通	communicate	communicate
+勇	勇	courageous	courageous
+犯	犯	criminal	criminal
+危	危	danger	danger
+脆	脆	fragile	fragile
+印	印	print	print
+興	兴	excitement	excitement
+酒	酒	liquor	liquor
+配	配	distribute	distribute
+酋	酋	chieftain	chieftain
+尊	尊	venerate	venerate
+遵	遵	abide by	abide by
+豆	豆	beans	beans
+頭	头	head	head
+短	短	short	short
+禮	礼	ceremony	ceremony
+體	体	body	body
+鼓	鼓	drum	drum
+喜	喜	joyful	joyful
+廚	厨	kitchen	kitchen
+樹	树	timber	timber
+血	血	blood	blood
+盡	尽	exhausted	exhausted
+儘	尽	utmost	
+蓋	盖	lid	lid
+溫	温	temperature	temperature
+監	监	supervise	supervise
+籃	篮	basket	basket
+藍	蓝	blue	blue
+銀	银	silver	silver
+跟	跟	heel	heel
+很	很	very	very
+根	根	root	root
+即	即	immediately	immediately
+節	节	holiday	holiday
+退	退	retreat	retreat
+腿	腿	leg	leg
+限	限	limit	limit
+眼	眼	eyelet	eyelet
+良	良	high-quality	high-quality
+浪	浪	breakers	breakers
+娘	娘	mom	mom
+食	食	food	food
+飯	饭	meal	meal
+餐	餐	dine	dine
+館	馆	Bldg.	Bldg.
+養	养	raise	raise
+既	既	since	since
+概	概	approximate	approximate
+平	平	even	even
+評	评	evaluate	evaluate
+坪	坪	level ground	level ground
+乎	乎	ooh!	ooh!
+呼	呼	shout	shout
+希	希	hope	hope
+稀	稀	scarce	scarce
+學	学	study	study
+覺	觉	senses	senses
+攪	搅	stir	stir
+凶	凶	sinister	
+兇	凶	cruel	cruel
+胸	胸	bosom	bosom
+離	离	leave	leave
+禽	禽	fowl	fowl
+辛	辛	peppery	peppery
+辦	办	manage	manage
+辯	辩	dispute	dispute
+壁	壁	partition	partition
+避	避	evade	evade
+新	新	new	new
+薪	薪	fuel	fuel
+親	亲	relatives	relatives
+襯	衬	inner garments	inner garments
+幸	幸	good fortune	good fortune
+執	执	clench	clench
+報	报	newspaper	newspaper
+叫	叫	call	call
+收	收	receive	receive
+陸	陆	land	land
+勢	势	force	force
+熱	热	heat	heat
+藝	艺	technique	technique
+亥	亥	sign of the hog	sign of the hog
+核	核	nucleus	nucleus
+孩	孩	tot	tot
+刻	刻	carve	carve
+該	该	should	should
+述	述	narrate	narrate
+術	术	art	art
+殺	杀	kill	kill
+襄	襄	aid	aid
+讓	让	yield	yield
+壤	壤	territory	territory
+寒	寒	frigid	frigid
+賽	赛	competition	competition
+毒	毒	poison	poison
+素	素	vegetarian diet	vegetarian diet
+青	青	blue or green	blue or green
+精	精	refined	refined
+請	请	invite	invite
+情	情	feelings	feelings
+睛	睛	eyeball	eyeball
+清	清	pure	pure
+靜	静	quiet	quiet
+責	责	responsibility	responsibility
+績	绩	accomplishments	accomplishments
+積	积	accumulate	accumulate
+表	表	surface	surface
+錶	錶	watch	watch
+生	生	life	life
+星	星	star	star
+姓	姓	surname	surname
+性	性	sex	sex
+害	害	harm	harm
+割	割	cut off	cut off
+慧	慧	intelligent	intelligent
+豐	丰	plentiful	plentiful
+春	春	springtime	springtime
+泰	泰	tranquil	tranquil
+奉	奉	proffer	proffer
+棒	棒	cudgel	cudgel
+勤	勤	diligent	diligent
+謹	谨	careful	careful
+僅	仅	merely	merely
+漢	汉	Han	Han
+難	难	difficult	difficult
+攤	摊	vendor's stand	vendor's stand
+華	华	splendor	splendor
+嘩	哗	clamor	clamor
+垂	垂	droop	droop
+錘	锤	hammer	hammer
+睡	睡	sleep	sleep
+今	今	now	now
+含	含	harbor	harbor
+念	念	miss	miss
+陰	阴	Yin	Yin
+蔭	荫	shady	shady
+西	西	west	west
+要	要	want	want
+腰	腰	waist	waist
+票	票	ticket	ticket
+漂	漂	drift	drift
+標	标	mark	mark
+賈	贾	merchant	merchant
+價	价	price	price
+煙	烟	smoke	smoke
+南	南	south	south
+門	门	gate	gate
+們	们	(plural)	(plural)
+閒	闲	leisure	leisure
+問	问	ask	ask
+間	间	interval	interval
+簡	简	simple	simple
+開	开	open	open
+聞	闻	hear	hear
+倉	仓	storehouse	storehouse
+槍	枪	gun	gun
+創	创	initiate	initiate
+非	非	non-	non-
+排	排	row	row
+罪	罪	guilt	guilt
+靠	靠	lean on	lean on
+侯	侯	marquis	marquis
+候	候	wait	wait
+決	决	decide	decide
+快	快	fast	fast
+筷	筷	chopsticks	chopsticks
+韋	韦	tanned hide	tanned hide
+圍	围	surround	surround
+偉	伟	great	great
+衛	卫	defend	defend
+干	干	offend	
+岸	岸	shore	shore
+幹	干	trunk	
+旱	旱	drought	drought
+趕	赶	hurry	hurry
+于	于	Yu	Yu
+宇	宇	eaves	eaves
+余	余	moi	
+餘	余	excess	excess
+除	除	eliminate	eliminate
+途	途	route	route
+束	束	bundle up	bundle up
+速	速	quick	quick
+辣	辣	spicy hot	spicy hot
+整	整	entire	entire
+練	练	practice	practice
+揀	拣	opt for	opt for
+重	重	heavy	heavy
+懂	懂	understand	understand
+動	动	move	move
+種	种	species	species
+衝	冲	collide	collide
+病	病	illness	illness
+痛	痛	ache	ache
+瘋	疯	insane	insane
+匹	匹	match	match
+區	区	region	region
+樞	枢	hub	hub
+歐	欧	Europe	Europe
+醫	医	physician	physician
+仰	仰	look up to	look up to
+迎	迎	greet	greet
+登	登	ascend	ascend
+燈	灯	lamp	lamp
+證	证	evidence	evidence
+發	发	send out	send out
+廢	废	discard	discard
+形	形	shape	shape
+影	影	shadow	shadow
+彩	彩	hue	hue
+須	须	have to	have to
+珍	珍	rare	rare
+參	参	participate	participate
+慘	惨	wretched	wretched
+修	修	repair	repair
+文	文	literature	literature
+蚊	蚊	mosquito	mosquito
+彥	彦	erudite	erudite
+顏	颜	countenance	countenance
+產	产	products	products
+率	率	rate	rate
+摔	摔	tumble	tumble
+央	央	center	center
+英	英	England	England
+巴	巴	crust	crust
+把	把	grasp	grasp
+爸	爸	papa	papa
+吧	吧	bar	bar
+色	色	color	color
+絕	绝	discontinue	discontinue
+甘	甘	sweet	sweet
+某	某	such and such	such and such
+其	其	his-hers-its-theirs	his-hers-its-theirs
+期	期	period of time	period of time
+基	基	base	base
+斯	斯	Sphinx	Sphinx
+甚	甚	tremendously	tremendously
+貴	贵	expensive	expensive
+遺	遗	bequeath	bequeath
+舞	舞	dance	dance
+無	无	nothing	nothing
+撫	抚	comfort	comfort
+且	且	moreover	moreover
+姐	姐	older sister	older sister
+組	组	group	group
+祖	祖	ancestor	ancestor
+助	助	assist	assist
+並	并	side by side	
+普	普	universal	universal
+業	业	profession	profession
+對	对	that's right	that's right
+共	共	together	together
+供	供	supply	supply
+異	异	different	different
+巷	巷	lane	lane
+港	港	port	port
+選	选	choose	choose
+井	井	well	well
+亞	亚	Asia	Asia
+惡	恶	evil	evil
+角	角	angle	angle
+解	解	untie	untie
+嘴	嘴	orifice	orifice
+再	再	once more	once more
+稱	称	weigh	weigh
+講	讲	lecture	lecture
+構	构	frame	frame
+扁	扁	flat	flat
+篇	篇	piece of writing	piece of writing
+編	编	compile	compile
+論	论	theory	theory
+輪	轮	wheel	wheel
+典	典	canon	canon
+氏	氏	family name	family name
+紙	纸	paper	paper
+昏	昏	dusk	dusk
+婚	婚	marriage	marriage
+低	低	low	low
+底	底	bottom	bottom
+民	民	people	people
+眠	眠	slumber	slumber
+甫	甫	Fu	Fu
+補	补	patch	patch
+博	博	knowledgeable	knowledgeable
+搏	搏	wrestle	wrestle
+都	都	metropolis	metropolis
+部	部	department	department
+郎	郎	young man	young man
+鄉	乡	countryside	countryside
+響	响	echo	echo
+段	段	section	section
+鍛	锻	forge	forge
+幻	幻	unreal	unreal
+司	司	take charge of	take charge of
+詞	词	word	word
+舟	舟	boat	boat
+船	船	ship	ship
+般	般	sort	sort
+盤	盘	tray	tray
+搬	搬	relocate	relocate
+瓜	瓜	melon	melon
+孤	孤	orphan	orphan
+益	益	benefit	benefit
+假	假	vacation	vacation
+蝦	虾	shrimp	shrimp
+氣	气	air	air
+汽	汽	vapor	vapor
+飛	飞	fly	fly
+面	面	face-to-face	face-to-face
+麵	面	noodles	
+革	革	leather	leather
+鞋	鞋	shoes	shoes
+馨	馨	fragrant	fragrant
+聲	声	voice	voice
+吳	吴	Wu	Wu
+娛	娱	amusement	amusement
+誤	误	error	error
+承	承	undertake	undertake
+蒸	蒸	steam	steam
+牙	牙	tooth	tooth
+穿	穿	pass through	pass through
+呀	呀	wow!	wow!
+釋	释	explain	explain
+番	番	try	try
+翻	翻	turn over	turn over
+播	播	broadcast	broadcast
+毛	毛	fur	fur
+尾	尾	tail	tail
+宅	宅	dwelling	dwelling
+託	托	entrust	entrust
+為	为	act	act
+偽	伪	bogus	bogus
+長	长	long	long
+張	张	stretch	stretch
+漲	涨	swell	swell
+套	套	cover	cover
+髮	发	hair of the head	
+展	展	unfold	unfold
+喪	丧	funeral	funeral
+雁	雁	wild goose	wild goose
+應	应	ought to	ought to
+鳥	鸟	bird	bird
+鷹	鹰	hawk	hawk
+鴨	鸭	duck	duck
+島	岛	island	island
+遇	遇	encounter	encounter
+萬	万	ten thousand	ten thousand
+邁	迈	stride	stride
+岡	冈	ridge of a hill	ridge of a hill
+剛	刚	just now	just now
+缺	缺	deficient	deficient
+寶	宝	treasure	treasure
+遙	遥	remote	remote
+搖	摇	shake	shake
+兔	兔	rabbit	rabbit
+逸	逸	flee	flee
+免	免	avoid	avoid
+晚	晚	nightfall	nightfall
+象	象	elephant	elephant
+像	像	likeness	likeness
+馬	马	horse	horse
+媽	妈	mama	mama
+罵	骂	scold	scold
+嗎	吗	yes or no	yes or no
+驗	验	check	check
+騎	骑	ride	ride
+驚	惊	startled	startled
+虎	虎	tiger	tiger
+慮	虑	ponder	ponder
+處	处	location	location
+戲	戏	frolic	frolic
+劇	剧	drama	drama
+據	据	certificate	certificate
+鹿	鹿	deer	deer
+塵	尘	dust	dust
+麗	丽	lovely	lovely
+熊	熊	bear	bear
+能	能	ability	ability
+態	态	attitude	attitude
+寅	寅	sign of the tiger	sign of the tiger
+演	演	perform	perform
+辰	辰	sign of the dragon	sign of the dragon
+晨	晨	morning	morning
+農	农	agriculture	agriculture
+濃	浓	concentrated	concentrated
+送	送	deliver	deliver
+鬼	鬼	ghost	ghost
+魔	魔	demon	demon
+塊	块	lump	lump
+龍	龙	dragon	dragon
+襲	袭	raid	raid
+兒	儿	youngster	youngster
+舊	旧	old	old
+寫	写	write	write
+瀉	泻	diarrhea	diarrhea
+兩	两	dos	dos
+倆	俩	duo	duo
+滿	满	full	full
+爾	尔	you (literary)	you (literary)
+彌	弥	fill	fill
+虛	虚	false	false
+聯	联	unite	unite
+關	关	shut	shut
+那	那	that	that
+哪	哪	which?	which?
+巫	巫	witch	witch
+靈	灵	spirit	spirit
+縣	县	county	county
+懸	悬	suspend	suspend
+與	与	offer	offer
+舉	举	lift up	lift up
+腦	脑	brain	brain
+惱	恼	annoyed	annoyed
+專	专	specialty	specialty
+傳	传	spread	spread
+轉	转	rotate	rotate
+團	团	troupe	troupe
+黃	黄	yellow	yellow
+廣	广	extensive	extensive
+橫	横	horizontal	horizontal
+窗	窗	window	window
+總	总	general	general
+詹	詹	verbose	
+擔	担	assume	assume
+數	数	number	number
+樓	楼	multistory building	multistory building
+獨	独	alone	alone
+屬	属	belong to	belong to
+爛	烂	spoiled	spoiled
+蘭	兰	orchid	orchid
+從	从	follow	follow
+縱	纵	vertical	vertical
+齊	齐	identical	identical
+濟	济	relieve	relieve
+丑	丑	clown	clown
+扭	扭	twist	twist
+卑	卑	lowly	lowly
+牌	牌	brand	brand
+號	号	appellation	appellation
+怪	怪	peculiar	peculiar
+赤	赤	crimson	crimson
+亦	亦	likewise	likewise
+極	极	extreme	extreme
+雜	杂	miscellaneous	miscellaneous
+曰	曰	sayeth	sayeth
+亂	乱	chaos	chaos
+叭	叭	trumpet	trumpet
+咕	咕	mutter	mutter
+咱	咱	we (inclusive)	we (inclusive)
+串	串	string together	string together
+罩	罩	overspread	overspread
+囂	嚣	hubbub	hubbub
+顛	颠	invert	invert
+叨	叨	talkative	talkative
+刮	刮	scrape	scrape
+盯	盯	stare at	stare at
+呵	呵	rebuke	rebuke
+姦	奸	adultery	adultery
+嬰	婴	baby	baby
+姑	姑	father's sister	father's sister
+姆	姆	nanny	nanny
+兢	兢	cautious	cautious
+碩	硕	big	big
+砌	砌	lay brick	lay brick
+哨	哨	whistle	whistle
+晃	晃	sway	sway
+泊	泊	moor	moor
+汰	汰	get rid of	get rid of
+沾	沾	soak	soak
+渺	渺	insignificant	insignificant
+腺	腺	gland	gland
+坦	坦	level	level
+娃	娃	newborn	newborn
+涯	涯	bank	bank
+吋	吋	inch	inch
+肘	肘	elbow	elbow
+灼	灼	scorch	scorch
+炒	炒	stir-fry	stir-fry
+澆	浇	sprinkle	sprinkle
+哩	哩	mile	mile
+鯉	鲤	carp	carp
+嘿	嘿	Hey!	Hey!
+丹	丹	cinnabar red	cinnabar red
+喧	喧	boisterous	boisterous
+賓	宾	visitor	visitor
+濱	滨	water's edge	water's edge
+寡	寡	widowed	widowed
+棚	棚	shed	shed
+柏	柏	cypress	cypress
+槓	杠	thick stick	thick stick
+朵	朵	flouds	flouds
+杜	杜	prevent	prevent
+桂	桂	cassia-bark tree	cassia-bark tree
+椅	椅	chair	chair
+杰	杰	hero	hero
+櫻	樱	cherry	cherry
+梢	梢	treetops	treetops
+桐	桐	paulownia	paulownia
+宋	宋	Song Dynasty	Song Dynasty
+淋	淋	drench	drench
+焚	焚	burn	burn
+昧	昧	obscure	obscure
+朱	朱	vermillion	vermillion
+株	株	tree trunk	tree trunk
+樑	梁	roof beam	roof beam
+碟	碟	saucer	saucer
+萌	萌	bud	bud
+苛	苛	exacting	exacting
+膜	膜	membrane	membrane
+寞	寞	solitary	solitary
+暮	暮	sunset	sunset
+燃	燃	ignite	ignite
+咒	咒	curse	curse
+獸	兽	beast	beast
+狸	狸	raccoon dog	raccoon dog
+嗅	嗅	sniff	sniff
+牡	牡	dude	dude
+牢	牢	jail	jail
+贊	赞	succor	succor
+舍	舍	abode	abode
+啥	啥	wha?	wha?
+洽	洽	in agreement	in agreement
+旺	旺	thriving	thriving
+碧	碧	green jade	green jade
+汪	汪	tearful	tearful
+枉	枉	crooked	crooked
+珠	珠	pearl	pearl
+噩	噩	shocking	shocking
+鱷	鳄	crocodile	crocodile
+鬥	斗	fight	
+栓	栓	plug	plug
+柱	柱	pillar	pillar
+鉤	钩	hook	hook
+鈔	钞	paper money	paper money
+銷	销	put up for sale	put up for sale
+鎖	锁	lock	lock
+鑽	钻	drill	drill
+迫	迫	compel	compel
+逼	逼	press	press
+逃	逃	escape	escape
+逞	逞	flaunt	flaunt
+轟	轰	rumble	rumble
+軌	轨	rails	rails
+軋	轧	flatten	flatten
+輻	辐	spokes	spokes
+煎	煎	saute	saute
+喻	喻	figure of speech	figure of speech
+榆	榆	elm	elm
+略	略	abbreviation	abbreviation
+暈	晕	dizzy	dizzy
+渾	浑	muddled	muddled
+膏	膏	ointment	ointment
+亨	亨	go smoothly	go smoothly
+哼	哼	hum	hum
+淳	淳	honest	honest
+鯨	鲸	whale	whale
+贖	赎	redeem	redeem
+晝	昼	daylight	daylight
+津	津	Tianjin	Tianjin
+釐	厘	smidgen	smidgen
+枚	枚	small objects	small objects
+牧	牧	herd	herd
+玫	玫	rose	rose
+敦	敦	candid	candid
+諾	诺	promise	promise
+謂	谓	meaning	meaning
+詢	询	inquire	inquire
+罰	罚	penalize	penalize
+訂	订	place an order	place an order
+詠	咏	chant	chant
+諜	谍	espionage	espionage
+註	注	annotate	
+諒	谅	forgive	forgive
+讚	赞	praise	
+貳	贰	II	II
+膩	腻	sick and tired of	sick and tired of
+洩	泄	discharge	discharge
+划	划	paddle	
+嘎	嘎	caw	caw
+域	域	domain	domain
+栽	栽	sow	sow
+戚	戚	kin	kin
+蔑	蔑	despise	despise
+喊	喊	yell	yell
+濺	溅	splatter	splatter
+址	址	address	address
+澀	涩	astringent	astringent
+蘋	苹	apple	apple
+赴	赴	go to	go to
+趟	趟	trip	trip
+堤	堤	dike	dike
+鍵	键	keyboard keys	keyboard keys
+婿	婿	son-in-law	son-in-law
+裁	裁	tailor	tailor
+襪	袜	socks	socks
+滾	滚	trundle	trundle
+衰	衰	decline	decline
+衷	衷	innermost feelings	innermost feelings
+禪	禅	meditation	meditation
+猿	猿	ape	ape
+吊	吊	dangle	dangle
+帕	帕	handkerchief	handkerchief
+帖	帖	note	note
+帆	帆	sail	sail
+幅	幅	width of cloth	width of cloth
+錦	锦	brocade	brocade
+沛	沛	copious	copious
+柿	柿	persimmon	persimmon
+鬧	闹	stir up trouble	stir up trouble
+棘	棘	thorn bushes	thorn bushes
+棗	枣	jujube	jujube
+蕾	蕾	flower bud	flower bud
+吞	吞	gulp down	gulp down
+妖	妖	bewitching	bewitching
+沃	沃	fertile	fertile
+轎	轿	sedan chair	sedan chair
+垃	垃	garbage	garbage
+啼	啼	weep aloud	weep aloud
+蒂	蒂	fruit stem	fruit stem
+滴	滴	drip	drip
+頃	顷	100 Chinese acres	100 Chinese acres
+匙	匙	spoon	spoon
+乖	乖	well-behaved	well-behaved
+乘	乘	hitch a ride	hitch a ride
+剩	剩	leftover	leftover
+棍	棍	club	club
+諧	谐	in accord	in accord
+柴	柴	firewood	firewood
+敏	敏	quick-witted	quick-witted
+霉	霉	mildew	mildew
+迄	迄	so far	so far
+砍	砍	chop	chop
+坎	坎	hump	hump
+炊	炊	cook	cook
+欽	钦	think highly of	think highly of
+剖	剖	cut open	cut open
+菩	菩	bodhisattva	bodhisattva
+芒	芒	mango	mango
+荒	荒	wasteland	wasteland
+謊	谎	lie	lie
+茫	茫	boundless	boundless
+贏	赢	win	win
+訊	讯	interrogate	interrogate
+坊	坊	workshop	workshop
+芳	芳	aromatic	aromatic
+訪	访	call on	call on
+熬	熬	stew	stew
+菸	菸	tobacco	tobacco
+榜	榜	roster	roster
+磅	磅	pound	pound
+膀	膀	upper arm	upper arm
+銳	锐	sharp	sharp
+虹	虹	rainbow	rainbow
+蝠	蝠	bat	bat
+蛙	蛙	frog	frog
+蝗	蝗	locust	locust
+蟬	蝉	cicada	cicada
+楓	枫	maple	maple
+胞	胞	placenta	placenta
+炮	炮	fireworks	
+袍	袍	robe	robe
+雹	雹	hail	hail
+逐	逐	pursue	pursue
+遂	遂	satisfy	satisfy
+蒙	蒙	Mongolia	Mongolia
+朦	朦	dim	dim
+豪	豪	unrestrained	unrestrained
+啄	啄	peck	peck
+琢	琢	chisel	chisel
+嫁	嫁	marry	marry
+腸	肠	intestines	intestines
+楊	杨	poplar	poplar
+燙	烫	scald	scald
+蕩	荡	licentious	licentious
+詳	详	detailed	detailed
+羨	羡	envy	envy
+唯	唯	solely	solely
+堆	堆	pile	pile
+焦	焦	apprehensive	apprehensive
+瞧	瞧	lay eyes on	lay eyes on
+礁	礁	reef	reef
+蕉	蕉	banana	banana
+雕	雕	sculpture	sculpture
+截	截	lop off	lop off
+准	准	allow	
+雀	雀	sparrow	sparrow
+霍	霍	all at once	all at once
+奮	奋	exert oneself	exert oneself
+奪	夺	take by force	take by force
+翹	翘	turn upward	turn upward
+塌	塌	fall down	fall down
+翰	翰	writing brush	writing brush
+咽	咽	throat	throat
+姻	姻	in-law	in-law
+廟	庙	temple	temple
+廂	厢	side room	side room
+嘛	嘛	(pause marker)	(pause marker)
+磨	磨	grind	grind
+廈	厦	skyscraper	skyscraper
+廁	厕	toilet	toilet
+悟	悟	realize	realize
+忠	忠	loyal	loyal
+悼	悼	mourn	mourn
+慎	慎	prudent	prudent
+恕	恕	pardon	pardon
+悄	悄	noiseless	noiseless
+恍	恍	all of a sudden	all of a sudden
+惰	惰	indolent	indolent
+恢	恢	immense	immense
+恆	恒	permanent	permanent
+慕	慕	admire	admire
+恰	恰	just right	just right
+惶	惶	fearful	fearful
+愉	愉	overjoyed	overjoyed
+愈	愈	more and more	more and more
+惑	惑	be bewildered	be bewildered
+怔	怔	terror-stricken	terror-stricken
+怖	怖	be scared of	be scared of
+添	添	augment	augment
+悔	悔	be sorry about	be sorry about
+慌	慌	nervous	nervous
+悅	悦	delighted	delighted
+憎	憎	loathe	loathe
+忌	忌	shun	shun
+惟	惟	thinking	thinking
+懼	惧	be frightened	be frightened
+患	患	troubles	troubles
+惹	惹	provoke	provoke
+恩	恩	kindness	kindness
+憶	忆	recall	recall
+媳	媳	daughter-in-law	daughter-in-law
+熄	熄	put out	put out
+瑟	瑟	Chinese harp	Chinese harp
+泌	泌	secrete	secrete
+蜜	蜜	honey	honey
+摩	摩	rub	rub
+蛾	蛾	moth	moth
+扒	扒	pick pockets	pick pockets
+扣	扣	button	button
+捐	捐	contribute	contribute
+拍	拍	racquet	racquet
+啪	啪	clapping sound	clapping sound
+損	损	damage	damage
+扛	扛	carry over the shoulder	carry over the shoulder
+扎	扎	prick	prick
+拇	拇	thumb	thumb
+拘	拘	detain	detain
+抄	抄	copy	copy
+拓	拓	pioneer	pioneer
+捏	捏	pinch	pinch
+撓	挠	chafe	chafe
+抹	抹	smear on	smear on
+描	描	describe	describe
+摸	摸	grope	grope
+挑	挑	foment	foment
+拴	拴	tether	tether
+拾	拾	tidy up	tidy up
+搭	搭	put up	put up
+掠	掠	pillage	pillage
+捨	舍	abandon	
+拭	拭	wipe away	wipe away
+扯	扯	yank	yank
+拖	拖	drag	drag
+揚	扬	publicize	publicize
+搞	搞	engage in	engage in
+撞	撞	bump into	bump into
+摘	摘	handpick	handpick
+捆	捆	lash together	lash together
+撼	撼	joggle	joggle
+擾	扰	harass	harass
+擅	擅	act without authority	act without authority
+壇	坛	altar	altar
+顫	颤	tremble	tremble
+莽	莽	rude	rude
+戒	戒	take precautions against	take precautions against
+械	械	weapon	weapon
+誡	诫	warn	warn
+奔	奔	dash	dash
+噴	喷	spurt	spurt
+墳	坟	tomb	tomb
+憤	愤	indignation	indignation
+材	材	stuff	stuff
+孕	孕	pregnant	pregnant
+扔	扔	throw away	throw away
+圾	圾	trash	trash
+叉	叉	fork	fork
+桑	桑	mulberry tree	mulberry tree
+嗓	嗓	voicebox	voicebox
+寇	寇	outlaw	outlaw
+敲	敲	knock	knock
+灌	灌	pour into	pour into
+權	权	authority	authority
+毅	毅	resolute	resolute
+肢	肢	limb	limb
+妓	妓	prostitute	prostitute
+歧	歧	fork in the road	fork in the road
+翅	翅	fins	fins
+淑	淑	graceful	graceful
+椒	椒	spice plant	spice plant
+后	后	queen	
+盾	盾	shield	shield
+販	贩	peddler	peddler
+扳	扳	tug	tug
+覓	觅	try to find	try to find
+妥	妥	appropriate	appropriate
+睬	睬	notice	notice
+允	允	consent	consent
+勾	勾	cross out	cross out
+晉	晋	promote	promote
+宏	宏	magnificent	magnificent
+胎	胎	fetus	fetus
+冶	冶	smelt	smelt
+颱	台	typhoon	
+怠	怠	negligent	negligent
+抬	抬	elevate	elevate
+丟	丢	mislay	mislay
+臺	台	Taiwan	
+致	致	bring about	bring about
+撤	撤	remove	remove
+硫	硫	sulfur	sulfur
+琉	琉	glaze	glaze
+疏	疏	sparse	sparse
+蔬	蔬	veggies	veggies
+崩	崩	crumble	crumble
+岩	岩	rock	rock
+崎	崎	rugged	rugged
+崖	崖	cliff	cliff
+炭	炭	charcoal	charcoal
+碳	碳	carbon	carbon
+盼	盼	await hopefully	await hopefully
+頒	颁	promulgate	promulgate
+芬	芬	essence	essence
+扮	扮	play the part of	play the part of
+岔	岔	diverge	diverge
+頌	颂	extol	extol
+訟	讼	litigate	litigate
+翁	翁	elderly man	elderly man
+裕	裕	abundant	abundant
+榕	榕	banyan	banyan
+賞	赏	prize	prize
+嘗	尝	attempt	
+嚐	尝	taste	taste
+掌	掌	palm of the hand	palm of the hand
+擋	挡	fend off	fend off
+膛	膛	chest	chest
+頗	颇	quite	quite
+坡	坡	slope	slope
+披	披	drape over the shoulders	drape over the shoulders
+彼	彼	the other	the other
+皺	皱	wrinkles	wrinkles
+雛	雏	chick	chick
+趨	趋	hasten	hasten
+菠	菠	spinach	spinach
+殖	殖	breed	breed
+殊	殊	dissimilar	dissimilar
+殘	残	incomplete	incomplete
+咧	咧	grin	grin
+裂	裂	crack	crack
+耿	耿	dedicated	dedicated
+恥	耻	shame	shame
+輯	辑	edit	edit
+攝	摄	take a photo	take a photo
+娶	娶	take a wife	take a wife
+扶	扶	lend a hand	lend a hand
+熙	熙	splendid	splendid
+腎	肾	kidneys	kidneys
+募	募	recruit	recruit
+脅	胁	threaten	threaten
+劣	劣	inferior	inferior
+勳	勋	merit	merit
+勸	劝	advise	advise
+劫	劫	plunder	plunder
+怒	怒	anger	anger
+茄	茄	eggplant	eggplant
+彷	彷	seemingly	seemingly
+征	征	go on an expedition	
+徒	徒	follower	follower
+徊	徊	undecided	undecided
+徵	征	solicit	solicit
+懲	惩	chasten	chasten
+循	循	comply with	comply with
+徹	彻	thorough	thorough
+役	役	service	service
+衍	衍	develop	develop
+衡	衡	weight	weight
+銜	衔	title	title
+禿	秃	bald	bald
+頹	颓	decrepit	decrepit
+秒	秒	seconds	seconds
+稍	稍	a little	a little
+穌	稣	rise again	rise again
+蘇	苏	revive	revive
+萎	萎	wilt	wilt
+黏	黏	sticky	sticky
+黎	黎	host	host
+漆	漆	wall paint	wall paint
+膝	膝	knees	knees
+稠	稠	dense	dense
+稿	稿	draft	draft
+穎	颖	clever	clever
+稅	税	tax	tax
+稼	稼	crops	crops
+菌	菌	fungus	fungus
+稚	稚	immature	immature
+穫	获	harvest	
+私	私	private	private
+秩	秩	order	order
+殼	壳	shell	shell
+穀	谷	cereal	
+鍬	锹	shovel	shovel
+揪	揪	hold tight	hold tight
+梨	梨	pear	pear
+犁	犁	plow	plow
+曆	历	calendar	
+糕	糕	cake	cake
+糊	糊	batter	batter
+粘	粘	glue	glue
+糧	粮	provisions	provisions
+菊	菊	chrysanthemum	chrysanthemum
+糙	糙	rough	rough
+粒	粒	grain	grain
+燦	灿	brilliant	brilliant
+粉	粉	powder	powder
+瞇	眯	squint	squint
+幣	币	currency	currency
+斃	毙	die a violent death	die a violent death
+蔽	蔽	shelter	shelter
+撇	撇	cast aside	cast aside
+弊	弊	fraud	fraud
+筍	笋	bamboo shoot	bamboo shoot
+筒	筒	tube	tube
+築	筑	construct	construct
+笨	笨	stupid	stupid
+箭	箭	arrow	arrow
+筋	筋	tendon	tendon
+伍	伍	V	V
+仇	仇	animosity	animosity
+倡	倡	start	start
+伯	伯	father's older brother	father's older brother
+仲	仲	mid-	mid-
+估	估	estimate	estimate
+偵	侦	detect	detect
+俱	俱	altogether	altogether
+側	侧	lateral	lateral
+佑	佑	bless	bless
+佐	佐	assistant	assistant
+仔	仔	meticulous	meticulous
+俏	俏	comely	comely
+倘	倘	if	if
+倚	倚	count on	count on
+佳	佳	superb	superb
+侍	侍	serve	serve
+伙	伙	mate	mate
+宿	宿	stay overnight	stay overnight
+伏	伏	bend over	bend over
+袱	袱	wrapping cloth	wrapping cloth
+偷	偷	steal	steal
+伐	伐	fell	fell
+佩	佩	wear at the waist	wear at the waist
+佈	布	announce	
+僑	侨	live abroad	live abroad
+億	亿	one hundred million	one hundred million
+傾	倾	incline	incline
+侮	侮	insult	insult
+倍	倍	times	times
+仿	仿	mimic	mimic
+傲	傲	haughty	haughty
+僧	僧	Buddhist monk	Buddhist monk
+悠	悠	without haste	without haste
+俄	俄	Russia	Russia
+儀	仪	rite	rite
+侄	侄	nephew	nephew
+仙	仙	immortal	immortal
+俗	俗	custom	custom
+償	偿	repay	repay
+臥	卧	for sleeping	for sleeping
+傍	傍	close to	close to
+俺	俺	we (exclusive)	we (exclusive)
+淹	淹	inundate	inundate
+掩	掩	conceal	conceal
+催	催	prod	prod
+摧	摧	wreck	wreck
+攜	携	take along	take along
+符	符	symbol	symbol
+貸	贷	loan	loan
+荷	荷	Holland	Holland
+仗	仗	battle	battle
+杖	杖	cane	cane
+夾	夹	press from both sides	press from both sides
+俠	侠	chivalrous person	chivalrous person
+頰	颊	cheek	cheek
+狹	狭	narrow	narrow
+挾	挟	coerce	coerce
+峽	峡	gorge	gorge
+傘	伞	umbrella	umbrella
+聚	聚	assemble	assemble
+挫	挫	frustrate	frustrate
+劍	剑	saber	saber
+斂	敛	restrain	restrain
+撿	捡	pick up	pick up
+簽	签	sign	sign
+儉	俭	thrifty	thrifty
+萊	莱	lambsquarters	lambsquarters
+葛	葛	kudzu	kudzu
+褐	褐	brown	brown
+竭	竭	use up	use up
+歇	歇	take a rest	take a rest
+揭	揭	reveal	reveal
+淫	淫	promiscuous	promiscuous
+挺	挺	erect	erect
+瓦	瓦	tile	tile
+瓷	瓷	porcelain	porcelain
+瓶	瓶	bottle	bottle
+鋁	铝	aluminum	aluminum
+宮	宫	palace	palace
+瑩	莹	lustrous	lustrous
+螢	萤	firefly	firefly
+撈	捞	scoop up	scoop up
+煥	焕	glowing	glowing
+旋	旋	whirl	whirl
+吻	吻	kiss	kiss
+匆	匆	hurriedly	hurriedly
+錫	锡	tin	tin
+惕	惕	watchful	watchful
+屑	屑	bits	bits
+尿	尿	urine	urine
+刷	刷	brush	brush
+犀	犀	rhinoceros	rhinoceros
+遲	迟	tardy	tardy
+漏	漏	leak	leak
+屁	屁	fart	fart
+履	履	footwear	footwear
+屎	屎	excrement	excrement
+屏	屏	folding screen	folding screen
+屈	屈	knuckle under	knuckle under
+掘	掘	excavate	excavate
+尺	尺	ruler	ruler
+眉	眉	eyebrows	eyebrows
+媚	媚	flatter	flatter
+肩	肩	shoulder	shoulder
+妒	妒	jealous of	jealous of
+淚	泪	tears	tears
+啓	启	enlighten	enlighten
+扇	扇	fan	fan
+奈	奈	can't help but	can't help but
+款	款	funds	funds
+祟	祟	evil spirit	evil spirit
+祝	祝	wish well	wish well
+祥	祥	propitious	propitious
+祕	秘	confidential	confidential
+慰	慰	console	console
+蔚	蔚	luxuriant	luxuriant
+蒜	蒜	garlic	garlic
+棕	棕	palm tree	palm tree
+宙	宙	universe	universe
+軸	轴	axle	axle
+袖	袖	sleeve	sleeve
+笛	笛	flute	flute
+坤	坤	female	female
+呻	呻	groan	groan
+暢	畅	smooth	smooth
+夥	夥	partnership	partnership
+巢	巢	nest	nest
+棵	棵	flora	flora
+裸	裸	naked	naked
+裹	裹	envelop	envelop
+析	析	analyze	analyze
+晰	晰	distinct	distinct
+芹	芹	celery	celery
+折	折	discount	discount
+哲	哲	philosopher	philosopher
+逝	逝	pass away	pass away
+誓	誓	vow	vow
+欣	欣	elated	elated
+掀	掀	uncover	uncover
+祈	祈	supplicate	supplicate
+慚	惭	conscience-stricken	conscience-stricken
+嶄	崭	towering	towering
+拆	拆	take apart	take apart
+炸	炸	blow up	blow up
+詐	诈	swindle	swindle
+妻	妻	wife	wife
+淒	凄	miserable	miserable
+棲	栖	perch	perch
+煞	煞	goblin	goblin
+捷	捷	nimble	nimble
+秉	秉	wield	wield
+剝	剥	peel off	peel off
+彙	汇	collection	
+兼	兼	double	double
+賺	赚	earn	earn
+嫌	嫌	dislike	dislike
+謙	谦	unassuming	unassuming
+歉	歉	apology	apology
+廉	廉	inexpensive	inexpensive
+鐮	镰	sickle	sickle
+簾	帘	drapes	drapes
+睜	睁	unshut	unshut
+掙	挣	struggle	struggle
+箏	筝	Chinese zither	Chinese zither
+塘	塘	pool	pool
+逮	逮	arrest	arrest
+隸	隶	bondservant	bondservant
+慷	慷	generous	generous
+糠	糠	chaff	chaff
+耍	耍	mess around	mess around
+耐	耐	-proof	-proof
+喘	喘	wheeze	wheeze
+揣	揣	conjecture	conjecture
+糟	糟	messed up	messed up
+遭	遭	meet with	meet with
+槽	槽	trough	trough
+抖	抖	quiver	quiver
+庸	庸	mediocre	mediocre
+傭	佣	put to work	put to work
+甩	甩	fling	fling
+惜	惜	rue	rue
+措	措	arrange	arrange
+棄	弃	forsake	forsake
+燕	燕	swallow	swallow
+遮	遮	screen	screen
+畔	畔	littoral	littoral
+拌	拌	blend	blend
+叛	叛	betray	betray
+券	券	voucher	voucher
+藤	藤	rattan	rattan
+狀	状	state of affairs	state of affairs
+牆	墙	wall	wall
+鼎	鼎	old cooking pot	old cooking pot
+寢	寝	get some shuteye	get some shuteye
+侵	侵	invade	invade
+浸	浸	immerse	immerse
+贓	赃	stolen goods	stolen goods
+藏	藏	hide	hide
+臟	脏	guts	dirty
+獎	奖	award	award
+漿	浆	thick liquid	thick liquid
+槳	桨	oar	oar
+蔣	蒋	Jiang	Jiang
+淵	渊	abyss	abyss
+肅	肃	solemn	solemn
+嘯	啸	howl	howl
+蕭	萧	desolate	desolate
+鏽	锈	rust	rust
+芝	芝	sesame	sesame
+貶	贬	devalue	devalue
+泛	泛	nonspecific	nonspecific
+歪	歪	askew	askew
+矯	矫	rectify	rectify
+矮	矮	short of stature	short of stature
+唉	唉	sigh--ay-ay	sigh--ay-ay
+埃	埃	fine dust	fine dust
+挨	挨	suffer	suffer
+簇	簇	cluster	cluster
+茅	茅	thatch	thatch
+橘	橘	tangerine	tangerine
+舒	舒	relax	relax
+弘	弘	noble	noble
+夷	夷	barbarian	barbarian
+姨	姨	maternal aunt	maternal aunt
+疆	疆	dividing line	dividing line
+僵	僵	stiff	stiff
+薑	姜	ginger	ginger
+粥	粥	porridge	porridge
+沸	沸	bring to a boil	bring to a boil
+拂	拂	caress	caress
+剃	剃	shave	shave
+涕	涕	snot	snot
+梯	梯	ladder	ladder
+朽	朽	decayed	decayed
+聘	聘	employ	employ
+犧	牺	sacrifice	sacrifice
+姊	姊	elder sister	elder sister
+躺	躺	lie down	lie down
+躲	躲	dodge	dodge
+躬	躬	stoop	stoop
+嗜	嗜	hanker	hanker
+拷	拷	flog	flog
+暑	暑	summer heat	summer heat
+睹	睹	behold	behold
+賭	赌	gamble	gamble
+奢	奢	extravagant	extravagant
+堵	堵	stop up	stop up
+煮	煮	boil	boil
+諸	诸	various	various
+儲	储	put in storage	put in storage
+屠	屠	slaughter	slaughter
+署	署	add your John Hancock	add your John Hancock
+薯	薯	yam	yam
+歸	归	come back	come back
+篩	筛	sift	sift
+棺	棺	coffin	coffin
+爹	爹	dad	dad
+斧	斧	axe	axe
+咬	咬	bite	bite
+狡	狡	sly	sly
+趴	趴	prostrate oneself	prostrate oneself
+踏	踏	trample	trample
+踐	践	tread on	tread on
+蹄	蹄	hoof	hoof
+捉	捉	catch	catch
+踩	踩	step on	step on
+蹦	蹦	hop	hop
+跌	跌	slump	slump
+促	促	urge	urge
+踢	踢	kick	kick
+躁	躁	impetuous	impetuous
+噪	噪	chirping	chirping
+澡	澡	bath	bath
+藻	藻	algae	algae
+操	操	exercise	exercise
+燥	燥	parched	parched
+躍	跃	leap	leap
+戳	戳	jab	jab
+耀	耀	show off	show off
+猾	猾	cunning	cunning
+髓	髓	marrow	marrow
+髒	脏	dirty	
+渦	涡	whirlpool	whirlpool
+鍋	锅	pot	pot
+蝸	蜗	snail	snail
+禍	祸	misfortune	misfortune
+陌	陌	footpath	footpath
+隙	隙	rift	rift
+陡	陡	steep	steep
+障	障	barrier	barrier
+陪	陪	accompany	accompany
+隧	隧	tunnel	tunnel
+墜	坠	plunge	plunge
+陋	陋	undesirable	undesirable
+挖	挖	dig	dig
+窯	窑	kiln	kiln
+窺	窥	peep	peep
+窟	窟	den	den
+窄	窄	strait	strait
+榨	榨	extract	extract
+窘	窘	poverty-stricken	poverty-stricken
+窮	穷	poor	poor
+窩	窝	hollow	hollow
+腔	腔	body cavity	body cavity
+累	累	tired	tired
+螺	螺	spiral shell	spiral shell
+紗	纱	yarn	yarn
+綽	绰	ample	ample
+紹	绍	acquaint	acquaint
+絮	絮	long-winded	long-winded
+繞	绕	go around	go around
+紮	扎	bind	
+綿	绵	continuous	continuous
+繪	绘	paint	paint
+絡	络	web	web
+綢	绸	silk fabric	silk fabric
+絨	绒	down	down
+締	缔	conclude	conclude
+紫	紫	purple	purple
+繁	繁	numerous	numerous
+紡	纺	spin	spin
+繭	茧	cocoon	cocoon
+纏	缠	wind around	wind around
+緻	致	delicate	
+繫	系	fasten	
+納	纳	let in	let in
+紛	纷	disorderly	disorderly
+縮	缩	shrink	shrink
+綜	综	sum up	sum up
+紳	绅	gentry	gentry
+緣	缘	reason	reason
+緒	绪	inception	inception
+絞	绞	wring	wring
+緩	缓	unhurried	unhurried
+暖	暖	warm	warm
+援	援	provide assistance	provide assistance
+索	索	large rope	large rope
+勃	勃	vibrant	vibrant
+脖	脖	head-hinge	head-hinge
+繳	缴	shell out	shell out
+邀	邀	request the presence of	request the presence of
+繡	绣	embroidery	embroidery
+蘿	萝	edible root	edible root
+鑼	锣	gong	gong
+邏	逻	make the rounds	make the rounds
+籮	箩	bamboo basket	bamboo basket
+蠻	蛮	barbaric	barbaric
+頸	颈	neck	neck
+莖	茎	plant stem	plant stem
+勁	劲	powerful	powerful
+徑	径	trail	trail
+溪	溪	creek	creek
+幼	幼	young	young
+幽	幽	secluded	secluded
+濕	湿	wet	wet
+玄	玄	mysterious	mysterious
+畜	畜	livestock	livestock
+蓄	蓄	save up	save up
+牽	牵	lead along	lead along
+弦	弦	bowstring	bowstring
+磁	磁	magnetism	magnetism
+滋	滋	nourish	nourish
+慈	慈	kindhearted	kindhearted
+譏	讥	deride	deride
+爍	烁	luminous	luminous
+遜	逊	modest	modest
+卸	卸	unload	unload
+御	御	imperial	
+禦	御	withstand	withstand
+卵	卵	nest eggs	nest eggs
+孵	孵	hatch	hatch
+乳	乳	breast	breast
+浮	浮	float	float
+俘	俘	captive	captive
+卿	卿	minister	minister
+貿	贸	trade	trade
+榴	榴	pomegranate	pomegranate
+疑	疑	doubt	doubt
+礙	碍	obstruct	obstruct
+凝	凝	congeal	congeal
+擬	拟	simulate	simulate
+玲	玲	exquisite	exquisite
+鈴	铃	small bell	small bell
+伶	伶	actor	actor
+嶺	岭	mountain range	mountain range
+桶	桶	bucket	bucket
+誦	诵	read aloud	read aloud
+湧	涌	gush	gush
+踴	踊	eagerly	eagerly
+卷	卷	exam paper	exam paper
+圈	圈	circle	circle
+捲	卷	roll up	
+倦	倦	worn out	worn out
+範	范	model	model
+怨	怨	resentment	resentment
+宛	宛	winding	winding
+腕	腕	wrist	wrist
+婉	婉	tactful	tactful
+碗	碗	bowl	bowl
+詭	诡	deceitful	deceitful
+跪	跪	kneel	kneel
+輿	舆	popular	popular
+酬	酬	reward	reward
+酌	酌	pour wine	pour wine
+酷	酷	brutal	brutal
+醇	醇	mellow wine	mellow wine
+醋	醋	vinegar	vinegar
+醉	醉	drunk	drunk
+粹	粹	unmixed	unmixed
+翠	翠	emerald green	emerald green
+碎	碎	shattered	shattered
+酸	酸	sour	sour
+梭	梭	shuttle	shuttle
+峻	峻	lofty	lofty
+俊	俊	pretty	
+釁	衅	quarrel	quarrel
+醬	酱	thick sauce	thick sauce
+猶	犹	just like	just like
+奠	奠	found	found
+蹲	蹲	squat	squat
+逗	逗	tease	tease
+豈	岂	(rhetorical question)	(rhetorical question)
+凱	凯	triumphant	triumphant
+豎	竖	perpendicular	perpendicular
+嘉	嘉	commend	commend
+嘻	嘻	giggling	giggling
+盟	盟	alliance	alliance
+孟	孟	Mencius	Mencius
+猛	猛	fierce	fierce
+盛	盛	flourishing	flourishing
+盞	盏	small cup	small cup
+盒	盒	small box	small box
+盜	盗	master thief	master thief
+盪	荡	swing	
+寧	宁	calm	calm
+盈	盈	replete	replete
+盆	盆	basin	basin
+盃	杯	trophy	
+蘊	蕴	amass	amass
+濫	滥	indiscriminate	indiscriminate
+鑑	鉴	probe	probe
+尷	尴	abashed	abashed
+尬	尬	embarrassed	embarrassed
+拋	抛	toss	toss
+耽	耽	indulge in	indulge in
+枕	枕	pillow	pillow
+覽	览	view	view
+攬	揽	take on	take on
+纜	缆	cable	cable
+狠	狠	ruthless	ruthless
+恨	恨	hate	hate
+爵	爵	upper crust	upper crust
+嚼	嚼	chew	chew
+懇	恳	wholeheartedly	wholeheartedly
+墾	垦	reclaim	reclaim
+豹	豹	leopard	leopard
+貓	猫	cat	cat
+貌	貌	mien	mien
+朗	朗	lucent	lucent
+狼	狼	wolf	wolf
+飢	饥	starving	starving
+饒	饶	spare	spare
+飾	饰	ornaments	ornaments
+飲	饮	beverage	beverage
+蝕	蚀	eat away	eat away
+飽	饱	sated	sated
+饅	馒	bread	bread
+餅	饼	cookie	cookie
+餃	饺	dumpling	dumpling
+餓	饿	hungry	hungry
+潛	潜	submerge	submerge
+蠶	蚕	silkworm	silkworm
+溉	溉	irrigate	irrigate
+慨	慨	incensed	incensed
+萍	萍	duckweed	duckweed
+秤	秤	scale	scale
+淆	淆	confuse	confuse
+艾	艾	Chinese mugwort	Chinese mugwort
+哎	哎	Good grief!	Good grief!
+拔	拔	pull out	pull out
+攀	攀	climb	climb
+屯	屯	stockpile	stockpile
+頓	顿	pause	pause
+噸	吨	ton	ton
+純	纯	unadulterated	unadulterated
+屆	届	fall due	fall due
+齒	齿	teeth	teeth
+齣	出	shows	
+齡	龄	length of service	length of service
+洶	汹	turbulent	turbulent
+籬	篱	fence	fence
+辜	辜	crime	crime
+宰	宰	butcher	butcher
+辨	辨	differentiate	differentiate
+辮	辫	braid	braid
+臂	臂	arm	arm
+劈	劈	split	split
+譬	譬	analogy	analogy
+僻	僻	out-of-the-way	out-of-the-way
+譯	译	translate	translate
+擇	择	select	select
+澤	泽	swamp	swamp
+墊	垫	pad	pad
+摯	挚	earnest	earnest
+糾	纠	entangle	entangle
+凌	凌	bully	bully
+菱	菱	water caltrop	water caltrop
+陵	陵	mausoleum	mausoleum
+咳	咳	cough	cough
+剎	刹	brake	brake
+嚷	嚷	cry out	cry out
+釀	酿	brew	brew
+塞	塞	stronghold	stronghold
+寨	寨	stockade	stockade
+憲	宪	constitution	constitution
+晴	晴	sunny	sunny
+猜	猜	guess	guess
+靖	靖	pacify	pacify
+債	债	debt	debt
+蹟	迹	remains	
+牲	牲	domestic animal	domestic animal
+隆	隆	impressive	impressive
+腥	腥	fishy smell	fishy smell
+猩	猩	orangutan	orangutan
+醒	醒	awaken	awaken
+瞎	瞎	visionless	visionless
+轄	辖	administer	administer
+契	契	contract	contract
+拜	拜	adore	adore
+潔	洁	spotless	spotless
+蜂	蜂	bee	bee
+峰	峰	peak	peak
+鋒	锋	cutting edge	cutting edge
+逢	逢	chance upon	chance upon
+蓬	蓬	disheveled	disheveled
+縫	缝	sew	sew
+奏	奏	play an instrument	play an instrument
+湊	凑	gather together	gather together
+秦	秦	Qin	Qin
+蠢	蠢	foolish	foolish
+捧	捧	carry in both hands	carry in both hands
+嘆	叹	sigh	sigh
+艱	艰	arduous	arduous
+灘	滩	beach	beach
+畢	毕	complete	complete
+唾	唾	saliva	saliva
+吟	吟	recite	recite
+貪	贪	greedy	greedy
+琴	琴	stringed instrument	stringed instrument
+栗	栗	chestnut	chestnut
+潭	潭	deep pool	deep pool
+遷	迁	resituate	resituate
+覆	覆	overturn	overturn
+飄	飘	flutter	flutter
+闆	板	boss	
+闊	阔	broad	broad
+閉	闭	close	close
+潤	润	moisten	moisten
+閣	阁	cabinet	cabinet
+擱	搁	put aside	put aside
+闡	阐	explicate	explicate
+閱	阅	peruse	peruse
+悶	闷	stuffy	stuffy
+閃	闪	flash	flash
+閥	阀	valve	valve
+閘	闸	floodgate	floodgate
+闢	辟	repudiate	repudiate
+蒼	苍	ash-colored	ash-colored
+搶	抢	rob	rob
+菲	菲	humble	humble
+輩	辈	lifetime	lifetime
+悲	悲	sad	sad
+徘	徘	irresolute	irresolute
+殲	歼	annihilate	annihilate
+籤	签	bamboo slip	
+纖	纤	fiber	fiber
+喉	喉	gullet	gullet
+猴	猴	monkey	monkey
+韓	韩	Korea	Korea
+違	违	disobey	disobey
+緯	纬	latitude	latitude
+竿	竿	pole	pole
+罕	罕	rarely	rarely
+軒	轩	veranda	veranda
+肝	肝	liver	liver
+刊	刊	publication	publication
+汗	汗	sweat	sweat
+桿	杆	shaft	shaft
+悍	悍	bold	bold
+徐	徐	slowly	slowly
+敘	叙	recount	recount
+塗	涂	smear	smear
+斜	斜	slanting	slanting
+喇	喇	flared horn	flared horn
+嗽	嗽	hack	hack
+賴	赖	rely on	rely on
+懶	懒	lazy	lazy
+嫩	嫩	tender	tender
+煉	炼	refine	refine
+鍊	链	chain	chain
+腫	肿	swollen	swollen
+董	董	director	director
+鍾	锺	draw together	draw together
+痰	痰	phlegm	phlegm
+症	症	disease	disease
+疼	疼	hurt	hurt
+癒	愈	get well	
+疫	疫	epidemic	epidemic
+癌	癌	cancer	cancer
+疲	疲	fatigued	fatigued
+疾	疾	rapid	rapid
+痴	痴	idiotic	idiotic
+瘤	瘤	tumor	tumor
+痕	痕	trace	trace
+癢	痒	itch	itch
+癱	瘫	paralysis	paralysis
+瘡	疮	sore	sore
+穩	稳	stable	stable
+隱	隐	hidden	hidden
+癮	瘾	addiction	addiction
+巨	巨	gigantic	gigantic
+渠	渠	canal	canal
+拒	拒	refuse	refuse
+矩	矩	square	square
+距	距	distance	distance
+框	框	rectangular frame	rectangular frame
+筐	筐	rectangular basket	rectangular basket
+砸	砸	smash	smash
+匯	汇	converge	converge
+匠	匠	artisan	artisan
+匪	匪	bandit	bandit
+匿	匿	keep out of sight	keep out of sight
+兜	兜	pocket	pocket
+嘔	呕	vomit	vomit
+毆	殴	hit	hit
+軀	躯	human body	human body
+昂	昂	hold one's head high	hold one's head high
+抑	抑	curb	curb
+葵	葵	large-flowered plants	large-flowered plants
+僚	僚	coworker	coworker
+遼	辽	far away	far away
+瞭	了	comprehend	
+療	疗	cure	cure
+瞪	瞪	glare	glare
+凳	凳	bench	bench
+澄	澄	transparent	transparent
+潑	泼	splash	splash
+撥	拨	allocate	allocate
+杉	杉	fir tree	fir tree
+彬	彬	well-mannered	well-mannered
+衫	衫	shirt	shirt
+彰	彰	manifest	manifest
+膨	膨	puffy	puffy
+趁	趁	take advantage of	take advantage of
+診	诊	diagnose	diagnose
+滲	渗	seep	seep
+膠	胶	gum	gum
+謬	谬	wrong	wrong
+寥	寥	deserted	deserted
+斑	斑	speck	speck
+紋	纹	design	design
+鏟	铲	small shovel	small shovel
+薩	萨	Samoa	Samoa
+脊	脊	backbone	backbone
+函	函	letter	letter
+涵	涵	culvert	culvert
+映	映	reflect	reflect
+殃	殃	calamity	calamity
+肥	肥	plump	plump
+爬	爬	crawl	crawl
+疤	疤	scar	scar
+艷	艳	gorgeous	gorgeous
+甜	甜	sugary	sugary
+鉗	钳	pliers	pliers
+媒	媒	matchmaker	matchmaker
+煤	煤	coal	coal
+謀	谋	scheme	scheme
+棋	棋	chess	chess
+欺	欺	dupe	dupe
+旗	旗	flag	flag
+嘶	嘶	hoarse	hoarse
+撕	撕	rip	rip
+堪	堪	tolerate	tolerate
+勘	勘	survey	survey
+遣	遣	dispatch	dispatch
+譴	谴	censure	censure
+囊	囊	sack	sack
+潰	溃	burst	burst
+櫃	柜	cupboard	cupboard
+宜	宜	fitting	fitting
+誼	谊	friendship	friendship
+租	租	rent	rent
+粗	粗	coarse	coarse
+阻	阻	block	block
+疊	叠	heap	heap
+壘	垒	baseball base	baseball base
+鋤	锄	hoe	hoe
+叢	丛	thicket	thicket
+樸	朴	plain	plain
+撲	扑	pounce on	pounce on
+僕	仆	servant	servant
+譜	谱	musical score	musical score
+哄	哄	fool	fool
+洪	洪	deluge	deluge
+烘	烘	warm by a fire	warm by a fire
+恭	恭	respectful	respectful
+拱	拱	arch	arch
+暴	暴	violent	violent
+瀑	瀑	waterfall	waterfall
+爆	爆	explode	explode
+殿	殿	ceremonial hall	ceremonial hall
+戴	戴	have on	have on
+翼	翼	wings	wings
+糞	粪	dung	dung
+撰	撰	compose	compose
+啞	哑	mute	mute
+壺	壶	kettle	kettle
+蟹	蟹	crab	crab
+懈	懈	lax	lax
+購	购	purchase	purchase
+溝	沟	ditch	ditch
+鑰	钥	key	key
+籲	吁	plead	plead
+冊	册	Vol.	Vol.
+刪	删	delete	delete
+柵	栅	palisade	palisade
+珊	珊	coral	coral
+遍	遍	everywhere	everywhere
+偏	偏	partial	partial
+淪	沦	sink	sink
+倫	伦	human relationships	human relationships
+抵	抵	resist	resist
+氓	氓	hoodlum	hoodlum
+哺	哺	breastfeed	breastfeed
+鋪	铺	shop	shop
+輔	辅	supplement	supplement
+捕	捕	capture	capture
+敷	敷	apply	apply
+浦	浦	river mouth	river mouth
+蒲	蒲	cattail	cattail
+薄	薄	slight	slight
+簿	簿	register	register
+傅	傅	mentor	mentor
+縛	缚	bind fast	bind fast
+郭	郭	outer walls	outer walls
+廓	廓	limitless	limitless
+鄙	鄙	despicable	despicable
+耶	耶	Jerusalem	Jerusalem
+爺	爷	grandfather	grandfather
+郊	郊	outskirts	outskirts
+邦	邦	nation	nation
+綁	绑	truss	truss
+郵	邮	post	post
+鄧	邓	Deng	Deng
+擲	掷	hurl	hurl
+廊	廊	hallway	hallway
+擁	拥	hug	hug
+緞	缎	satin	satin
+刁	刁	wily	wily
+叼	叼	hold in the mouth	hold in the mouth
+殷	殷	ardent	ardent
+壽	寿	longevity	longevity
+濤	涛	large waves	large waves
+鑄	铸	cast	cast
+禱	祷	pray	pray
+籌	筹	make arrangements	make arrangements
+伺	伺	attend to	attend to
+飼	饲	rear	rear
+舶	舶	liner	liner
+航	航	navigate	navigate
+艇	艇	light boat	light boat
+艦	舰	warship	warship
+艙	舱	ship's cabin	ship's cabin
+沿	沿	along	along
+鉛	铅	lead	lead
+狐	狐	fox	fox
+瓣	瓣	petal	petal
+溢	溢	brim over	brim over
+暇	暇	spare time	spare time
+霞	霞	red sky	red sky
+氧	氧	oxygen	oxygen
+氛	氛	atmosphere	atmosphere
+氯	氯	chlorine	chlorine
+氫	氢	hydrogen	hydrogen
+鞏	巩	strengthen	strengthen
+霸	霸	tyrant	tyrant
+壩	坝	dam	dam
+勒	勒	tighten	tighten
+鞠	鞠	bow respectfully	bow respectfully
+靴	靴	boots	boots
+鞭	鞭	whip	whip
+芽	芽	sprout	sprout
+訝	讶	surprised	surprised
+撐	撑	prop up	prop up
+雅	雅	polished	polished
+邪	邪	wicked	wicked
+奧	奥	of great depth	of great depth
+澳	澳	deep inlet	deep inlet
+懊	懊	remorseful	remorseful
+悉	悉	be informed	be informed
+竊	窃	pilfer	pilfer
+審	审	painstaking	painstaking
+嬸	婶	auntie	auntie
+毯	毯	blanket	blanket
+毫	毫	milli-	milli-
+耗	耗	consume	consume
+耕	耕	till	till
+籍	籍	records	records
+藉	藉	excuse	
+托	托	hold up	
+畏	畏	be afraid of	be afraid of
+喂	喂	Hello...	Hello...
+脹	胀	bloated	bloated
+帳	帐	tent	tent
+肆	肆	IV	IV
+鬍	胡	beard	
+鬆	松	loose	
+鵬	鹏	roc	roc
+鳴	鸣	twitter	twitter
+鴻	鸿	swan	swan
+鴿	鸽	pigeon	pigeon
+鶴	鹤	crane	crane
+鶯	莺	oriole	oriole
+鵲	鹊	magpie	magpie
+鷗	鸥	gull	gull
+鴉	鸦	raven	raven
+鵝	鹅	goose	goose
+烏	乌	crow	crow
+嗚	呜	zoom-zoom	zoom-zoom
+搗	捣	pound with a pestle	pound with a pestle
+寓	寓	residence	residence
+愚	愚	pea-brained	pea-brained
+偶	偶	by chance	by chance
+厲	厉	stern	stern
+勵	励	encourage	encourage
+鋼	钢	steel	steel
+崗	岗	hillock	hillock
+綱	纲	guidelines	guidelines
+逆	逆	go against	go against
+溯	溯	go upstream	go upstream
+塑	塑	plastic	plastic
+缸	缸	vat	vat
+罐	罐	jar	jar
+鬱	郁	depressed	depressed
+鹽	盐	salt	salt
+鹹	咸	salty	salty
+掏	掏	draw out	draw out
+淘	淘	wash in a container	wash in a container
+陶	陶	pottery	pottery
+謠	谣	rumor	rumor
+冤	冤	injustice	injustice
+饞	馋	gluttonous	gluttonous
+挽	挽	tow	tow
+勉	勉	strive	strive
+橡	橡	rubber tree	rubber tree
+豫	豫	pleased	pleased
+騰	腾	take flight	take flight
+碼	码	numeral	numeral
+馴	驯	tame	tame
+瑪	玛	Mary	Matteo
+駐	驻	be stationed	be stationed
+驕	骄	arrogant	arrogant
+馳	驰	gallop	gallop
+螞	蚂	leech-hopper	leech-hopper
+憑	凭	proof	proof
+駛	驶	maneuver	maneuver
+騷	骚	disturb	disturb
+駕	驾	drive	drive
+騾	骡	mule	mule
+駁	驳	refute	refute
+闖	闯	rush	rush
+驅	驱	drive away	drive away
+騙	骗	cheat	cheat
+驟	骤	trot	trot
+遞	递	hand over	hand over
+虜	虏	take captive	take captive
+虐	虐	despotic	despotic
+膚	肤	skin	skin
+盧	卢	Louvre	Louvre
+爐	炉	stove	stove
+蘆	芦	reeds	reeds
+驢	驴	donkey	donkey
+虧	亏	loss	loss
+污	污	filthy	filthy
+愕	愕	stunned	stunned
+誇	夸	brag	brag
+垮	垮	collapse	collapse
+跨	跨	straddle	straddle
+獻	献	donate	donate
+融	融	melt	melt
+隔	隔	separate	separate
+濾	滤	filter	filter
+慶	庆	celebrate	celebrate
+薦	荐	recommend	recommend
+傑	杰	outstanding	outstanding
+瞬	瞬	instant	instant
+麟	麟	Chinese unicorn	Chinese unicorn
+憐	怜	pity	pity
+鄰	邻	neighbor	neighbor
+曬	晒	bask	bask
+灑	洒	spill	spill
+罷	罢	cease	cease
+擺	摆	put in order	put in order
+唇	唇	lips	lips
+辱	辱	disgrace	disgrace
+震	震	quake	quake
+振	振	vibrate	vibrate
+魄	魄	vigor	vigor
+槐	槐	scholar tree	scholar tree
+魅	魅	enchant	enchant
+瑰	瑰	marvelous	marvelous
+魂	魂	soul	soul
+愧	愧	ashamed	ashamed
+魁	魁	leader	leader
+醜	丑	ugly	
+壟	垄	raised path between fields	raised path between fields
+寵	宠	dote on	dote on
+龐	庞	huge	huge
+攏	拢	draw near	draw near
+聾	聋	deaf	deaf
+籠	笼	cage	cage
+插	插	insert	insert
+毀	毁	ruin	ruin
+舅	舅	mother's brother	mother's brother
+樁	桩	stake	stake
+鑿	凿	bore a hole	bore a hole
+鼠	鼠	mouse	mouse
+竄	窜	scurry	scurry
+臘	腊	dried meat	dried meat
+蠟	蜡	wax	wax
+獵	猎	hunt	hunt
+艘	艘	vessels	vessels
+嫂	嫂	elder brother's wife	elder brother's wife
+瘦	瘦	emaciated	emaciated
+搜	搜	search	search
+稻	稻	unhulled rice	unhulled rice
+蹈	蹈	tread	tread
+滔	滔	surging	surging
+陷	陷	get stuck	get stuck
+焰	焰	flame	flame
+餡	馅	filling	filling
+輛	辆	vehicles	vehicles
+瞞	瞒	dissemble	dissemble
+爽	爽	frank	frank
+綴	缀	embellish	embellish
+碰	碰	bump	bump
+挪	挪	transfer	transfer
+誣	诬	charge falsely	charge falsely
+譽	誉	reputation	reputation
+嶼	屿	islet	islet
+傻	傻	thick-headed	thick-headed
+磚	砖	brick	brick
+惠	惠	favor	favor
+穗	穗	ear of grain	ear of grain
+曠	旷	expansive	expansive
+礦	矿	mine	mine
+擴	扩	enlarge	enlarge
+聰	聪	smart	smart
+蔥	葱	onion	onion
+膽	胆	gall bladder	gall bladder
+瞻	瞻	look upward	look upward
+摟	搂	cuddle	cuddle
+屢	屡	time and again	time and again
+濁	浊	turbid	turbid
+燭	烛	candle	candle
+觸	触	touch	touch
+囑	嘱	admonish	admonish
+欄	栏	railing	railing
+攔	拦	impede	impede
+蹤	踪	tracks	tracks
+聳	耸	shrug	shrug
+劑	剂	pharmaceutical	pharmaceutical
+齋	斋	abstain from food	abstain from food
+擠	挤	squeeze	squeeze
+鈕	钮	push button	push button
+羞	羞	shy	shy
+紐	纽	New York	New York
+脾	脾	spleen	spleen
+啤	啤	beer	beer
+碑	碑	stele	stele
+赫	赫	illustrious	illustrious
+嚇	吓	terrify	terrify
+奕	奕	radiating vitality	radiating vitality
+跡	迹	indication	indication
+辭	辞	phraseology	phraseology
+龜	龟	tortoise	tortoise
+繩	绳	rope	rope
+蠅	蝇	flies	flies
+蝴	蝴	butterfly (front end)	butterfly (front end)
+蝶	蝶	butterfly (back end)	butterfly (back end)
+蜘	蜘	spider (front end)	spider (front end)
+蛛	蛛	spider (back end)	spider (back end)
+駱	骆	camel (front end)	camel (front end)
+駝	驼	camel (back end)	camel (back end)
+蜻	蜻	dragonfly (front end)	dragonfly (front end)
+蜓	蜓	dragonfly (back end)	dragonfly (back end)
+鳳	凤	male phoenix	male phoenix
+凰	凰	female phoenix	female phoenix
+橄	橄	olive (A)	olive (A)
+欖	榄	olive (B)	olive (B)
+玻	玻	glass (front side)	glass (front side)
+璃	璃	glass (back side)	glass (back side)
+咖	咖	coffee (first drop)	coffee (first drop)
+啡	啡	coffee (last drop)	coffee (last drop)
+葡	葡	grapes (A)	grapes (A)
+萄	萄	grapes (B)	grapes (B)
+吩	吩	in-	in-
+咐	咐	-struct	-struct
+乒	乒	ping	ping
+乓	乓	pong	pong
+崔	崔	Cui	Cui
+曹	曹	Cao	Cao
+劉	刘	Liu	Liu
+潘	潘	Pan	Pan
+梁	梁	Liang	
+沈	沈	Shen	Shen
+鄭	郑	Zheng	Zheng
+譚	谭	Tan	Tan
+趙	赵	Zhao	Zhao
+姚	姚	Yao-2	Yao-2
+魯	鲁	Lu	Lu
+姜	姜	Jiang-2	
+范	范	Fan	
+薛	薛	Xue	Xue
+涂	涂	Tu	
+彭	彭	Peng	Peng
+郁	郁	Yu-2	
+馮	冯	Feng	Feng
+魏	魏	Wei	Wei
+岳	岳	Yue	Yue
+彿	佛	as though	
+莉	莉	jasmine	jasmine
+湘	湘	Hunan Province	Hunan Province
+甸	甸	outlying areas	outlying areas
+滄	沧	dark blue	dark blue
+穆	穆	reverent	reverent
+娜	娜	na	na
+瓊	琼	fine jade	fine jade
+琳	琳	gem	gem
+鈞	钧	30 catties	30 catties
+喲	哟	Oh!	Oh!
+砲	炮	cannon	cannon
+蒐	搜	search for	
+芙	芙	hibiscus (A)	hibiscus (A)
+蓉	蓉	cottonrose hibiscus (B)	cottonrose hibiscus (B)
+卒	卒	foot soldier	foot soldier
+堇	堇	violet	violet
+昴	昴	The Pleiades	The Pleiades
+瘧	疟	malaria	malaria
+癖	癖	mannerism	mannerism
+肛	肛	anus	anus
+茵	茵	mattress	mattress
+笑	笑	laugh	laugh
+莊	庄	hamlet	hamlet
+動	动	move	move
+島	岛	island	island
+龍	龙	dragon	dragon
+淚	泪	tears	tears
+碗	碗	bowl	bowl
+煉	炼	refine	refine
+壽	寿	longevity	longevity
+籠	笼	cage	cage
+咾	咾		a noise
+矗	矗	stand straight	stand straight
+灶	灶	cooking stove	cooking stove
+熏	熏	treat with smoke	treat with smoke
+炯	炯	shining	shining
+晌	晌	part of the day	part of the day
+淌	淌	trickle	trickle
+苟	苟	careless	careless
+瑣	琐	trivial	trivial
+胳	胳	upper limb	upper limb
+炕	炕	brick-heated bed	brick-heated bed
+墩	墩	mound	mound
+襖	袄	short Chinese-style coat	short Chinese-style coat
+黯	黯	tenebrous	tenebrous
+淤	淤	silt	silt
+雌	雌	feminine	feminine
+傻	愣	dumbfounded	dumbfounded
+捎	捎	bring to	bring to
+捏	拧	tweak	tweak
+搓	搓	massage	massage
+梗	梗	stalk	stalk
+怡	怡	cheerful	cheerful
+峭	峭	precipitous	precipitous
+嗡	嗡	buzzing	buzzing
+熔	熔	fuse	fuse
+裳	裳	raiment	raiment
+蔓	蔓	creeping vine	creeping vine
+粱	粱	fine millet	fine millet
+憋	憋	suppress	suppress
+屜	屉	drawer	drawer
+凜	凛	chilly	chilly
+浙	浙	Zhejian Province	Zhejian Province
+挎	挎	carry on the arm	carry on the arm
+姥	姥	maternal grandmother	maternal grandmother
+陝	陕	Shaanxi Province	Shaanxi Province
+棱	棱	edge	edge
+繃	绷	stretch taut	stretch taut
+綻	绽	split at the seams	split at the seams
+縷	缕	in detail	in detail
+絹	绢	tough silk	tough silk
+扼	扼	clutch	clutch
+俊	俊	handsome	handsome
+櫥	橱	closet	closet
+盔	盔	helmet	helmet
+磕	磕	collide with	collide with
+鑲	镶	inlay	inlay
+疇	畴	farmland	farmland
+篷	篷	awning	awning
+豁	豁	breach	breach
+澗	涧	ravine	ravine
+秧	秧	youngling	youngling
+嵌	嵌	set	set
+賬	账		accounts
+鈣	钙	calcium	calcium
+舵	舵	rudder	rudder
+隘	隘	pass	pass
+氨	氨	ammonia	ammonia
+藉	藉	in disorder	in disorder
+唬	唬	bluff	bluff
+磷	磷	phosphorous	phosphorous
+朧	胧	hazy	hazy
+蘑	蘑	mushroom (cap)	mushroom (cap)
+菇	菇	mushroom (stem)	mushroom (stem)
+著	著		author
+皿	皿		dish
+豸	豸		feline beast
+奐	奂		first-class
+鷺	鹭		heron
+嗯	嗯		huh
+羔	羔		lamb
+葷	荤		meat diet
+咪	咪		meow
+臼	臼		mortar
+哦	哦		oh!
+呦	呦		oh! (surprised)
+橙	橙		orange
+俐	俐		sharp intelligence
+膊	膊		shoulder to arm
+閨	闺		small door
+缶	缶		tin can
+么	幺		uno
+妳	妳		you girl
