@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "dot-into": "^1.0.2",
-    "pinyin-utils": "^1.0.4",
+    "pinyin-utils": "git+https://git@github.com/agj/pinyin-utils.git#dev",
     "ramda": "^0.25.0",
     "wanakana": "^2.3.4"
   }
