@@ -43,7 +43,7 @@ const toEntry = o =>
 		meaning:       o['kDefinition'],
 		japaneseKun:   R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
 		japaneseOn:    R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
-		soundFile:     '[sound:pffy-mp3-chinese-pinyin-sound-' + pinyinToFile(o['kMandarin']) + '.mp3]',
+		soundFile:     '[sound:agj-pinyin-' + pinyinToFile(o['kMandarin']) + '.mp3]',
 		frequencyRank: o['frequency'],
 	});
 const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches) ? R.merge(entry, patches[entry.traditional]) : entry);
