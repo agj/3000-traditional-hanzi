@@ -948,7 +948,7 @@
 1074	遇		yù	encounter	meet, come across, encounter	あう もてなす たまたま	グウ ク	[sound:agj-pinyin-yu4.mp3]	737
 1075	恐		kǒng	fear	fear; fearful, apprehensive	おそれる おそろしい おそれ	キョウ	[sound:agj-pinyin-kong3.mp3]	846
 1076	奏		zòu	play an instrument	memorialize emperor; report	かなでる すすめる	ソウ	[sound:agj-pinyin-zou4.mp3]	922
-1078	著	着	zhe		manifest; (Cant.) to wear	あらわす いちじるし つく	チョ チャク ジャク	[sound:agj-pinyin-zhe1.mp3]	177
+1078	著	着	zhe	-ing	manifest; (Cant.) to wear	あらわす いちじるし つく	チョ チャク ジャク	[sound:agj-pinyin-zhe1.mp3]	177
 1079	排		pái	row	row, rank, line	おしひらく つらねる	ハイ	[sound:agj-pinyin-pai2.mp3]	547
 1080	斬	斩	zhǎn	hew	cut, chop, sever; behead	きる	ザン サン	[sound:agj-pinyin-zhan3.mp3]	2336
 1081	簡	简	jiǎn	simple	simple, terse, succinct; letter	ふだ えらぶ	カン	[sound:agj-pinyin-jian3.mp3]	639
@@ -1406,7 +1406,7 @@
 1591	植		zhí	plant	plant, trees, plants; grow	うえる たてる	ショク チ	[sound:agj-pinyin-zhi2.mp3]	1715
 1592	哲		zhé	philosopher	wise, sagacious; wise man, sage	あきらか さとい	テツ	[sound:agj-pinyin-zhe2.mp3]	1245
 1593	窮	穷	qióng	poor	poor, destitute, impoverished	きわめる きわまる	キュウ	[sound:agj-pinyin-qiong2.mp3]	1656
-1594	俊		jùn	handsome	talented, capable; handsome	すぐれる	シュン	[sound:agj-pinyin-jun4.mp3]	834
+1594	俊		jùn	pretty	talented, capable; handsome	すぐれる	シュン	[sound:agj-pinyin-jun4.mp3]	834
 1595	埃		āi	fine dust	fine dust, dirt	ちり ほこり	アイ	[sound:agj-pinyin-ai1.mp3]	2241
 1596	偉	伟	wěi	great	great, robust; extraordinary	えらい	イ	[sound:agj-pinyin-wei3.mp3]	958
 1597	橋	桥	qiáo	bridge	bridge; beam, crosspiece	はし	キョウ コウ	[sound:agj-pinyin-qiao2.mp3]	1213
@@ -1752,7 +1752,7 @@
 1983	撞		zhuàng	bump into	knock against, bump into, collide	つく	シュ トウ ドウ	[sound:agj-pinyin-zhuang4.mp3]	1426
 1984	脅	胁	xié	threaten	ribs; armpits; flank; threaten	おびゃかす おどす おどかす	キョウ コウ キュウ	[sound:agj-pinyin-xie2.mp3]	2166
 1986	蛋		dàn	egg	eggs; term of abuse	たまご	タン	[sound:agj-pinyin-dan4.mp3]	1026
-1987	唬		hǔ	bluff	to intimidate; to scare		カ ケ コウ ゴウ キョウ カク キャク	[sound:agj-pinyin-hu3.mp3]	1830
+1987	唬		hǔ		to intimidate; to scare		カ ケ コウ ゴウ キョウ カク キャク	[sound:agj-pinyin-hu3.mp3]	1830
 1988	礦	矿	kuàng	mine	mine; mineral, ore	あらがね	コウ	[sound:agj-pinyin-kuang4.mp3]	2654
 1989	騰	腾	téng	take flight	fly; gallop; run; prance; rise	のぼる あがる	トウ	[sound:agj-pinyin-teng2.mp3]	2084
 1990	插		chā	insert	insert, stick into; plant	さす にない とる	ソウ	[sound:agj-pinyin-cha1.mp3]	1093
@@ -2216,7 +2216,7 @@
 2526	灘	滩	tān	beach	bank, a sandbar, shoal; rapids	せ なだ	ダン カン	[sound:agj-pinyin-tan1.mp3]	2647
 2527	鈔	钞	chāo	paper money	paper money, bank notes; copy	はさみとる かすめる うつす	ショウ ビョウ	[sound:agj-pinyin-chao1.mp3]	2942
 2529	猩		xīng	orangutan	species of orangutan	あかいろ	セイ ショウ	[sound:agj-pinyin-xing1.mp3]	2366
-2530	傻		shǎ	dumbfounded	foolish, silly, stupid; an imbecile		サ	[sound:agj-pinyin-sha3.mp3]	1340
+2530	傻		shǎ	thick-headed	foolish, silly, stupid; an imbecile		サ	[sound:agj-pinyin-sha3.mp3]	1340
 2535	薪		xīn	fuel	fuel, firewood; salary	たきぎ	シン	[sound:agj-pinyin-xin1.mp3]	1708
 2536	碑		bēi	stele	stone tablet; gravestone	たていし いしぶみ	ヒ	[sound:agj-pinyin-bei1.mp3]	2652
 2537	挽		wǎn	tow	pull; pull back, draw back	ひく	バン	[sound:agj-pinyin-wan3.mp3]	2519
@@ -2479,7 +2479,7 @@
 2880	綽	绰	chuò	ample	graceful, delicate; spacious	ゆるやか しなやか	シャク	[sound:agj-pinyin-chuo4.mp3]	2726
 2881	蹈		dǎo	tread	stamp feet; dance	ふむ	トウ ドウ	[sound:agj-pinyin-dao3.mp3]	2398
 2885	啡		fēi	coffee (last drop)	morphine; coffee	いびき つば	ハイ ヘ ヒ	[sound:agj-pinyin-fei1.mp3]	1812
-2886	捏		niē	tweak	pick with fingers; knead; mold	こねる	デツ ネチ	[sound:agj-pinyin-nie1.mp3]	2855
+2886	捏		niē	pinch	pick with fingers; knead; mold	こねる	デツ ネチ	[sound:agj-pinyin-nie1.mp3]	2855
 2888	詭	诡	guǐ	deceitful	deceive, cheat, defraud; sly	いつわる	キ	[sound:agj-pinyin-gui3.mp3]	2339
 2889	竅	窍	qiào		hole, opening, aperture	あな	キョウ	[sound:agj-pinyin-qiao4.mp3]	2876
 2890	奢		shē	extravagant	extravagant, wasteful; exaggerate	おごる	シャ	[sound:agj-pinyin-she1.mp3]	2977
@@ -2653,7 +2653,7 @@
 3285	汰		tài	get rid of	excessive; scour, wash out	よなげる にごる おごる	タ タイ	[sound:agj-pinyin-tai4.mp3]	2615
 3294	拷		kǎo	flog	torture and interrogate; hit	うつ	ゴウ コウ	[sound:agj-pinyin-kao3.mp3]	2111
 3304	疤		bā	scar	scar, cicatrix; birthmark	やまい	ハ ヘ	[sound:agj-pinyin-ba1.mp3]	2898
-3306	綻	绽	zhàn	split at the seams	ripped seam, rend, crack	ほころびる	タン デン	[sound:agj-pinyin-zhan4.mp3]	2926
+3306	綻	绽	zhàn		ripped seam, rend, crack	ほころびる	タン デン	[sound:agj-pinyin-zhan4.mp3]	2926
 3307	錐	锥	zhuī		gimlet, awl, drill, auger; bore	きり	スイ	[sound:agj-pinyin-zhui1.mp3]	2957
 3308	鑼	锣	luó	gong	gong	どら	ラ	[sound:agj-pinyin-luo2.mp3]	2576
 3309	蚊		wén	mosquito	mosquito; gnat	か	ブン	[sound:agj-pinyin-wen2.mp3]	2345
