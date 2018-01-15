@@ -6,31 +6,10 @@ const xre = require('xregexp');
 require('dot-into').install();
 
 
-// const toEntry = o =>
-// 	({
-// 		// studyOrder:    o['order'],
-// 		// traditional:   o['character'],
-// 		// simplified:    R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
-// 		// pinyin:        o['kMandarin'],
-// 		// heisigKeyword: o['heisigKeyword'],
-// 		// meaning:       o['kDefinition'],
-// 		// japaneseKun:   R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
-// 		// japaneseOn:    R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
-// 		// soundFile:     '[sound:agj-pinyin-' + pinyinToFile(o['kMandarin']) + '.mp3]',
-// 		// frequencyRank: o['frequency'],
-// 	});
-
-const notEmptyLine = R.pipe(
-	R.trim,
-	line => line.length > 0 && line[0] !== '#' && !/^\/\*/.test(line)
-);
+const U = require('./utilities');
 const unicodeToChar = code => String.fromCodePoint(parseInt(code.substring(2), 16));
-const getFile = filename =>
-	fs.readFileSync(filename, 'utf-8')
-	.split('\n')
-	.filter(notEmptyLine);
 const getUnihanFile = filename =>
-	getFile(filename)
+	U.getFile(filename)
 	.map(R.split('\t'))
 	.reduce((obj, [code, key, value]) => {
 		const char = unicodeToChar(code);
@@ -39,7 +18,7 @@ const getUnihanFile = filename =>
 		return obj;
 	}, {});
 const getTocflFile = level =>
-	getFile(`data/tocfl/vocabulary-${ level }.txt`)
+	U.getFile(`data/tocfl/vocabulary-${ level }.txt`)
 	.map(R.replace(xre('\\P{Han}', 'ug'), ''))
 	.map(R.split(''))
 	.into(R.flatten)
@@ -48,7 +27,7 @@ const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches)
 
 
 const studyOrder =
-	getFile('data/DNWorderT.txt')
+	U.getFile('data/DNWorderT.txt')
 	.map(R.split(','))
 	.into(R.fromPairs)
 	.into(R.map(order => ({ studyOrder: parseInt(order) })));
@@ -66,14 +45,14 @@ const variants =
 		simplified: R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
 	})));
 const frequencies =
-	getFile('data/frequency.txt')
+	U.getFile('data/frequency.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [char, freq, ..._], index) => {
 		obj[char] = { frequencyRank: index + 1, frequencyRaw: parseInt(freq) };
 		return obj;
 	}, {});
 const heisig =
-	getFile('data/heisig-traditional.txt')
+	U.getFile('data/heisig-traditional.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [idx, chr, kwd]) => {
 		obj[chr] = { heisigKeyword: kwd, heisigIndex: idx };
@@ -86,7 +65,7 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7]
 		return r;
 	}, { all: [] });
 const patches =
-	getFile('data/meaning-patches.txt')
+	U.getFile('data/meaning-patches.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [char, meaning]) => {
 		obj[char] = { meaning };
@@ -95,13 +74,13 @@ const patches =
 
 
 module.exports = {
-	characters: R.keys(studyOrder),
 	studyOrder,
 	readings,
 	variants,
 	frequencies,
 	heisig,
 	tocfl,
+	network: require('./network'),
 	expand: chars =>
 		chars
 		.into(R.indexBy(R.identity))

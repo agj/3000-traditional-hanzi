@@ -4,7 +4,7 @@ const fs = require('fs');
 const pinyin = require('pinyin-utils');
 require('dot-into').install();
 
-const log = R.tap(console.log);
+const U = require('./src/utilities');
 const toStringEntry = o => [
 		o.studyOrder,
 		o.traditional,
@@ -29,7 +29,7 @@ const pinyinToFile = py => {
 
 const data = require('./src/data');
 const characters =
-	data.characters
+	R.keys(data.studyOrder)
 	.filter(char => R.has(char, data.readings) && R.has('pinyin', data.readings[char]) && (R.has(char, data.frequencies) && data.frequencies[char].frequencyRank <= 3000));
 
 data.expand(characters)

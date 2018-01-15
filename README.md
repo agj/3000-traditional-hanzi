@@ -10,6 +10,7 @@ Databases used:
 - [Network and Meaningful Learning of Chinese Characters][learnm]
 - Taiwan Steering Committee for the Test of Proficiency's [8000 Chinese Words][top]
 - Reviewing the Kanji Wiki [spreadsheet][heisig]
+- CJKV Ideograph Database's [ideographic description sequence data][cjkvi]
 
 [unihan]: https://www.unicode.org/charts/unihan.html
 [charfreq]: http://technology.chtsai.org/charfreq/
