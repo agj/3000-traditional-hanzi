@@ -26,11 +26,6 @@ const getTocflFile = level =>
 const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches) ? R.merge(entry, patches[entry.traditional]) : entry);
 
 
-const studyOrder =
-	U.getFile('data/DNWorderT.txt')
-	.map(R.split(','))
-	.into(R.fromPairs)
-	.into(R.map(order => ({ studyOrder: parseInt(order) })));
 const readings =
 	getUnihanFile('data/unihan/Unihan_Readings.txt')
 	.into(R.map(o => ({
@@ -64,6 +59,12 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7]
 		r.all = r.all.concat(r[level]);
 		return r;
 	}, { all: [] });
+const network = require('./network');
+const studyOrder = require('./study-order')(network, frequencies, heisig, tocfl);
+	// U.getFile('data/DNWorderT.txt')
+	// .map(R.split(','))
+	// .into(R.fromPairs)
+	// .into(R.map(order => ({ studyOrder: parseInt(order) })));
 const patches =
 	U.getFile('data/meaning-patches.txt')
 	.map(R.split('\t'))
@@ -80,13 +81,13 @@ module.exports = {
 	frequencies,
 	heisig,
 	tocfl,
-	network: require('./network'),
+	network,
 	expand: chars =>
 		chars
 		.into(R.indexBy(R.identity))
 		.into(R.map(char => R.mergeAll([
 				{ traditional: char },
-				studyOrder[char],
+				studyOrder.charactersAndComponents[char],
 				readings[char],
 				frequencies[char],
 				variants[char],

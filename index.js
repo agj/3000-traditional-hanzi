@@ -6,8 +6,8 @@ require('dot-into').install();
 
 const U = require('./src/utilities');
 const toStringEntry = o => [
-		o.studyOrder,
 		o.traditional,
+		o.studyOrder,
 		o.simplified,
 		o.pinyin,
 		o.heisigKeyword,
@@ -28,14 +28,12 @@ const pinyinToFile = py => {
 
 
 const data = require('./src/data');
-const characters =
-	R.keys(data.studyOrder)
-	.filter(char => R.has(char, data.readings) && R.has('pinyin', data.readings[char]) && (R.has(char, data.frequencies) && data.frequencies[char].frequencyRank <= 3000));
+const characters = R.keys(data.studyOrder.characters);
 
 data.expand(characters)
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {
-	fs.writeFileSync('output/out.txt', r.join('\n'), 'utf-8');
+	fs.writeFileSync('output/facts.tsv', r.join('\n'), 'utf-8');
 });
 
