@@ -19,8 +19,9 @@ const toStringEntry = o => [
 	].join('\t');
 const pinyinToFile = py => {
 	let r =
-		pinyin.markToNumber(py)
-		.match(/^(\S+)/)[1]
+		py
+		.replace(/^(\S+).*$/, '$1')
+		.into(pinyin.markToNumber)
 		.replace(/ü/g, 'uu');
 	if (/\D$/.test(r)) r = r + '1';
 	return r;
