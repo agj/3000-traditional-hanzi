@@ -61,10 +61,6 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7]
 	}, { all: [] });
 const network = require('./network');
 const studyOrder = require('./study-order')(network, frequencies, heisig, tocfl);
-	// U.getFile('data/DNWorderT.txt')
-	// .map(R.split(','))
-	// .into(R.fromPairs)
-	// .into(R.map(order => ({ studyOrder: parseInt(order) })));
 const patches =
 	U.getFile('data/meaning-patches.txt')
 	.map(R.split('\t'))
@@ -87,7 +83,7 @@ module.exports = {
 		.into(R.indexBy(R.identity))
 		.into(R.map(char => R.mergeAll([
 				{ traditional: char },
-				studyOrder.charactersAndComponents[char],
+				studyOrder.charactersResult[char],
 				readings[char],
 				frequencies[char],
 				variants[char],

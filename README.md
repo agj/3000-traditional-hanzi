@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 1.0.0_
+_Version 2.0.0_
 
 
 ## How the characters are selected
@@ -17,16 +17,16 @@ The list combines characters from the following sources:
 
 For a grand total of **3189** characters.
 
-Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic.
+Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence is not perfect, as it depends 100% on the thoroughness of the databases used, and it is not corrected by hand for common sense, but it is a pretty good result overall.
 
 
 ## The first 100 characters
 
-白勺的日是一不我月有人大十土在了口中至到  
-欠目八次貝資女要以丁可言這古固個小你會子  
-好為上木來學尤京就父交也二用能如寸寺時文  
-兄兌說又沒他看刀那門問生提卜下過青請們天  
-戶斤所夕多林麻麼之心相想旦得工出還雨電對
+白一勺的日止正是不戈我月又肉有人大十才土  
+在了口中刀至到八目二貝欠次資女要以丁可立  
+言這古固個小你曾會子好為上木來學乙尤京就  
+父交也用能如寸士寺時文兄水允兌說沒匕它他  
+手看那門問生提卜下過員圓青請們天戶斤所夕
 
 
 ## Sample entry
@@ -83,6 +83,18 @@ door; family, household
 ```
 
 For my particular case, including the Japanese _kun_ reading (と へ) helps me identify commonalities and differences between the Chinese and Japanese uses for the character, but this information can and probably should be elided by non-Japanese speakers.
+
+
+## Changelog
+
+### 2.0.0
+
+- Improved study order, by integrating data from `ids-analysis.txt`. Still not ideal in some cases, like as with the precedence of 肉 before 人.
+- Fixed some wrong sound filenames.
+
+### 1.0.0
+
+- First public release.
 
 
 ## Credits

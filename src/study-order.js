@@ -3,17 +3,21 @@ const R = require('ramda');
 
 
 const U = require('./utilities');
-const allNodes = R.curry((network, char) => {
-	if (char.decomposition.length === 0) return [char.character];
-	return char.decomposition.map(allNodes(network))
+const allNodes = R.curry((network, char) => _allNodes(network, [])(char));
+const _allNodes = (network, stack) => char =>
+	R.contains(char, stack) ? []
+	: network[char].decomposition.length === 0 ? [char]
+	: network[char].decomposition.map(_allNodes(network, R.append(char, stack)))
 		.into(R.flatten)
-		.into(R.prepend(char.character))
+		.into(R.prepend(char))
 		.into(R.uniq);
-});
 const foundIn = R.flip(R.contains);
 const componentOf = R.curry((network, a, b) => R.contains(a, allNodes(network, network[b])));
-const depth = R.curry((network, a) => _depth(network[a]));
-const _depth = a => !a || a.decomposition.length === 0 ? 0 : a.decomposition.map(_depth).reduce(R.max, 0) + 1;
+const depth = R.curry((network, char) => _depth(network, [])(char));
+const _depth = (network, stack) => char =>
+	R.contains(char, stack) ? 0
+	: !R.has(char, network) || network[char].decomposition.length === 0 ? 0
+	: network[char].decomposition.map(_depth(network, R.append(char, stack))).reduce(R.max, 0) + 1;
 const sortByDepth = depths => R.sort((a, b) => depths[a] < depths[b] ? -1 : depths[a] > depths[b] ? 1 : 0);
 const sortByFrequency = frequencies => R.sort((a, b) =>
 	!R.has(a, frequencies) && !R.has(b, frequencies) ? 0
@@ -45,7 +49,6 @@ module.exports = (network, frequenciesRaw, heisig, tocfl) => {
 		.into(R.uniq);
 	const htfComponentsRaw =
 		htfCharacters
-		.map(c => network[c])
 		.map(allNodes(network))
 		.into(R.flatten)
 		.concat(heisigComponents)
@@ -53,7 +56,7 @@ module.exports = (network, frequenciesRaw, heisig, tocfl) => {
 		.into(R.without(htfCharacters));
 	const htfComponentUseRaw =
 		htfCharacters.concat(htfComponentsRaw)
-		.map(char => network[char].decomposition.map(R.prop('character')))
+		.map(char => network[char].decomposition)
 		.into(R.flatten);
 	const htfComponentUse =
 		htfComponentsRaw
@@ -74,7 +77,7 @@ module.exports = (network, frequenciesRaw, heisig, tocfl) => {
 	const charactersAndComponentsSorted =
 		charactersAndComponents
 		.reduce((r, char) =>
-			allNodes(network, network[char])
+			allNodes(network, char)
 				.filter(foundIn(charactersAndComponents))
 				.into(R.without(r))
 				.into(sortByDepth(depths))
@@ -96,8 +99,17 @@ module.exports = (network, frequenciesRaw, heisig, tocfl) => {
 		})));
 
 	return {
-		charactersAndComponents: charactersResult,
-		characters: charactersResult.into(R.reject(R.prop('isComponent'))),
+		characters: charactersSorted,
+		components: componentsSorted,
+		charactersAndComponents: charactersAndComponentsSorted,
+
+		charactersResult: charactersResult,
+
+		heisigCharacters,
+		heisigComponents,
+		tocflCharacters,
+		htfCharacters,
+		htfComponents,
 	};
 
 };

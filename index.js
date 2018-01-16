@@ -29,9 +29,8 @@ const pinyinToFile = py => {
 
 
 const data = require('./src/data');
-const characters = R.keys(data.studyOrder.characters);
 
-data.expand(characters)
+data.expand(data.studyOrder.characters)
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {

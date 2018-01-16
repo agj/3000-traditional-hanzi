@@ -14,39 +14,39 @@ const notEmptyLine = R.pipe(
 	line => line.length > 0 && line[0] !== '#' && !/^\/\*/.test(line)
 );
 const stripNonHan = R.replace(xre('\\P{Han}', 'gA'), '');
-
-
-const network =
-	getFile('data/ids.txt')
+const getIdsFile = (filename, preprocess) =>
+	getFile(filename)
 	.map(R.split('\t'))
-	.reduce((obj, [_, char, dec]) => {
+	.map(preprocess)
+	.reduce((obj, [char, dec]) => {
+		const decomposition = dec.into(stripNonHan).split('').filter(c => c !== char);
+		if (R.has(char, obj)) obj[char].decomposition.concat(decomposition).into(R.uniq);
 		obj[char] = {
 			character: char,
-			decomposition: dec.into(stripNonHan).split('').into(R.uniq),
+			decomposition: decomposition.into(R.uniq),
 		};
 		return obj;
-	}, {})
-	.into(chars => chars.into(R.map(char => {
-		char.decomposition = char.decomposition.reduce((r, comp) => {
-			if (comp !== char.character && R.has(comp, chars)) r.push(chars[comp]);
-			return r;
-		}, []);
-		return char;
-	})));
-	// .into(chars => {
-	// 	chars.forEach(char => {
-	// 		char.level = getLevel(char);
-	// 	})
-	// 	return chars;
-	// });
-// const getLevel = char => char.decomposition.length === 0 ? 0 : 1 + getLevel();
+	}, {});
 
-// R.values(network)
-// // .filter(c => c.decomposition.length === 0)
-// .filter(c => c.decomposition.some(d => d.character === '門'))
-// .map(R.prop('character'))
-// .join('')
-// .into(log);
+
+const ids = getIdsFile('data/ids.txt', ([_, char, ...decs]) => [char, decs.reduce(R.concat, '')]);
+const wrongAnalysisCats = ['簡体', '或字'];
+const idsAnalysis = getIdsFile('data/ids-analysis.txt', ([_, char, dec, cat]) => [char, R.contains(cat, wrongAnalysisCats) ? '' : dec]);
+
+const network =
+	R.mergeWith((a, b) => ({ character: a.character,
+	                         decomposition: R.concat(a.decomposition, b.decomposition).into(R.uniq) }),
+	            ids, idsAnalysis)
+	.into(R.map(c => ({ character: c.character,
+	                    decomposition: c.decomposition.filter(c => R.has(c, ids) || R.has(c, idsAnalysis)) })));
+
+	// .into(chars => chars.into(R.map(char => {
+	// 	char.decomposition = char.decomposition.reduce((r, comp) => {
+	// 		if (comp !== char.character && R.has(comp, chars)) r.push(chars[comp]);
+	// 		return r;
+	// 	}, []);
+	// 	return char;
+	// })));
 
 
 module.exports = network;
