@@ -23,7 +23,6 @@ const getTocflFile = level =>
 	.map(R.split(''))
 	.into(R.flatten)
 	.into(R.uniq);
-const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches) ? R.merge(entry, patches[entry.traditional]) : entry);
 
 
 const readings =
@@ -59,8 +58,6 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7]
 		r.all = r.all.concat(r[level]);
 		return r;
 	}, { all: [] });
-const network = require('./network');
-const studyOrder = require('./study-order')(network, frequencies, heisig, tocfl);
 const patches =
 	U.getFile('data/patches.txt')
 	.map(R.split('\t'))
@@ -68,27 +65,30 @@ const patches =
 		obj[char] = { [key]: value };
 		return obj;
 	}, {});
+const conflateMap =
+	U.getFile('data/conflate.txt')
+	.map(R.split('\t'))
+	.reduce((obj, [char, conf]) => {
+		obj[char] = conf;
+		return obj;
+	}, {});
+const conflated =
+	R.values(conflateMap)
+	.into(R.uniq)
+	.into(R.indexBy(R.identity))
+	.into(R.map(char => ({
+		conflated: conflateMap.into(R.filter(R.equals(char))).into(R.keys),
+	})));
 
 
 module.exports = {
-	studyOrder,
 	readings,
 	variants,
 	frequencies,
 	heisig,
 	tocfl,
-	network,
-	expand: chars =>
-		chars
-		.into(R.indexBy(R.identity))
-		.into(R.map(char => R.mergeAll([
-				{ traditional: char },
-				studyOrder.charactersResult[char],
-				readings[char],
-				frequencies[char],
-				variants[char],
-				heisig[char],
-			])))
-		.into(R.map(patchEntry(patches))),
+	patches,
+	conflateMap,
+	conflated,
 };
 

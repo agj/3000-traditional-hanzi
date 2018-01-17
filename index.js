@@ -8,6 +8,7 @@ const U = require('./src/utilities');
 const toStringEntry = o => [
 		o.traditional,
 		o.studyOrder,
+		o.conflated ? o.conflated.join('') : '',
 		o.simplified,
 		o.pinyin,
 		o.heisigKeyword,
@@ -28,9 +29,9 @@ const pinyinToFile = py => {
 };
 
 
-const data = require('./src/data');
+const characters = require('./src/characters');
 
-data.expand(data.studyOrder.characters)
+characters
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {

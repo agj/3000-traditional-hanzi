@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 3.0.0_
+_Version 4.0.0_
 
 
 ## How the characters are selected
@@ -15,7 +15,7 @@ The list combines characters from the following sources:
 - All 2555 contemplated in all levels of the _Test of Chinese as a Foreign Language._
 - The 2000 most frequently used characters according to Chih-Tsao Hai's research.
 
-For a grand total of **3189** characters.
+For a grand total of **3186** characters.
 
 Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence is not perfect, as it depends 100% on the thoroughness of the databases used, and it is not corrected by hand for common sense, but it is a pretty good result overall.
 
@@ -34,6 +34,7 @@ Characters are ordered according to usage frequency, except whenever a character
 ```
 Traditional       戶
 Study order       114
+Variants          
 Simplified        户
 Pinyin            hù
 Heisig keyword    door
@@ -45,6 +46,8 @@ Frequency rank    1368
 ```
 
 While the data is mostly general, with nothing Anki-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files.][pinyin-audio]
+
+The 'Variants' column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
 
 
 ## Rationale

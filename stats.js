@@ -14,7 +14,7 @@ const { out, print } = (() => {
 })();
 
 
-const data = require('./src/data').studyOrder;
+const data = require('./src/selection');
 
 out("Heisig: " + data.heisigCharacters.length);
 out("TOCFL: " + data.tocflCharacters.length);

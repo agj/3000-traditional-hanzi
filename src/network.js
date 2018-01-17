@@ -40,13 +40,5 @@ const network =
 	.into(R.map(c => ({ character: c.character,
 	                    decomposition: c.decomposition.filter(c => R.has(c, ids) || R.has(c, idsAnalysis)) })));
 
-	// .into(chars => chars.into(R.map(char => {
-	// 	char.decomposition = char.decomposition.reduce((r, comp) => {
-	// 		if (comp !== char.character && R.has(comp, chars)) r.push(chars[comp]);
-	// 		return r;
-	// 	}, []);
-	// 	return char;
-	// })));
-
 
 module.exports = network;
