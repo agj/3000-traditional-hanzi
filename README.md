@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 2.0.0_
+_Version 3.0.0_
 
 
 ## How the characters are selected
@@ -87,14 +87,7 @@ For my particular case, including the Japanese _kun_ reading (と へ) helps me 
 
 ## Changelog
 
-### 2.0.0
-
-- Improved study order, by integrating data from `ids-analysis.txt`. Still not ideal in some cases, like as with the precedence of 肉 before 人.
-- Fixed some wrong sound filenames.
-
-### 1.0.0
-
-- First public release.
+See `changes.md`.
 
 
 ## Credits

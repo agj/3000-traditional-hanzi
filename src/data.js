@@ -62,10 +62,10 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7]
 const network = require('./network');
 const studyOrder = require('./study-order')(network, frequencies, heisig, tocfl);
 const patches =
-	U.getFile('data/meaning-patches.txt')
+	U.getFile('data/patches.txt')
 	.map(R.split('\t'))
-	.reduce((obj, [char, meaning]) => {
-		obj[char] = { meaning };
+	.reduce((obj, [char, key, value]) => {
+		obj[char] = { [key]: value };
 		return obj;
 	}, {});
 
