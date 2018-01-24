@@ -109,9 +109,10 @@ Referenced:
 
 [unihan]: https://www.unicode.org/charts/unihan.html
 [charfreq]: http://technology.chtsai.org/charfreq/
-[learnm]: http://learnm.org/
 [top]: http://www.sc-top.org.tw/english/download.php
 [heisig]: http://rtkwiki.koohii.com/wiki/Remembering_Simplified_Hanzi,_Traditional_Hanzi_and_Kanji_spreadsheet
+[cjkvi]:https://github.com/cjkvi/cjkvi-ids
+[learnm]: http://learnm.org/
 
 [anki]: https://ankisrs.net/
 [pinyin-audio]: https://github.com/agj/mp3-chinese-pinyin-sound
