@@ -13,6 +13,8 @@ const toStringEntry = o => [
 		o.pinyin,
 		o.heisigKeyword,
 		o.meaning,
+		o.vocabulary.map(R.prop('word')).join(' '),
+		o.vocabulary.map(R.prop('pinyin')).join(' '),
 		o.japaneseKun,
 		o.japaneseOn,
 		'[sound:agj-pinyin-' + pinyinToFile(o.pinyin) + '.mp3]',

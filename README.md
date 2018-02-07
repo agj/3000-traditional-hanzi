@@ -102,6 +102,7 @@ Databases used:
 - Taiwan Steering Committee for the Test of Proficiency's [8000 Chinese Words][top]
 - Reviewing the Kanji Wiki [spreadsheet][heisig]
 - CJKV Ideograph Database's [ideographic description sequence data][cjkvi]
+- [CC-CEDICT][cedict]
 
 Referenced:
 
@@ -113,6 +114,7 @@ Referenced:
 [heisig]: http://rtkwiki.koohii.com/wiki/Remembering_Simplified_Hanzi,_Traditional_Hanzi_and_Kanji_spreadsheet
 [cjkvi]:https://github.com/cjkvi/cjkvi-ids
 [learnm]: http://learnm.org/
+[cedict]: https://www.mdbg.net/chinese/dictionary?page=cc-cedict
 
 [anki]: https://ankisrs.net/
 [pinyin-audio]: https://github.com/agj/mp3-chinese-pinyin-sound

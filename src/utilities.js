@@ -18,4 +18,5 @@ const getFile = filename =>
 module.exports = {
 	log,
 	getFile,
+	whenAll: Promise.all.bind(Promise),
 };

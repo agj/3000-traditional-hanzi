@@ -6,9 +6,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "cedict-lookup": "0.0.2",
     "dot-into": "^1.0.2",
     "pinyin-utils": "git+https://git@github.com/agj/pinyin-utils.git#dev",
+    "promise-all": "^1.0.0",
     "ramda": "^0.25.0",
+    "thenify": "^3.3.0",
     "wanakana": "^2.3.4",
     "xregexp": "^4.0.0"
   }

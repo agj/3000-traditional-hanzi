@@ -17,9 +17,13 @@ const getUnihanFile = filename =>
 		obj[char][key] = value;
 		return obj;
 	}, {});
-const getTocflFile = level =>
+const removeNonHan = R.replace(xre('\\P{Han}', 'ug'), '');
+const getTocflFileWords = level =>
 	U.getFile(`data/tocfl/vocabulary-${ level }.txt`)
-	.map(R.replace(xre('\\P{Han}', 'ug'), ''))
+	.into(R.uniq);
+const getTocflFileCharacters = level =>
+	U.getFile(`data/tocfl/vocabulary-${ level }.txt`)
+	.map(removeNonHan)
 	.map(R.split(''))
 	.into(R.flatten)
 	.into(R.uniq);
@@ -52,9 +56,17 @@ const heisig =
 		obj[chr] = { heisigKeyword: kwd, heisigIndex: idx };
 		return obj;
 	}, {});
-const tocfl = [1, 2, 3, 4, 5, 6, 7]
+const tocflWords =
+	[1, 2, 3, 4, 5, 6, 7]
 	.reduce((r, level) => {
-		r[level] = getTocflFile(level).into(R.without(r.all));
+		r[level] = getTocflFileWords(level).into(R.without(r.all));
+		r.all = r.all.concat(r[level]);
+		return r;
+	}, { all: [] });
+const tocfl =
+	[1, 2, 3, 4, 5, 6, 7]
+	.reduce((r, level) => {
+		r[level] = getTocflFileCharacters(level).into(R.without(r.all));
 		r.all = r.all.concat(r[level]);
 		return r;
 	}, { all: [] });
@@ -86,6 +98,7 @@ module.exports = {
 	variants,
 	frequencies,
 	heisig,
+	tocflWords,
 	tocfl,
 	patches,
 	conflateMap,
