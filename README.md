@@ -102,6 +102,7 @@ Databases used:
 - Taiwan Steering Committee for the Test of Proficiency's [8000 Chinese Words][top]
 - Reviewing the Kanji Wiki [spreadsheet][heisig]
 - CJKV Ideograph Database's [ideographic description sequence data][cjkvi]
+- Gavin Grover's (with Aaron Madlon-Kay's contributions) [CJK Decomposition Data][grover]
 - [CC-CEDICT][cedict]
 
 Referenced:
@@ -115,6 +116,7 @@ Referenced:
 [cjkvi]:https://github.com/cjkvi/cjkvi-ids
 [learnm]: http://learnm.org/
 [cedict]: https://www.mdbg.net/chinese/dictionary?page=cc-cedict
+[grover]: https://github.com/amake/cjk-decomp
 
 [anki]: https://ankisrs.net/
 [pinyin-audio]: https://github.com/agj/mp3-chinese-pinyin-sound
