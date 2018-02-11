@@ -1,6 +1,11 @@
 
 # Changelog
 
+### 5.0.0
+
+- Added vocabulary hanzi and pinyin columns.
+- Improved character sequence by adopting Gavin Grover's CJK Decomposition Data.
+
 ### 4.0.0
 
 - Conflated characters:

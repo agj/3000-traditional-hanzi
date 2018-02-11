@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 4.0.0_
+_Version 5.0.0_
 
 
 ## How the characters are selected
@@ -17,35 +17,43 @@ The list combines characters from the following sources:
 
 For a grand total of **3186** characters.
 
-Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence is not perfect, as it depends 100% on the thoroughness of the databases used, and it is not corrected by hand for common sense, but it is a pretty good result overall.
+Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence may not be perfect, as it depends 100% on the thoroughness of the databases used, but it is a pretty good result overall.
 
 
 ## The first 100 characters
 
-白一勺的日止正是不戈我月又肉有人大十才土  
-在了口中刀至到八目二貝欠次資女要以丁可立  
-言這古固個小你曾會子好為上木來學乙尤京就  
-父交也用能如寸士寺時文兄水允兌說沒匕它他  
-手看那門問生提卜下過員圓青請們天戶斤所夕
+一勺口日白的止正是卜不二戈手我十人又月肉  
+有大土才在了中至刀到八欠目次貝資弓兀女西  
+要以丁可立言這古固個小你曾會子好爪火為上  
+木來力五學乙京尤就入六父交也用匕能如士寸  
+寺時文水兄允兌說沒它他看那門問三生提下過
+
+Compare to the first few characters in the list of most frequently used:
+
+的是不我一有大在人了中到資要以可這個你會  
+好為上來學就交也用能如時文說沒他看那問生  
+提下過
 
 
 ## Sample entry
 
 ```
-Traditional       戶
-Study order       114
-Variants          
-Simplified        户
-Pinyin            hù
-Heisig keyword    door
-Meaning           door; family, household
-Japanese kun      と へ
-Japanese on       コ
-Sound file        [sound:agj-pinyin-hu4.mp3]
-Frequency rank    1368
+Traditional        戶
+Study order        114
+Variants           
+Simplified         户
+Pinyin             hù
+Heisig keyword     door
+Meaning            door; family, household
+Vocabulary hanzi   窗戶 戶外 開戶
+Vocabulary pinyin  chuānghu hùwài kāihù
+Japanese kun       と へ
+Japanese on        コ
+Sound file         [sound:agj-pinyin-hu4.mp3]
+Frequency rank     1368
 ```
 
-While the data is mostly general, with nothing Anki-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files.][pinyin-audio]
+While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
 
 The 'Variants' column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
 
@@ -59,19 +67,21 @@ I am a non-native but proficient Japanese speaker who sought to learn Mandarin C
 
 ## My study method
 
-I originally started using these by making each fact into a three-way card: _pinyin recall,_ _character recall_ and _meaning recall._ For pinyin recall I would have the meaning and the character on the 'front', and the pinyin (with its sound) on the back.
+I originally started using these by making each note into a three-way card: _pinyin recall,_ _character recall_ and _meaning recall._ For pinyin recall I would have the meaning and the character on the 'front' of the card, and the pinyin (with its sound) on the back.
 
 When I originally studied Japanese kanji, I didn't study their readings this way, because they are multiple and too complicated, so I learned the readings of the characters organically in the process of learning new vocabulary. This time around, at first I thought I could learn the (pretty much) single pinyin reading per character, but after some time trying and failing, I realized that my first approach (not purposefully studying each character's reading) made more sense.
 
-So, I modified my approach and made it two-way: _character recall_ and _meaning recall_ only. (James Heisig would probably remove the latter.) Here is a character recall example card for 戶 door, with everything under the line (----) hidden:
+So, I modified my approach and made it two-way: _character recall_ and _meaning recall_ only. (James Heisig would probably remove the latter.) Here is a character recall example card for 戶 door, with everything under the line (`----`) hidden:
 
 ```
 hù  [pinyin audio]
+chuānghu hùwài kāihù
 と へ
-*door*
+door
 door; family, household
 -----------------------
 戶 (户)
+窗戶 戶外 開戶
 ```
 
 And here's the same fact, displayed as a meaning recall card:
@@ -80,12 +90,41 @@ And here's the same fact, displayed as a meaning recall card:
 戶 (户)
 hù  [pinyin audio]
 -----------------------
+窗戶 戶外 開戶
 と へ
-*door*
+door
 door; family, household
 ```
 
-For my particular case, including the Japanese _kun_ reading (と へ) helps me identify commonalities and differences between the Chinese and Japanese uses for the character, but this information can and probably should be elided by non-Japanese speakers.
+As you can see, I incorporate a few compound words using the character to take advantage of my growing vocabulary and strengthen such cognitive links.
+
+For my particular case, including the Japanese _kun_ reading (と へ) helps me identify commonalities and differences between the Chinese and Japanese uses for the character, but this information can and most likely should be elided by non-Japanese speakers.
+
+
+## Data format
+
+The main output of the program contained in this repository is the `output/facts.tsv` file. The data in this file is formatted as a tab-separated value file. This is a plain-text file, formatted so that each line corresponds to one row, and each row has columns of text separated by tab characters, forming a table. The above samply entry shows the column order and exemplifies the values that fill each cell.
+
+
+## How to use with Anki
+
+Flashcard software [Anki][anki] has an option to import tab-separated value files as notes. See the [documentation on importing](https://apps.ankiweb.net/docs/manual.html#importing) on the Anki website for the details on this procedure. You, however, need to do some preparation before actually importing the file.
+
+Consult [the documentation](https://apps.ankiweb.net/docs/manual.html) for all details on the following.
+
+1. First create a new deck.
+2. Add a new note type with the same fields as shown in the "sample entry" above, in the same order (the name of each field doesn't have to be the exact same).
+3. Set the "Study order" field as the main sort field.
+4. Instruct Anki to "check database", to prevent errors in the following step.
+5. Import `facts.tsv`.
+6. In the import dialog make sure you have the correct deck and note type selected, but the rest of the options should work as set by default.
+7. Import the sound files manually into the media folder, named so that they match the contents of the "sound file" column of `facts.tsv`.
+8. Create cards types suited to your use case.
+9. Check the database again.
+
+If you want to later update the notes to a newer version of `facts.tsv`, just make sure to match the number and order of fields in the note type of the new version, check database as needed, and import. Because Anki modifies the order cards are displayed when they were just updated, you'll need to go to the browser, select **all** cards in the deck simultaneously, and use the "Reposition" command in the Edit menu to make sure the cards show up according to the study order field again.
+
+Once I consider this stable enough, I might convert it into a shared deck file and upload it to the Anki website, to save everyone the trouble of the above.
 
 
 ## Changelog
