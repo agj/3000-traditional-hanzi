@@ -9,7 +9,7 @@ const toStringEntry = o => [
 		o.traditional,
 		o.studyOrder,
 		o.conflated ? o.conflated.join('') : '',
-		o.simplified,
+		o.simplified ? o.simplified.join('') : '',
 		o.pinyin,
 		o.heisigKeyword,
 		o.meaning,

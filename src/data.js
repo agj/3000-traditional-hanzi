@@ -40,7 +40,7 @@ const readings =
 const variants =
 	getUnihanFile('data/unihan/Unihan_Variants.txt')
 	.into(R.mapObjIndexed((o, char) => ({
-		simplified: R.has('kSimplifiedVariant', o) ? unicodeToChar(o['kSimplifiedVariant']) : '',
+		simplified: R.has('kSimplifiedVariant', o) ? o['kSimplifiedVariant'].split(' ').map(unicodeToChar).filter(c => c !== char) : [],
 	})));
 const frequencies =
 	U.getFile('data/frequency.txt')
