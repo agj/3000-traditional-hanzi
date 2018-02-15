@@ -1,6 +1,11 @@
 
 # Changelog
 
+### 5.1.0
+
+- Where the simplified variant was the same as the traditional character, it was removed.
+- Some characters with more than one simplified variant now list all of them instead of just one.
+
 ### 5.0.0
 
 - Added vocabulary hanzi and pinyin columns.
