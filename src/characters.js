@@ -22,7 +22,12 @@ const getVocabulary = char =>
 	.into(R.take(3))
 	.map(w => ({
 		word: w,
-		pinyin: cedict.getMatch(w)[0].pinyin.split(' ').map(pinyin.numberToMark).join(''),
+		pinyin:
+			cedict.getMatch(w)[0].pinyin
+			.split(' ')
+			.map(R.replace(/u:/g, 'ü'))
+			.map(pinyin.numberToMark)
+			.join(''),
 	}));
 
 const compileData = char =>
