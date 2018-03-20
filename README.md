@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 5.1.0_
+_Version 5.2.0_
 
 
 ## How the characters are selected
@@ -71,7 +71,9 @@ I originally started using these by making each note into a three-way card: _pin
 
 When I originally studied Japanese kanji, I didn't study their readings this way, because they are multiple and too complicated, so I learned the readings of the characters organically in the process of learning new vocabulary. This time around, at first I thought I could learn the (pretty much) single pinyin reading per character, but after some time trying and failing, I realized that my first approach (not purposefully studying each character's reading) made more sense.
 
-So, I modified my approach and made it two-way: _character recall_ and _meaning recall_ only. (James Heisig would probably remove the latter.) Here is a character recall example card for 戶 door, with everything under the line (`----`) hidden:
+Anyway, I ended up with pretty much the same method I originally used for Japanese kanji. I use a single card per note, with only _character recall_. I studied _meaning recall_ too for a while until the added study load became too much, and it's not really very necessary. Reading content in Chinese makes up for this very well.
+
+Here is a character recall example card for 戶 door, with everything under the line (`----`) hidden:
 
 ```
 hù  [pinyin audio]
@@ -82,18 +84,6 @@ door; family, household
 -----------------------
 戶 (户)
 窗戶 戶外 開戶
-```
-
-And here's the same fact, displayed as a meaning recall card:
-
-```
-戶 (户)
-hù  [pinyin audio]
------------------------
-窗戶 戶外 開戶
-と へ
-door
-door; family, household
 ```
 
 As you can see, I incorporate a few compound words using the character to take advantage of my growing vocabulary and strengthen such cognitive links.

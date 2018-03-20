@@ -1,6 +1,13 @@
 
 # Changelog
 
+### 5.2.0
+
+- Renamed output file from `facts.tsv` to `notes.tsv`.
+- Fixed "ü" being rendered as "u:" in vocabulary words.
+- Wording improved for the cases where the "meaning" field gets patched, and also now patching instances of "same as..." that display an alternative to the main character.
+- Pinyin column reduced to a single reading, the one that the Unihan documentation says is preferred for traditional writing. Sound column also reflects this change.
+
 ### 5.1.0
 
 - Where the simplified variant was the same as the traditional character, it was removed.

@@ -37,6 +37,6 @@ characters
 .into(R.map(toStringEntry))
 .into(R.values)
 .into(r => {
-	fs.writeFileSync('output/facts.tsv', r.join('\n'), 'utf-8');
+	fs.writeFileSync('output/notes.tsv', r.join('\n'), 'utf-8');
 });
 
