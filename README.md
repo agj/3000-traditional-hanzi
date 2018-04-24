@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 5.2.0_
+_Version 5.2.1_
 
 
 ## How the characters are selected
@@ -93,7 +93,7 @@ For my particular case, including the Japanese _kun_ reading (と へ) helps me 
 
 ## Data format
 
-The main output of the program contained in this repository is the `output/facts.tsv` file. The data in this file is formatted as a tab-separated value file. This is a plain-text file, formatted so that each line corresponds to one row, and each row has columns of text separated by tab characters, forming a table. The above samply entry shows the column order and exemplifies the values that fill each cell.
+The main output of the program contained in this repository is the `output/notes.tsv` file. The data in this file is formatted as a tab-separated value file. This is a plain-text file, formatted so that each line corresponds to one row, and each row has columns of text separated by tab characters, forming a table. The above samply entry shows the column order and exemplifies the values that fill each cell.
 
 
 ## How to use with Anki
@@ -106,13 +106,13 @@ Consult [the documentation](https://apps.ankiweb.net/docs/manual.html) for all d
 2. Add a new note type with the same fields as shown in the "sample entry" above, in the same order (the name of each field doesn't have to be the exact same).
 3. Set the "Study order" field as the main sort field.
 4. Instruct Anki to "check database", to prevent errors in the following step.
-5. Import `facts.tsv`.
+5. Import `notes.tsv`.
 6. In the import dialog make sure you have the correct deck and note type selected, but the rest of the options should work as set by default.
-7. Import the sound files manually into the media folder, named so that they match the contents of the "sound file" column of `facts.tsv`.
+7. Import the sound files manually into the media folder, named so that they match the contents of the "sound file" column of `notes.tsv`.
 8. Create cards types suited to your use case.
 9. Check the database again.
 
-If you want to later update the notes to a newer version of `facts.tsv`, just make sure to match the number and order of fields in the note type of the new version, check database as needed, and import. Because Anki modifies the order cards are displayed when they were just updated, you'll need to go to the browser, select **all** cards in the deck simultaneously, and use the "Reposition" command in the Edit menu to make sure the cards show up according to the study order field again.
+If you want to later update the notes to a newer version of `notes.tsv`, just make sure to match the number and order of fields in the note type of the new version, check database as needed, and import. Because Anki modifies the order cards are displayed when they were just updated, you'll need to go to the browser, select **all** cards in the deck simultaneously, and use the "Reposition" command in the Edit menu to make sure the cards show up according to the study order field again.
 
 Once I consider this stable enough, I might convert it into a shared deck file and upload it to the Anki website, to save everyone the trouble of the above.
 

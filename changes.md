@@ -1,6 +1,11 @@
 
 # Changelog
 
+### 5.2.1
+
+- Updated todo.
+- Fixed readme referencing old `facts.tsv` filename.
+
 ### 5.2.0
 
 - Renamed output file from `facts.tsv` to `notes.tsv`.
