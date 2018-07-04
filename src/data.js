@@ -74,7 +74,7 @@ const patches =
 	U.getFile('data/patches.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [char, key, value]) => {
-		obj[char] = { [key]: value };
+		obj[char] = { [key]: JSON.parse(value) };
 		return obj;
 	}, {});
 const conflateMap =

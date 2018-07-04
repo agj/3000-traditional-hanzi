@@ -90,6 +90,20 @@ As you can see, I incorporate a few compound words using the character to take a
 
 For my particular case, including the Japanese _kun_ reading (と へ) helps me identify commonalities and differences between the Chinese and Japanese uses for the character, but this information can and most likely should be elided by non-Japanese speakers.
 
+### Studying simplified
+
+Using this same data, it's trivial (using Anki) to create cards to also study the simplified forms. What I would suggest is to study traditional to simplified. The way to do that is to create a new card type, and put in the contents something like the following:
+
+```
+{{#Simplified}}
+    {{Simplified}} → {{Traditional}}
+{{/Simplified}}
+```
+
+If you use this pattern to write the front of the card, notes that have no 'Simplified' field will appear empty, and thus Anki won't create them. Since characters that are different in the simplified standard are in the minority, this will create much fewer cards compared to notes, and you'll only study the characters that are do in fact change.
+
+Since simplified characters sometimes map to multiple traditional characters, I also add the vocabulary data below, faded in color so I only reference it when in doubt of which this card refers to.
+
 
 ## Data format
 
