@@ -7,7 +7,7 @@ require('dot-into').install();
 const U = require('./src/utilities');
 const toStringEntry = o => [
 		o.traditional,
-		o.studyOrder,
+		o.charactersOnlyStudyOrder,
 		o.conflated ? o.conflated.join('') : '',
 		o.simplified ? o.simplified.join('') : '',
 		o.pinyin ? o.pinyin.split(' ').into(R.last) : '',

@@ -19,10 +19,10 @@ const getUnihanFile = filename =>
 	}, {});
 const removeNonHan = R.replace(xre('\\P{Han}', 'ug'), '');
 const getTocflFileWords = level =>
-	U.getFile(`data/tocfl/vocabulary-${ level }.txt`)
+	U.getFile(`data/external/tocfl/vocabulary-${ level }.txt`)
 	.into(R.uniq);
 const getTocflFileCharacters = level =>
-	U.getFile(`data/tocfl/vocabulary-${ level }.txt`)
+	U.getFile(`data/external/tocfl/vocabulary-${ level }.txt`)
 	.map(removeNonHan)
 	.map(R.split(''))
 	.into(R.flatten)
@@ -30,7 +30,7 @@ const getTocflFileCharacters = level =>
 
 
 const readings =
-	getUnihanFile('data/unihan/Unihan_Readings.txt')
+	getUnihanFile('data/external/unihan/Unihan_Readings.txt')
 	.into(R.map(o => ({
 		pinyin:      o['kMandarin'],
 		japaneseKun: R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
@@ -38,19 +38,19 @@ const readings =
 		meaning:     o['kDefinition'],
 	})));
 const variants =
-	getUnihanFile('data/unihan/Unihan_Variants.txt')
+	getUnihanFile('data/external/unihan/Unihan_Variants.txt')
 	.into(R.mapObjIndexed((o, char) => ({
 		simplified: R.has('kSimplifiedVariant', o) ? o['kSimplifiedVariant'].split(' ').map(unicodeToChar).filter(c => c !== char) : [],
 	})));
 const frequencies =
-	U.getFile('data/frequency.txt')
+	U.getFile('data/external/frequency.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [char, freq, ..._], index) => {
 		obj[char] = { frequencyRank: index + 1, frequencyRaw: parseInt(freq) };
 		return obj;
 	}, {});
 const heisig =
-	U.getFile('data/heisig-traditional.txt')
+	U.getFile('data/external/heisig-traditional.txt')
 	.map(R.split('\t'))
 	.reduce((obj, [idx, chr, kwd]) => {
 		obj[chr] = { heisigKeyword: kwd, heisigIndex: idx };
@@ -77,6 +77,8 @@ const patches =
 		obj[char] = { [key]: JSON.parse(value) };
 		return obj;
 	}, {});
+const exclude =
+	U.getFile('data/exclude.txt');
 const conflateMap =
 	U.getFile('data/conflate.txt')
 	.map(R.split('\t'))
@@ -101,6 +103,7 @@ module.exports = {
 	tocflWords,
 	tocfl,
 	patches,
+	exclude,
 	conflateMap,
 	conflated,
 };

@@ -1,7 +1,7 @@
 
 const R = require('ramda');
 const pinyin = require('pinyin-utils');
-const cedict = require('cedict-lookup').loadTraditional('data/cedict_ts.u8');
+const cedict = require('cedict-lookup').loadTraditional('data/external/cedict_ts.u8');
 
 const U = require('./utilities');
 

@@ -25,13 +25,13 @@ const getIdsFile = (filename, preprocess) =>
 	}, {});
 
 
-const ids = getIdsFile('data/ids.txt', ([_, char, ...decs]) => [char, decs.reduce(R.concat, '')]);
+const ids = getIdsFile('data/external/ids.txt', ([_, char, ...decs]) => [char, decs.reduce(R.concat, '')]);
 const wrongAnalysisCats = ['簡体', '或字'];
-const idsAnalysis = getIdsFile('data/ids-analysis.txt', ([_, char, dec, cat]) => [char, R.contains(cat, wrongAnalysisCats) ? '' : dec]);
+const idsAnalysis = getIdsFile('data/external/ids-analysis.txt', ([_, char, dec, cat]) => [char, R.contains(cat, wrongAnalysisCats) ? '' : dec]);
 const reCjkDecomp = /^(.+):.+\((.+)\)$/u;
 const redefineNumeric = R.curry((mapping, component) => /\d+/.test(component) ? mapping[component].decomposition.map(redefineNumeric(mapping)).into(R.flatten).into(R.uniq) : [component]);
 const cjkDecomp =
-	getFile('data/cjk-decomp.txt')
+	getFile('data/external/cjk-decomp.txt')
 	.map(l => [l.replace(reCjkDecomp, '$1'), l.replace(reCjkDecomp, '$2').split(',')])
 	.reduce((obj, [char, dec]) => {
 		obj[char] = { character: char,
