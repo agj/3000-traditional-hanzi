@@ -18,7 +18,8 @@ const toStringEntry = o => [
 		o.japaneseKun,
 		o.japaneseOn,
 		'[sound:agj-pinyin-' + pinyinToFile(o.pinyin ? o.pinyin.split(' ').into(R.last) : '') + '.mp3]',
-		o.frequencyRank
+		o.frequencyRank,
+		o.cangjie,
 	].join('\t');
 const pinyinToFile = py => {
 	let r =

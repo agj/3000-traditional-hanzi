@@ -28,6 +28,40 @@ const getTocflFileCharacters = level =>
 	.into(R.flatten)
 	.into(R.uniq);
 
+const cangjieMap = {
+	A: "日",
+	B: "月",
+	C: "金",
+	D: "木",
+	E: "水",
+	F: "火",
+	G: "土",
+	H: "竹",
+	I: "戈",
+	J: "十",
+	K: "大",
+	L: "中",
+	M: "一",
+	N: "弓",
+	O: "人",
+	P: "心",
+	Q: "手",
+	R: "口",
+	S: "尸",
+	T: "廿",
+	U: "山",
+	V: "女",
+	W: "田",
+	Y: "卜",
+	X: "難",
+};
+const cangjieKeyToName = key => {
+	const result = cangjieMap[key];
+	if (!result) console.error(`Can't find cangjie code: ${ key }`);
+	return result;
+};
+const cangjieKeystoNames = keys => keys.split('').map(cangjieKeyToName).join('');
+
 
 const readings =
 	getUnihanFile('data/external/unihan/Unihan_Readings.txt')
@@ -36,6 +70,11 @@ const readings =
 		japaneseKun: R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
 		japaneseOn:  R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
 		meaning:     o['kDefinition'],
+	})));
+const cangjie =
+	getUnihanFile('data/external/unihan/Unihan_DictionaryLikeData.txt')
+	.into(R.map(o => ({
+		cangjie: o['kCangjie'] ? cangjieKeystoNames(o['kCangjie']) : '',
 	})));
 const variants =
 	getUnihanFile('data/external/unihan/Unihan_Variants.txt')
@@ -97,6 +136,7 @@ const conflated =
 
 module.exports = {
 	readings,
+	cangjie,
 	variants,
 	frequencies,
 	heisig,

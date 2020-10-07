@@ -35,6 +35,7 @@ const compileData = char =>
 		{ traditional: char },
 		selectionData[char],
 		data.readings[char],
+		data.cangjie[char],
 		data.frequencies[char],
 		data.variants[char],
 		data.heisig[char],
