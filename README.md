@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 5.2.1_
+_Version 6.0.0_
 
 
 ## How the characters are selected
@@ -28,7 +28,7 @@ Characters are ordered according to usage frequency, except whenever a character
 木來力五學乙京尤就入六父交也用匕能如士寸  
 寺時文水兄允兌說沒它他看那門問三生提下過
 
-Compare to the first few characters in the list of most frequently used:
+Compare with the first few characters in the list of most frequently used:
 
 的是不我一有大在人了中到資要以可這個你會  
 好為上來學就交也用能如時文說沒他看那問生  
@@ -51,6 +51,7 @@ Japanese kun       と へ
 Japanese on        コ
 Sound file         [sound:agj-pinyin-hu4.mp3]
 Frequency rank     1368
+Cangjie            竹尸
 ```
 
 While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.

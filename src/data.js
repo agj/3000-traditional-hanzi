@@ -55,11 +55,7 @@ const cangjieMap = {
 	Y: "卜",
 	X: "難",
 };
-const cangjieKeyToName = key => {
-	const result = cangjieMap[key];
-	if (!result) console.error(`Can't find cangjie code: ${ key }`);
-	return result;
-};
+const cangjieKeyToName = key => cangjieMap[key];
 const cangjieKeystoNames = keys => keys.split('').map(cangjieKeyToName).join('');
 
 
