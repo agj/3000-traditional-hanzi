@@ -55,6 +55,7 @@ const conflate = R.curry((conflateMap, chars) => chars.map(char => R.has(char, c
 const htfCharacters =
 	heisigCharacters.concat(tocflCharacters).concat(frequentCharacters)
 	.into(R.uniq)
+	.into(R.reject(c => R.contains(c, data.exclude)))
 	.into(conflate(conflateMap));
 const htfComponentsRaw =
 	htfCharacters
@@ -105,6 +106,7 @@ const charactersResult =
 	.into(R.indexBy(R.identity))
 	.into(R.map(c => ({
 		studyOrder: charactersAndComponentsSorted.indexOf(c) + 1,
+		charactersOnlyStudyOrder: charactersSorted.indexOf(c) + 1,
 		isComponent: foundIn(componentsSorted, c),
 	})));
 

@@ -4,7 +4,7 @@
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
-_Version 5.2.1_
+_Version 6.0.0_
 
 
 ## How the characters are selected
@@ -28,7 +28,7 @@ Characters are ordered according to usage frequency, except whenever a character
 木來力五學乙京尤就入六父交也用匕能如士寸  
 寺時文水兄允兌說沒它他看那門問三生提下過
 
-Compare to the first few characters in the list of most frequently used:
+Compare with the first few characters in the list of most frequently used:
 
 的是不我一有大在人了中到資要以可這個你會  
 好為上來學就交也用能如時文說沒他看那問生  
@@ -51,6 +51,7 @@ Japanese kun       と へ
 Japanese on        コ
 Sound file         [sound:agj-pinyin-hu4.mp3]
 Frequency rank     1368
+Cangjie            竹尸
 ```
 
 While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
@@ -89,6 +90,20 @@ door; family, household
 As you can see, I incorporate a few compound words using the character to take advantage of my growing vocabulary and strengthen such cognitive links.
 
 For my particular case, including the Japanese _kun_ reading (と へ) helps me identify commonalities and differences between the Chinese and Japanese uses for the character, but this information can and most likely should be elided by non-Japanese speakers.
+
+### Studying simplified
+
+Using this same data, it's trivial (using Anki) to create cards to also study the simplified forms. What I would suggest is to study traditional to simplified. The way to do that is to create a new card type, and put in the contents something like the following:
+
+```
+{{#Simplified}}
+    {{Simplified}} → {{Traditional}}
+{{/Simplified}}
+```
+
+If you use this pattern to write the front of the card, notes that have no 'Simplified' field will appear empty, and thus Anki won't create them. Since characters that are different in the simplified standard are in the minority, this will create much fewer cards compared to notes, and you'll only study the characters that are do in fact change.
+
+Since simplified characters sometimes map to multiple traditional characters, I also add the vocabulary data below, faded in color so I only reference it when in doubt of which this card refers to.
 
 
 ## Data format

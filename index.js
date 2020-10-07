@@ -7,7 +7,7 @@ require('dot-into').install();
 const U = require('./src/utilities');
 const toStringEntry = o => [
 		o.traditional,
-		o.studyOrder,
+		o.charactersOnlyStudyOrder,
 		o.conflated ? o.conflated.join('') : '',
 		o.simplified ? o.simplified.join('') : '',
 		o.pinyin ? o.pinyin.split(' ').into(R.last) : '',
@@ -18,7 +18,8 @@ const toStringEntry = o => [
 		o.japaneseKun,
 		o.japaneseOn,
 		'[sound:agj-pinyin-' + pinyinToFile(o.pinyin ? o.pinyin.split(' ').into(R.last) : '') + '.mp3]',
-		o.frequencyRank
+		o.frequencyRank,
+		o.cangjie,
 	].join('\t');
 const pinyinToFile = py => {
 	let r =
