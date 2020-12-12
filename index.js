@@ -22,6 +22,7 @@ const toStringEntry = o => [
 		o.cangjie,
 		o.heisigIndex,
 		o.zhuyin ? o.zhuyin.split(' ').into(R.last) : '',
+		o.vocabulary.map(R.prop('zhuyin')).join('  '),
 	].join('\t');
 const pinyinToFile = py => {
 	let r =
