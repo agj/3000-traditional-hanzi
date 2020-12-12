@@ -53,6 +53,7 @@ Sound file         [sound:agj-pinyin-hu4.mp3]
 Frequency rank     1368
 Cangjie            竹尸
 Heisig index       0830
+Zhuyin             ㄏㄨ`
 ```
 
 While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.

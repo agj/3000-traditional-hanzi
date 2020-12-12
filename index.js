@@ -21,6 +21,7 @@ const toStringEntry = o => [
 		o.frequencyRank,
 		o.cangjie,
 		o.heisigIndex,
+		o.zhuyin ? o.zhuyin.split(' ').into(R.last) : '',
 	].join('\t');
 const pinyinToFile = py => {
 	let r =

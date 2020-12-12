@@ -13,6 +13,7 @@
     "ramda": "^0.25.0",
     "thenify": "^3.3.0",
     "wanakana": "^2.3.4",
-    "xregexp": "^4.0.0"
+    "xregexp": "^4.0.0",
+    "zhuyin": "^1.14.0"
   }
 }
