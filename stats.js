@@ -16,10 +16,10 @@ const { out, print } = (() => {
 
 const data = require('./src/selection');
 
-out("Heisig:", data.heisigCharacters.length);
-out("TOCFL:", data.tocflCharacters.length);
+out("Heisig (H):", data.heisigCharacters.length);
+out("TOCFL (T):", data.tocflCharacters.length);
 out("Heisig + TOCFL:", data.heisigCharacters.concat(data.tocflCharacters).into(R.uniq).length);
-out("Heisig + TOCFL + 2000 most frequent:", data.htfCharacters.length);
+out("Heisig + TOCFL + 2000 most frequent (F):", data.htfCharacters.length);
 out("H+T+F components:", data.htfComponents.length);
 out('');
 out("All H+T+F components sorted:");

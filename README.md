@@ -15,7 +15,7 @@ The list combines characters from the following sources:
 - All 2555 contemplated in all levels of the _Test of Chinese as a Foreign Language._
 - The 2000 most frequently used characters according to Chih-Tsao Hai's research.
 
-For a grand total of **3186** characters.
+For a grand total of **3183** characters.
 
 Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence may not be perfect, as it depends 100% on the thoroughness of the databases used, but it is a pretty good result overall.
 
@@ -52,6 +52,7 @@ Japanese on        コ
 Sound file         [sound:agj-pinyin-hu4.mp3]
 Frequency rank     1368
 Cangjie            竹尸
+Heisig index       0830
 ```
 
 While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
