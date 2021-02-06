@@ -1,9 +1,12 @@
 
 const R = require('ramda');
 const pinyin = require('pinyin-utils');
+const zhuyin = require('zhuyin');
 const cedict = require('cedict-lookup').loadTraditional('data/external/cedict_ts.u8');
 
 const U = require('./utilities');
+
+const zhuyinDiacritics = ['ˊ', 'ˇ', '`', '˙'];
 
 const patchEntry = R.curry((patches, entry) => R.has(entry.traditional, patches) ? R.merge(entry, patches[entry.traditional]) : entry);
 
@@ -20,15 +23,21 @@ const getVocabulary = char =>
 	.into(R.flatten)
 	.into(R.filter(w => w.length > 1 && cedict.getMatch(w).length > 0))
 	.into(R.take(3))
-	.map(w => ({
-		word: w,
-		pinyin:
+	.map(w => {
+		const pys =
 			cedict.getMatch(w)[0].pinyin
 			.split(' ')
 			.map(R.replace(/u:/g, 'ü'))
-			.map(pinyin.numberToMark)
-			.join(''),
-	}));
+			.map(pinyin.numberToMark);
+		const zys =
+			pys.map(zhuyin.fromPinyinSyllable)
+			.map(zy => zhuyinDiacritics.includes(R.last(zy)) ? zy : zy + ' ');
+		return {
+			word: w,
+			pinyin: pys.join(''),
+			zhuyin: zys.join(''),
+		};
+	});
 
 const compileData = char =>
 	R.mergeAll([

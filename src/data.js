@@ -3,6 +3,7 @@ const R = require('ramda');
 const fs = require('fs');
 const wanakana = require('wanakana');
 const xre = require('xregexp');
+const zhuyin = require('zhuyin');
 require('dot-into').install();
 
 
@@ -61,12 +62,18 @@ const cangjieKeystoNames = keys => keys.split('').map(cangjieKeyToName).join('')
 
 const readings =
 	getUnihanFile('data/external/unihan/Unihan_Readings.txt')
-	.into(R.map(o => ({
-		pinyin:      o['kMandarin'],
-		japaneseKun: R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
-		japaneseOn:  R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
-		meaning:     o['kDefinition'],
-	})));
+	.into(R.map(o => {
+		const py = o['kMandarin'];
+		const pys = py ? py.split(' ') : [];
+		const zy = pys.map(zhuyin.fromPinyin).join(' ');
+		return ({
+			pinyin:      py,
+			zhuyin:      zy,
+			japaneseKun: R.has('kJapaneseKun', o) ? wanakana.toHiragana(o['kJapaneseKun']) : '',
+			japaneseOn:  R.has('kJapaneseOn', o) ? wanakana.toKatakana(o['kJapaneseOn']) : '',
+			meaning:     o['kDefinition'],
+		})
+	}));
 const cangjie =
 	getUnihanFile('data/external/unihan/Unihan_DictionaryLikeData.txt')
 	.into(R.map(o => ({

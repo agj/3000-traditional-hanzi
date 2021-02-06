@@ -14,3 +14,4 @@
 菸	meaning	"to fade; withered or dried leaves; tobacco"
 陸	meaning	"land, continental; army; an accounting form of \"six\""
 願	simplified	["愿"]
+鋼	cangjie	"金月廿山"

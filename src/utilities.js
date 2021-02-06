@@ -14,6 +14,8 @@ const getFile = filename =>
 	.split('\n')
 	.filter(notEmptyLine);
 
+asList = string => string ? string.split(' ') : [];
+
 
 module.exports = {
 	log,

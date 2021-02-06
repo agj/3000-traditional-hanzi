@@ -20,6 +20,9 @@ const toStringEntry = o => [
 		'[sound:agj-pinyin-' + pinyinToFile(o.pinyin ? o.pinyin.split(' ').into(R.last) : '') + '.mp3]',
 		o.frequencyRank,
 		o.cangjie,
+		o.heisigIndex,
+		o.zhuyin ? o.zhuyin.split(' ').into(R.last) : '',
+		o.vocabulary.map(R.prop('zhuyin')).join('  '),
 	].join('\t');
 const pinyinToFile = py => {
 	let r =
