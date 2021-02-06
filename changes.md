@@ -1,16 +1,21 @@
 
 # Changelog
 
+### 7.0.0
+
+- Added Zhuyin, Vocabulary Zhuyin and Heisig Index columns.
+- Patched 鋼's cangjie code to 金月廿山.
+- Updated character count in readme.
+
 ### 6.0.0
 
-- Added Cangjie column, that includes the code to type the character using canjie input.
+- Added Cangjie column, that includes the code to type the character using cangjie input.
 - 'Study order' numbers are now contiguous, as they don't consider non-included components.
 - Removed 么 (a uniquely simplified character).
 - Conflated 秘 into 祕, and 裏 into 裡.
 - Patched meaning for each of 吋雕菸陸, removing reference to other characters.
 - Patched away an uncommon codepoint among the simplications of 願.
 - Wrote a bit about how to study simplified characters with this data in the readme.
-
 
 ### 5.2.1
 
