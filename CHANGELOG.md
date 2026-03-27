@@ -20,7 +20,7 @@ data file.
 - Improved changelog formatting to match keepachangelog.com, renaming file from
   `changes.md` to `CHANGELOG.md`.
 
-## [7.0.0][7.0.0]
+## [7.0.0][7.0.0] (2021-02-06)
 
 [7.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v7.0.0
 
@@ -36,7 +36,7 @@ data file.
 
 - Updated character count in readme.
 
-## [6.0.0][6.0.0]
+## [6.0.0][6.0.0] (2020-10-07)
 
 [6.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v6.0.0
 
@@ -59,7 +59,7 @@ data file.
 - Removed 么 (a uniquely simplified character).
 - Patched away an uncommon codepoint among the simplications of 願.
 
-## [5.2.1][5.2.1]
+## [5.2.1][5.2.1] (2018-04-24)
 
 [5.2.1]: https://github.com/agj/3000-traditional-hanzi/tree/v5.2.1
 
@@ -71,7 +71,7 @@ data file.
 
 - Fixed readme referencing old `facts.tsv` filename.
 
-## [5.2.0][5.2.0]
+## [5.2.0][5.2.0] (2018-03-20)
 
 [5.2.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.2.0
 
@@ -92,7 +92,7 @@ data file.
   documentation says is preferred for traditional writing. Sound column also
   reflects this change.
 
-## [5.1.0][5.1.0]
+## [5.1.0][5.1.0] (2018-02-15)
 
 [5.1.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.1.0
 
@@ -106,7 +106,7 @@ data file.
 - Removed redundant simplified variant information wherever it is the same as
   the traditional character.
 
-## [5.0.0][5.0.0]
+## [5.0.0][5.0.0] (2018-02-11)
 
 [5.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.0.0
 
@@ -118,7 +118,7 @@ data file.
 
 - Improved character sequence by adopting Gavin Grover's CJK Decomposition Data.
 
-## [4.0.0][4.0.0]
+## [4.0.0][4.0.0] (2018-01-17)
 
 [4.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v4.0.0
 
@@ -138,7 +138,7 @@ data file.
     list) into 豔 (T, f#2553).
   - 啓 (H&R, no f.) into 啟 (T, f#962).
 
-## [3.0.0][3.0.0]
+## [3.0.0][3.0.0] (2018-01-17)
 
 [3.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v3.0.0
 
@@ -151,7 +151,7 @@ data file.
 
 - Output .tsv file had not been updated correctly! Oops.
 
-## [2.0.0][2.0.0]
+## [2.0.0][2.0.0] (2018-01-16)
 
 [2.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v2.0.0
 
@@ -164,7 +164,7 @@ data file.
 
 - Fixed some wrong sound filenames.
 
-## [1.0.0][1.0.0]
+## [1.0.0][1.0.0] (2018-01-15)
 
 [1.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v1.0.0
 
