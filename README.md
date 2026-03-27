@@ -137,7 +137,7 @@ Once I consider this stable enough, I might convert it into a shared deck file a
 
 ## Changelog
 
-See `changes.md`.
+See `CHANGELOG.md`.
 
 
 ## Credits
