@@ -20,7 +20,7 @@ import {
 import * as data from "./data.js";
 import { network, type Decomposition } from "./network.js";
 
-type Character = {
+export type Character = {
   studyOrder: number;
   charactersOnlyStudyOrder: number;
   isComponent: boolean;
