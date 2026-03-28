@@ -10,7 +10,7 @@ build: install
 
 # List all primitives that cannot be decomposed any further.
 primitives: install
-  bun ./list-primitives.js
+  bun ./list-primitives.ts
 
 # Formats files.
 format:
