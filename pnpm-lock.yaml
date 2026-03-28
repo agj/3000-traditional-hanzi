@@ -18,11 +18,11 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       dot-into:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 2.0.0
+        version: 2.0.0
       pinyin-utils:
-        specifier: git+https://git@github.com/agj/pinyin-utils.git#dev
-        version: https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1
+        specifier: 2.32.0
+        version: 2.32.0
       promise-all:
         specifier: ^1.0.0
         version: 1.0.0
@@ -33,8 +33,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.1
       wanakana:
-        specifier: ^2.3.4
-        version: 2.3.4
+        specifier: 5.3.1
+        version: 5.3.1
       xregexp:
         specifier: ^4.0.0
         version: 4.4.1
@@ -63,8 +63,8 @@ packages:
   core-js-pure@3.49.0:
     resolution: {integrity: sha512-XM4RFka59xATyJv/cS3O3Kml72hQXUeGRuuTmMYFxwzc9/7C8OYTaIR/Ji+Yt8DXzsFLNhat15cE/JP15HrCgw==}
 
-  dot-into@1.0.2:
-    resolution: {integrity: sha512-pU8+AGurBIyfgcmkVbhNtT8jCWtzuIM1veFR9eG7md74P6K1SvT+N4rEcv8hPsVTqR504EUpO9ILLO56jYiuGQ==}
+  dot-into@2.0.0:
+    resolution: {integrity: sha512-n+zpHJMmpNKmaubPrILSMDyh83HNjclUlRdYxCYNkcHWwOP3fZA3N7Yy2vrzXd6ysEr1qNxcaVNrmMcHSibPeg==}
 
   is-plain-object@2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
@@ -80,10 +80,6 @@ packages:
   pinyin-utils@2.32.0:
     resolution: {integrity: sha512-jgPlD0lhF9GCxhFkUD+KZ0NEHw3QCIGX1n11DPmPvvgqvrX3YUdlp2p7bdrbejnjmzNK+BJaDwG9uyApw3xL8Q==}
 
-  pinyin-utils@https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1:
-    resolution: {tarball: https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1}
-    version: 1.0.3
-
   promise-all@1.0.0:
     resolution: {integrity: sha512-whAvMcaK4qZNupq4T///1Va3bJ1pNbPfhGseuf3CHRqvCLwA6Ximd6BR5oCLqRooBRMAfRBpmK+jv8zfzD6h/Q==}
 
@@ -96,8 +92,9 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
-  wanakana@2.3.4:
-    resolution: {integrity: sha512-OcZelffPMb9Rb38sw1n+ywQWxUCI8NTnYJ4PYzsHbUPEjB7bGPd1d5tBxAoZozeLM0HrPRSG7n6BjEtzpRAXpg==}
+  wanakana@5.3.1:
+    resolution: {integrity: sha512-OSDqupzTlzl2LGyqTdhcXcl6ezMiFhcUwLBP8YKaBIbMYW1wAwDvupw2T9G9oVaKT9RmaSpyTXjxddFPUcFFIw==}
+    engines: {node: '>=12'}
 
   xregexp@4.4.1:
     resolution: {integrity: sha512-2u9HwfadaJaY9zHtRRnH6BY6CQVNQKkYm3oLtC9gJXXzfsbACg5X5e4EZZGVAH+YIfa+QA9lsFQTTe3HURF3ag==}
@@ -123,7 +120,7 @@ snapshots:
 
   core-js-pure@3.49.0: {}
 
-  dot-into@1.0.2: {}
+  dot-into@2.0.0: {}
 
   is-plain-object@2.0.4:
     dependencies:
@@ -134,8 +131,6 @@ snapshots:
   pinyin-split@1.170.0: {}
 
   pinyin-utils@2.32.0: {}
-
-  pinyin-utils@https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1: {}
 
   promise-all@1.0.0:
     dependencies:
@@ -149,7 +144,7 @@ snapshots:
 
   undici-types@7.16.0: {}
 
-  wanakana@2.3.4: {}
+  wanakana@5.3.1: {}
 
   xregexp@4.4.1:
     dependencies:

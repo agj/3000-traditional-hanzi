@@ -1,10 +1,8 @@
-import dotInto from "dot-into";
+import "dot-into";
 import R from "ramda";
 import fs from "fs";
 import * as U from "./src/utilities";
 import * as data from "./src/selection";
-
-dotInto.install();
 
 const { out, print } = (() => {
   let output = "";

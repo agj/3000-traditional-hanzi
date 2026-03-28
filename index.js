@@ -1,11 +1,9 @@
-import dotInto from "dot-into";
+import "dot-into";
 import R from "ramda";
 import fs from "fs";
 import pinyin from "pinyin-utils";
 import characters from "./src/characters";
 import * as U from "./src/utilities";
-
-dotInto.install();
 
 const toStringEntry = (o) =>
   [

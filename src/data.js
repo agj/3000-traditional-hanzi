@@ -1,12 +1,10 @@
-import dotInto from "dot-into";
+import "dot-into";
 import R from "ramda";
 import fs from "fs";
 import wanakana from "wanakana";
 import xre from "xregexp";
 import * as zhuyin from "zhuyin";
 import * as U from "./utilities";
-
-dotInto.install();
 
 const unicodeToChar = (code) =>
   String.fromCodePoint(parseInt(code.substring(2), 16));
