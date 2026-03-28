@@ -6,7 +6,7 @@
 build: install
   tsc --noEmit
   bun ./index.js
-  bun ./stats.js
+  bun ./stats.ts
 
 # List all primitives that cannot be decomposed any further.
 primitives: install

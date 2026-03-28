@@ -1,13 +1,13 @@
 import "dot-into";
 import R from "ramda";
 import fs from "fs";
-import * as U from "./src/utilities";
-import * as data from "./src/selection";
+import * as data from "./src/selection.js";
 
 const { out, print } = (() => {
   let output = "";
   return {
-    out: (...msg) => (output = output + msg.join(" ") + "\n"),
+    out: (...msg: (string | number)[]) =>
+      (output = output + msg.join(" ") + "\n"),
     print: () => output,
   };
 })();
@@ -27,5 +27,4 @@ out("");
 out("All H+T+F characters sorted (no components):");
 out(data.characters.join(""));
 
-// U.log(print());
 fs.writeFileSync("output/stats.txt", print(), "utf-8");
