@@ -4,8 +4,8 @@
 
 # Generate output files.
 build: install
-  node ./index.js
-  node ./stats.js
+  bun ./index.js
+  bun ./stats.js
 
 [private]
 install:

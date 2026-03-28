@@ -16,7 +16,7 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             pkgs.just
-            pkgs.nodejs-slim_24
+            pkgs.bun
             pkgs.pnpm
             pkgs.prettier
           ];
