@@ -1,7 +1,7 @@
 import R from "ramda";
 import * as U from "./utilities";
 import * as data from "./data";
-import network from "./network";
+import { network } from "./network";
 
 const log = U.log;
 const allNodes = R.curry((network, char) => _allNodes(network, [])(char));

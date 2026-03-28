@@ -15,7 +15,7 @@ import {
 import fs from "fs";
 import xre from "xregexp";
 
-type Decomposition = { character: string; decomposition: string[] };
+export type Decomposition = { character: string; decomposition: string[] };
 
 const getFile = (filename: string) =>
   fs.readFileSync(filename, "utf-8").split("\n").filter(notEmptyLine);
@@ -96,7 +96,8 @@ const mergeDecompositions = (a: Decomposition, b: Decomposition) => ({
   character: a.character,
   decomposition: concat(a.decomposition, b.decomposition).into(uniq),
 });
-const network: Record<string, Decomposition> = mergeWith(
+
+export const network: Record<string, Decomposition> = mergeWith(
   mergeDecompositions,
   ids,
   idsAnalysis,
@@ -110,5 +111,3 @@ const network: Record<string, Decomposition> = mergeWith(
       ),
     })),
   );
-
-export default network;
