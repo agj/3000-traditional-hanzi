@@ -1,8 +1,10 @@
-const R = require("ramda");
-const fs = require("fs");
-require("dot-into").install();
+import dotInto from "dot-into";
+import R from "ramda";
+import fs from "fs";
+import * as U from "./src/utilities";
+import * as data from "./src/selection";
 
-const U = require("./src/utilities");
+dotInto.install();
 
 const { out, print } = (() => {
   let output = "";
@@ -11,8 +13,6 @@ const { out, print } = (() => {
     print: () => output,
   };
 })();
-
-const data = require("./src/selection");
 
 out("Heisig (H):", data.heisigCharacters.length);
 out("TOCFL (T):", data.tocflCharacters.length);

@@ -1,6 +1,8 @@
-const R = require("ramda");
+import R from "ramda";
+import * as U from "./utilities";
+import * as data from "./data";
+import network from "./network";
 
-const U = require("./utilities");
 const log = U.log;
 const allNodes = R.curry((network, char) => _allNodes(network, [])(char));
 const _allNodes = (network, stack) => (char) =>
@@ -43,20 +45,18 @@ const sortByFrequency = (frequencies) =>
             : 1,
   );
 
-const data = require("./data");
-const network = require("./network");
 const frequenciesRaw = data.frequencies;
 const heisig = data.heisig;
 const tocfl = data.tocfl;
 const conflateMap = data.conflateMap;
 
-const heisigCharacters = heisig
+export const heisigCharacters = heisig
   .into(R.reject(R.propEq("heisigIndex", "c")))
   .into(R.keys);
-const heisigComponents = heisig
+export const heisigComponents = heisig
   .into(R.filter(R.propEq("heisigIndex", "c")))
   .into(R.keys);
-const tocflCharacters = tocfl.all;
+export const tocflCharacters = tocfl.all;
 const frequencies = frequenciesRaw.into(R.map(R.prop("frequencyRank")));
 const frequentCharacters = frequencies.into(R.filter(R.gte(2000))).into(R.keys);
 
@@ -65,7 +65,7 @@ const conflate = R.curry((conflateMap, chars) =>
     .map((char) => (R.has(char, conflateMap) ? conflateMap[char] : char))
     .into(R.uniq),
 );
-const htfCharacters = heisigCharacters
+export const htfCharacters = heisigCharacters
   .concat(tocflCharacters)
   .concat(frequentCharacters)
   .into(R.uniq)
@@ -88,7 +88,9 @@ const htfComponentUse = htfComponentsRaw
     htfComponentUseRaw.reduce((n, c) => (c === char ? n + 1 : n), 0),
   ])
   .into(R.fromPairs);
-const htfComponents = htfComponentUse.into(R.reject(R.gte(1))).into(R.keys);
+export const htfComponents = htfComponentUse
+  .into(R.reject(R.gte(1)))
+  .into(R.keys);
 
 const depths = htfCharacters
   .concat(htfComponents)
@@ -123,16 +125,9 @@ const charactersResult = charactersAndComponentsSorted
     })),
   );
 
-module.exports = {
-  characters: charactersSorted,
-  components: componentsSorted,
-  charactersAndComponents: charactersAndComponentsSorted,
-
-  characterData: charactersResult,
-
-  heisigCharacters,
-  heisigComponents,
-  tocflCharacters,
-  htfCharacters,
-  htfComponents,
+export {
+  charactersSorted as characters,
+  componentsSorted as components,
+  charactersAndComponentsSorted as charactersAndComponents,
+  charactersResult as characterData,
 };

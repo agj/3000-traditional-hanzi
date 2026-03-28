@@ -1,11 +1,13 @@
-const R = require("ramda");
-const pinyin = require("pinyin-utils");
-const zhuyin = require("zhuyin");
-const cedict = require("cedict-lookup").loadTraditional(
-  "data/external/cedict_ts.u8",
-);
+import R from "ramda";
+import pinyin from "pinyin-utils";
+import * as zhuyin from "zhuyin";
+import cedictLookup from "cedict-lookup";
+import * as U from "./utilities";
+import * as selection from "./selection";
+import * as data from "./data";
+import { characterData as selectionData } from "./selection";
 
-const U = require("./utilities");
+const cedict = cedictLookup.loadTraditional("data/external/cedict_ts.u8");
 
 const zhuyinDiacritics = ["ˊ", "ˇ", "`", "˙"];
 
@@ -14,10 +16,6 @@ const patchEntry = R.curry((patches, entry) =>
     ? R.merge(entry, patches[entry.traditional])
     : entry,
 );
-
-const selection = require("./selection");
-const data = require("./data");
-const selectionData = require("./selection").characterData;
 
 const getVocabulary = (char) =>
   data.tocflWords
@@ -69,4 +67,4 @@ const expand = (chars) =>
     )
     .into(R.map(patchEntry(data.patches)));
 
-module.exports = expand(selection.characters);
+export default expand(selection.characters);

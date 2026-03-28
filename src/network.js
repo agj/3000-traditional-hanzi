@@ -1,7 +1,9 @@
-const R = require("ramda");
-const fs = require("fs");
-const xre = require("xregexp");
-require("dot-into").install();
+import dotInto from "dot-into";
+import R from "ramda";
+import fs from "fs";
+import xre from "xregexp";
+
+dotInto.install();
 
 const log = R.tap(console.log);
 const getFile = (filename) =>
@@ -83,4 +85,4 @@ const network = R.mergeWith(mergeDecompositions, ids, idsAnalysis)
     })),
   );
 
-module.exports = network;
+export default network;

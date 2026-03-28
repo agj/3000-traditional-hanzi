@@ -1,11 +1,13 @@
-const R = require("ramda");
-const fs = require("fs");
-const wanakana = require("wanakana");
-const xre = require("xregexp");
-const zhuyin = require("zhuyin");
-require("dot-into").install();
+import dotInto from "dot-into";
+import R from "ramda";
+import fs from "fs";
+import wanakana from "wanakana";
+import xre from "xregexp";
+import * as zhuyin from "zhuyin";
+import * as U from "./utilities";
 
-const U = require("./utilities");
+dotInto.install();
+
 const unicodeToChar = (code) =>
   String.fromCodePoint(parseInt(code.substring(2), 16));
 const getUnihanFile = (filename) =>
@@ -58,7 +60,9 @@ const cangjieKeyToName = (key) => cangjieMap[key];
 const cangjieKeystoNames = (keys) =>
   keys.split("").map(cangjieKeyToName).join("");
 
-const readings = getUnihanFile("data/external/unihan/Unihan_Readings.txt").into(
+export const readings = getUnihanFile(
+  "data/external/unihan/Unihan_Readings.txt",
+).into(
   R.map((o) => {
     const py = o["kMandarin"];
     const pys = py ? py.split(" ") : [];
@@ -76,14 +80,16 @@ const readings = getUnihanFile("data/external/unihan/Unihan_Readings.txt").into(
     };
   }),
 );
-const cangjie = getUnihanFile(
+export const cangjie = getUnihanFile(
   "data/external/unihan/Unihan_DictionaryLikeData.txt",
 ).into(
   R.map((o) => ({
     cangjie: o["kCangjie"] ? cangjieKeystoNames(o["kCangjie"]) : "",
   })),
 );
-const variants = getUnihanFile("data/external/unihan/Unihan_Variants.txt").into(
+export const variants = getUnihanFile(
+  "data/external/unihan/Unihan_Variants.txt",
+).into(
   R.mapObjIndexed((o, char) => ({
     simplified: R.has("kSimplifiedVariant", o)
       ? o["kSimplifiedVariant"]
@@ -93,19 +99,19 @@ const variants = getUnihanFile("data/external/unihan/Unihan_Variants.txt").into(
       : [],
   })),
 );
-const frequencies = U.getFile("data/external/frequency.txt")
+export const frequencies = U.getFile("data/external/frequency.txt")
   .map(R.split("\t"))
   .reduce((obj, [char, freq, ..._], index) => {
     obj[char] = { frequencyRank: index + 1, frequencyRaw: parseInt(freq) };
     return obj;
   }, {});
-const heisig = U.getFile("data/external/heisig-traditional.txt")
+export const heisig = U.getFile("data/external/heisig-traditional.txt")
   .map(R.split("\t"))
   .reduce((obj, [idx, chr, kwd]) => {
     obj[chr] = { heisigKeyword: kwd, heisigIndex: idx };
     return obj;
   }, {});
-const tocflWords = [1, 2, 3, 4, 5, 6, 7].reduce(
+export const tocflWords = [1, 2, 3, 4, 5, 6, 7].reduce(
   (r, level) => {
     r[level] = getTocflFileWords(level).into(R.without(r.all));
     r.all = r.all.concat(r[level]);
@@ -113,7 +119,7 @@ const tocflWords = [1, 2, 3, 4, 5, 6, 7].reduce(
   },
   { all: [] },
 );
-const tocfl = [1, 2, 3, 4, 5, 6, 7].reduce(
+export const tocfl = [1, 2, 3, 4, 5, 6, 7].reduce(
   (r, level) => {
     r[level] = getTocflFileCharacters(level).into(R.without(r.all));
     r.all = r.all.concat(r[level]);
@@ -121,20 +127,20 @@ const tocfl = [1, 2, 3, 4, 5, 6, 7].reduce(
   },
   { all: [] },
 );
-const patches = U.getFile("data/patches.txt")
+export const patches = U.getFile("data/patches.txt")
   .map(R.split("\t"))
   .reduce((obj, [char, key, value]) => {
     obj[char] = { [key]: JSON.parse(value) };
     return obj;
   }, {});
-const exclude = U.getFile("data/exclude.txt");
-const conflateMap = U.getFile("data/conflate.txt")
+export const exclude = U.getFile("data/exclude.txt");
+export const conflateMap = U.getFile("data/conflate.txt")
   .map(R.split("\t"))
   .reduce((obj, [char, conf]) => {
     obj[char] = conf;
     return obj;
   }, {});
-const conflated = R.values(conflateMap)
+export const conflated = R.values(conflateMap)
   .into(R.uniq)
   .into(R.indexBy(R.identity))
   .into(
@@ -142,17 +148,3 @@ const conflated = R.values(conflateMap)
       conflated: conflateMap.into(R.filter(R.equals(char))).into(R.keys),
     })),
   );
-
-module.exports = {
-  readings,
-  cangjie,
-  variants,
-  frequencies,
-  heisig,
-  tocflWords,
-  tocfl,
-  patches,
-  exclude,
-  conflateMap,
-  conflated,
-};

@@ -1,9 +1,12 @@
-const R = require("ramda");
-const fs = require("fs");
-const pinyin = require("pinyin-utils");
-require("dot-into").install();
+import dotInto from "dot-into";
+import R from "ramda";
+import fs from "fs";
+import pinyin from "pinyin-utils";
+import characters from "./src/characters";
+import * as U from "./src/utilities";
 
-const U = require("./src/utilities");
+dotInto.install();
+
 const toStringEntry = (o) =>
   [
     o.traditional,
@@ -34,8 +37,6 @@ const pinyinToFile = (py) => {
   if (/\D$/.test(r)) r = r + "1";
   return r;
 };
-
-const characters = require("./src/characters");
 
 characters
   .into(R.map(toStringEntry))

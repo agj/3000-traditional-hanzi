@@ -1,8 +1,11 @@
-const R = require("ramda");
-const fs = require("fs");
-require("dot-into").install();
+import dotInto from "dot-into";
+import R from "ramda";
+import fs from "fs";
+import * as U from "./src/utilities";
+import data from "./src/selection";
+import network from "./src/network";
 
-const U = require("./src/utilities");
+dotInto.install();
 
 const allNodes = R.curry((network, char) => _allNodes(network, [])(char));
 const _allNodes = (network, stack) => (char) =>
@@ -24,9 +27,6 @@ const _depth = (network, stack) => (char) =>
       : network[char].decomposition
           .map(_depth(network, R.append(char, stack)))
           .reduce(R.max, 0) + 1;
-
-const data = require("./src/selection");
-const network = require("./src/network");
 
 data.characters
   .map(allNodes(network))
