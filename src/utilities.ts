@@ -1,14 +1,14 @@
-import R from "ramda";
+import { tap, pipe, trim } from "ramda";
 import fs from "fs";
 
-export const log = R.tap(console.log);
+export const log = tap(console.log);
 
-const notEmptyLine = R.pipe(
-  R.trim,
+const notEmptyLine = pipe(
+  trim,
   (line) => line.length > 0 && line[0] !== "#" && !/^\/\*/.test(line),
 );
 
-export const getFile = (filename) =>
+export const getFile = (filename: string) =>
   fs.readFileSync(filename, "utf-8").split("\n").filter(notEmptyLine);
 
 export const whenAll = Promise.all.bind(Promise);

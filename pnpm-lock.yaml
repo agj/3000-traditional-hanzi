@@ -9,8 +9,11 @@ importers:
   .:
     dependencies:
       '@types/node':
-        specifier: ^24.12.0
+        specifier: 24.12.0
         version: 24.12.0
+      '@types/ramda':
+        specifier: 0.25.0
+        version: 0.25.0
       cedict-lookup:
         specifier: 0.0.2
         version: 0.0.2
@@ -24,7 +27,7 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       ramda:
-        specifier: ^0.25.0
+        specifier: 0.25.0
         version: 0.25.0
       thenify:
         specifier: ^3.3.0
@@ -47,6 +50,9 @@ packages:
 
   '@types/node@24.12.0':
     resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
+
+  '@types/ramda@0.25.0':
+    resolution: {integrity: sha512-5IdrohP5RJe1kbMnJ4MvQFfwA1Iqyme1b4/5mIzDiVDrR0L/AuhozrxaUGXpZRHWvJkTHQCf9yNSr+CaLM+QdA==}
 
   any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
@@ -108,6 +114,8 @@ snapshots:
   '@types/node@24.12.0':
     dependencies:
       undici-types: 7.16.0
+
+  '@types/ramda@0.25.0': {}
 
   any-promise@1.3.0: {}
 
