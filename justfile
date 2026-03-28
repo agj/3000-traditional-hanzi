@@ -8,6 +8,10 @@ build: install
   bun ./index.js
   bun ./stats.js
 
+# Formats files.
+format:
+  prettier --write "**/*.{js,md,json}"
+
 [private]
 install:
   pnpm install
