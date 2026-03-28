@@ -38,6 +38,9 @@ importers:
       zhuyin:
         specifier: ^1.14.0
         version: 1.14.0
+      zod:
+        specifier: 4.3.6
+        version: 4.3.6
 
 packages:
 
@@ -88,6 +91,9 @@ packages:
   zhuyin@1.14.0:
     resolution: {integrity: sha512-m0gpSLP77jPZj2l+Pyiws01T51/UhZZlpGEtWldGxkulzBF4lCywaFJ1gGhzfSHWrC8uC8qaKLuymld2JvW38A==}
 
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+
 snapshots:
 
   '@babel/runtime-corejs3@7.29.2':
@@ -130,3 +136,5 @@ snapshots:
     dependencies:
       pinyin-split: 1.170.0
       pinyin-utils: 2.32.0
+
+  zod@4.3.6: {}
