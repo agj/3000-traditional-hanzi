@@ -226,10 +226,11 @@ export const conflateMap: Record<string, string> = U.getFile(
 export const conflated: Record<string, Conflated> = values(conflateMap)
   .into((v) => uniq(v))
   .into((v) => indexBy(identity, v))
-  .into(
+  .into((v) =>
     map(
-      (char): Conflated => ({
+      (char: string): Conflated => ({
         conflated: conflateMap.into(filter(equals(char))).into(keys),
       }),
+      v,
     ),
   );
