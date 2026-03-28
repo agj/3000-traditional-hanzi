@@ -16,12 +16,13 @@ import {
 } from "ramda";
 import wanakana from "wanakana";
 import xre from "xregexp";
+import * as z from "zod";
 import * as zhuyin from "zhuyin";
 import * as U from "./utilities.js";
 
 type Unihan = Record<string, string>;
 
-type Readings = {
+export type Readings = {
   pinyin: string;
   zhuyin: string;
   japaneseKun: string;
@@ -29,15 +30,27 @@ type Readings = {
   meaning: string;
 };
 
-type Cangjie = { cangjie: string };
+export type Cangjie = { cangjie: string };
 
-type Variants = { simplified: string[] };
+export type Variants = { simplified: string[] };
 
-type Frequency = { frequencyRank: number; frequencyRaw: number };
+export type Frequency = { frequencyRank: number; frequencyRaw: number };
 
-type Heisig = { heisigKeyword: string; heisigIndex: string };
+export type Heisig = { heisigKeyword: string; heisigIndex: string };
 
-type Conflated = { conflated: string[] };
+export type Conflated = { conflated: string[] };
+
+export type Patch = Cangjie | Variants | { meaning: string };
+
+const patchRowSchema = z.tuple([
+  z.string(),
+  z.enum(["meaning", "simplified", "cangjie"]),
+  z.string(),
+]);
+
+const patchMeaningValueSchema = z.string();
+const patchSimplifiedValueSchema = z.array(z.string());
+const patchCangjieValueSchema = z.string();
 
 const unicodeToChar = (code: string) =>
   String.fromCodePoint(parseInt(code.substring(2), 16));
@@ -197,20 +210,26 @@ export const tocfl: Record<number | "all", string[]> = [
   },
   { all: [] },
 );
-export const patches: Record<string, Record<string, unknown>> = U.getFile(
-  "data/patches.txt",
-)
+export const patches: Record<string, Patch> = U.getFile("data/patches.txt")
   .map(split("\t"))
-  .reduce(
-    (obj: Record<string, Record<string, unknown>>, [char, key, value]) => {
-      if (!char || !key || !value) {
-        throw new Error("Patches file line is in wrong format");
-      }
-      obj[char] = { [key]: JSON.parse(value) };
-      return obj;
-    },
-    {},
-  );
+  .reduce((obj: Record<string, Patch>, row) => {
+    const parsedRow = patchRowSchema.safeParse(row);
+    if (!parsedRow.success) {
+      throw new Error("Patches file line is in wrong format");
+    }
+    const [char, key, valueStr] = parsedRow.data;
+    const value: unknown = JSON.parse(valueStr);
+    if (key === "meaning") {
+      obj[char] = { [key]: patchMeaningValueSchema.parse(value) };
+    } else if (key === "simplified") {
+      obj[char] = { [key]: patchSimplifiedValueSchema.parse(value) };
+    } else if (key === "cangjie") {
+      obj[char] = { [key]: patchCangjieValueSchema.parse(value) };
+    } else {
+      throw new Error(`No parsing known for patch key: ${key}`);
+    }
+    return obj;
+  }, {});
 export const exclude: string[] = U.getFile("data/exclude.txt");
 export const conflateMap: Record<string, string> = U.getFile(
   "data/conflate.txt",
