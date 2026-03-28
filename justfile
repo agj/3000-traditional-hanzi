@@ -8,6 +8,10 @@ build: install
   bun ./index.js
   bun ./stats.js
 
+# List all primitives that cannot be decomposed any further.
+primitives: install
+  bun ./list-primitives.js
+
 # Formats files.
 format:
   prettier --write "**/*.{js,md,json}"
