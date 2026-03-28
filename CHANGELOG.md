@@ -20,6 +20,10 @@ data file.
 - Improved changelog formatting to match keepachangelog.com, renaming file from
   `changes.md` to `CHANGELOG.md`.
 
+### Removed
+
+- Removed link to set of pronunciation sound files, as it is incomplete.
+
 ## [7.0.0][7.0.0] (2021-02-06)
 
 [7.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v7.0.0

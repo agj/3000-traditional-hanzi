@@ -57,7 +57,7 @@ Zhuyin             ㄏㄨ`
 Vocabulary zhuyin  ㄔㄨㄤ ㄏㄨ˙  ㄏㄨ`ㄨㄞ`  ㄎㄞ ㄏㄨ`
 ```
 
-While the data is mostly general, with nothing [Anki][anki]-specific, the “Sound file” column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
+While the data is mostly general, with nothing [Anki][anki]-specific, the “Sound file” column is an exception and formatted specifically for Anki use. I don't provide any audio files here, but if you find your own set of Mandarin syllable pronunciation MP3 files, rename them to match the schema used here and add them to your Anki database to use.
 
 The “Variants” column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
 
@@ -166,4 +166,3 @@ Referenced:
 [grover]: https://github.com/amake/cjk-decomp
 
 [anki]: https://ankisrs.net/
-[pinyin-audio]: https://github.com/agj/mp3-chinese-pinyin-sound
