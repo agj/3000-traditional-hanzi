@@ -6,11 +6,11 @@
     "@types/ramda": "0.25.0",
     "cedict-lookup": "0.0.2",
     "dot-into": "2.0.0",
-    "pinyin-utils": "git+https://git@github.com/agj/pinyin-utils.git#dev",
+    "pinyin-utils": "2.32.0",
     "promise-all": "^1.0.0",
     "ramda": "0.25.0",
     "thenify": "^3.3.0",
-    "wanakana": "^2.3.4",
+    "wanakana": "5.3.1",
     "xregexp": "^4.0.0",
     "zhuyin": "^1.14.0"
   }

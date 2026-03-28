@@ -8,7 +8,7 @@ const notEmptyLine = pipe(
   (line) => line.length > 0 && line[0] !== "#" && !/^\/\*/.test(line),
 );
 
-export const getFile = (filename: string) =>
+export const getFile = (filename: string): string[] =>
   fs.readFileSync(filename, "utf-8").split("\n").filter(notEmptyLine);
 
 export const whenAll = Promise.all.bind(Promise);
