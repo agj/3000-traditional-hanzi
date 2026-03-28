@@ -1,8 +1,7 @@
 import "dot-into";
 import R from "ramda";
-import fs from "fs";
 import * as U from "./src/utilities";
-import data from "./src/selection";
+import * as data from "./src/selection";
 import { network } from "./src/network";
 
 const allNodes = R.curry((network, char) => _allNodes(network, [])(char));
