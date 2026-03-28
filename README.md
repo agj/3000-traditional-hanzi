@@ -57,9 +57,9 @@ Zhuyin             ㄏㄨ`
 Vocabulary zhuyin  ㄔㄨㄤ ㄏㄨ˙  ㄏㄨ`ㄨㄞ`  ㄎㄞ ㄏㄨ`
 ```
 
-While the data is mostly general, with nothing [Anki][anki]-specific, the 'Sound file' column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
+While the data is mostly general, with nothing [Anki][anki]-specific, the “Sound file” column is an exception and formatted specifically for Anki use, and for use in conjunction with [this set of audio files,][pinyin-audio] or any other set of mandarin syllable sound files properly named.
 
-The 'Variants' column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
+The “Variants” column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
 
 
 ## Rationale
@@ -71,7 +71,7 @@ I am a non-native but proficient Japanese speaker who sought to learn Mandarin C
 
 ## My study method
 
-I originally started using these by making each note into a three-way card: _pinyin recall,_ _character recall_ and _meaning recall._ For pinyin recall I would have the meaning and the character on the 'front' of the card, and the pinyin (with its sound) on the back.
+I originally started using these by making each note into a three-way card: _pinyin recall,_ _character recall_ and _meaning recall._ For pinyin recall I would have the meaning and the character on the “front” of the card, and the pinyin (with its sound) on the back.
 
 When I originally studied Japanese kanji, I didn't study their readings this way, because they are multiple and too complicated, so I learned the readings of the characters organically in the process of learning new vocabulary. This time around, at first I thought I could learn the (pretty much) single pinyin reading per character, but after some time trying and failing, I realized that my first approach (not purposefully studying each character's reading) made more sense.
 
@@ -104,7 +104,7 @@ Using this same data, it's trivial (using Anki) to create cards to also study th
 {{/Simplified}}
 ```
 
-If you use this pattern to write the front of the card, notes that have no 'Simplified' field will appear empty, and thus Anki won't create them. Since characters that are different in the simplified standard are in the minority, this will create much fewer cards compared to notes, and you'll only study the characters that are do in fact change.
+If you use this pattern to write the front of the card, notes that have no “Simplified” field will appear empty, and thus Anki won't create them. Since characters that are different in the simplified standard are in the minority, this will create much fewer cards compared to notes, and you'll only study the characters that do in fact change.
 
 Since simplified characters sometimes map to multiple traditional characters, I also add the vocabulary data below, faded in color so I only reference it when in doubt of which this card refers to.
 
@@ -121,16 +121,16 @@ Flashcard software [Anki][anki] has an option to import tab-separated value file
 Consult [the documentation](https://apps.ankiweb.net/docs/manual.html) for all details on the following.
 
 1. First create a new deck.
-2. Add a new note type with the same fields as shown in the "sample entry" above, in the same order (the name of each field doesn't have to be the exact same).
-3. Set the "Study order" field as the main sort field.
-4. Instruct Anki to "check database", to prevent errors in the following step.
+2. Add a new note type with the same fields as shown in the “sample entry” above, in the same order (the name of each field doesn't have to be the exact same).
+3. Set the “Study order” field as the main sort field.
+4. Instruct Anki to “check database”, to prevent errors in the following step.
 5. Import `notes.tsv`.
 6. In the import dialog make sure you have the correct deck and note type selected, but the rest of the options should work as set by default.
-7. Import the sound files manually into the media folder, named so that they match the contents of the "sound file" column of `notes.tsv`.
+7. Import the sound files manually into the media folder, named so that they match the contents of the “sound file” column of `notes.tsv`.
 8. Create cards types suited to your use case.
 9. Check the database again.
 
-If you want to later update the notes to a newer version of `notes.tsv`, just make sure to match the number and order of fields in the note type of the new version, check database as needed, and import. Because Anki modifies the order cards are displayed when they were just updated, you'll need to go to the browser, select **all** cards in the deck simultaneously, and use the "Reposition" command in the Edit menu to make sure the cards show up according to the study order field again.
+If you want to later update the notes to a newer version of `notes.tsv`, just make sure to match the number and order of fields in the note type of the new version, check database as needed, and import. Because Anki modifies the order cards are displayed when they were just updated, you'll need to go to the browser, select **all** cards in the deck simultaneously, and use the “Reposition” command in the Edit menu to make sure the cards show up according to the study order field again.
 
 Once I consider this stable enough, I might convert it into a shared deck file and upload it to the Anki website, to save everyone the trouble of the above.
 
