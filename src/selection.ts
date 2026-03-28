@@ -26,9 +26,13 @@ export type Character = {
   isComponent: boolean;
 };
 
-const allNodes = curry((network: Record<string, Decomposition>, char: string) =>
-  _allNodes(network, [])(char),
-);
+/**
+ * Gets all decomposition nodes as a flat array for a given character.
+ */
+export const allNodes =
+  (network: Record<string, Decomposition>) =>
+  (char: string): string[] =>
+    _allNodes(network, [])(char);
 const _allNodes =
   (network: Record<string, Decomposition>, stack: string[]) =>
   (char: string): string[] => {
@@ -46,7 +50,13 @@ const _allNodes =
             .into((v) => uniq(v));
     }
   };
-const depth =
+
+/**
+ * Gets the maximum amount of times a character can be decomposed into smaller
+ * and smaller components, until we reach an indivisible primitive. A primitive
+ * has depth `0`.
+ */
+export const depth =
   (network: Record<string, Decomposition>) =>
   (char: string): number =>
     _depth(network, [])(char);
@@ -149,7 +159,7 @@ const charactersAndComponents: string[] = htfCharacters
   .into(sortByFrequency(frequencies));
 const charactersAndComponentsSorted: string[] = charactersAndComponents.reduce(
   (r: string[], char) =>
-    allNodes(network, char)
+    allNodes(network)(char)
       .filter((c) => charactersAndComponents.includes(c))
       .into(without(r))
       .into(sortByDepth(depths))
