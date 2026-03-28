@@ -4,6 +4,7 @@
 
 # Generate output files.
 build: install
+  tsc --noEmit
   bun ./index.js
   bun ./stats.js
 

@@ -15,10 +15,11 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
-            pkgs.just
             pkgs.bun
+            pkgs.just
             pkgs.pnpm
             pkgs.prettier
+            pkgs.typescript
           ];
         };
       }
