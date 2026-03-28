@@ -1,11 +1,8 @@
-
-3000+ traditional hanzi Anki deck
-=================================
+# 3000+ traditional hanzi Anki deck
 
 Making use of a number of databases of Chinese characters (hanzi) publicly available online, I (agj) created this code that compiles a number of traditional Chinese characters and their information, into a tab-separated values file for importing and use in the [Anki][anki] flashcard reviewing software (or similar).
 
 _Version 7.0.0_
-
 
 ## How the characters are selected
 
@@ -18,7 +15,6 @@ The list combines characters from the following sources:
 For a grand total of **3183** characters.
 
 Characters are ordered according to usage frequency, except whenever a character is a subcomponent of another, in which case the subcomponent will always be placed earlier. This strategy attemps to place focus on real-life use of each studied character, without compromising building-block sequence logic. The sequence may not be perfect, as it depends 100% on the thoroughness of the databases used, but it is a pretty good result overall.
-
 
 ## The first 100 characters
 
@@ -34,13 +30,12 @@ Compare with the first few characters in the list of most frequently used:
 好為上來學就交也用能如時文說沒他看那問生  
 提下過
 
-
 ## Sample entry
 
 ```
 Traditional        戶
 Study order        114
-Variants           
+Variants
 Simplified         户
 Pinyin             hù
 Heisig keyword     door
@@ -61,13 +56,11 @@ While the data is mostly general, with nothing [Anki][anki]-specific, the “Sou
 
 The “Variants” column is rarely used, but when it is it contains different writings of the same character, as found in different sources. For ease of study, I conflated them into a single writing but included the others in this field.
 
-
 ## Rationale
 
 I found it hard to find good study resources for traditional Chinese writing that weren't an adaptation of a resource originally meant for simplified Chinese. This includes flashcard decks of characters. The reality is that the two scripts are not comparable one-for-one. For instance, certain simplified characters are mapped to multiple possible traditional characters, depending on context. This affects usage statistics, among other factors. Thus the need to compile my own deck of flashcards, based on traditional character data.
 
 I am a non-native but proficient Japanese speaker who sought to learn Mandarin Chinese while focusing on traditional characters. While learning Japanese I understood the importance of the character study sequence. Most characters can be subdivided into components, which are (often) characters themselves. It makes the most sense to go bottom-up, studying the simplest characters first, that in combination give shape to other characters, and so on. That is why I devised the sequencing strategy employed here.
-
 
 ## My study method
 
@@ -108,11 +101,9 @@ If you use this pattern to write the front of the card, notes that have no “Si
 
 Since simplified characters sometimes map to multiple traditional characters, I also add the vocabulary data below, faded in color so I only reference it when in doubt of which this card refers to.
 
-
 ## Data format
 
 The main output of the program contained in this repository is the `output/notes.tsv` file. The data in this file is formatted as a tab-separated value file. This is a plain-text file, formatted so that each line corresponds to one row, and each row has columns of text separated by tab characters, forming a table. The above samply entry shows the column order and exemplifies the values that fill each cell.
-
 
 ## How to use with Anki
 
@@ -134,11 +125,9 @@ If you want to later update the notes to a newer version of `notes.tsv`, just ma
 
 Once I consider this stable enough, I might convert it into a shared deck file and upload it to the Anki website, to save everyone the trouble of the above.
 
-
 ## Changelog
 
 See `CHANGELOG.md`.
-
 
 ## Credits
 
@@ -160,9 +149,8 @@ Referenced:
 [charfreq]: http://technology.chtsai.org/charfreq/
 [top]: http://www.sc-top.org.tw/english/download.php
 [heisig]: http://rtkwiki.koohii.com/wiki/Remembering_Simplified_Hanzi,_Traditional_Hanzi_and_Kanji_spreadsheet
-[cjkvi]:https://github.com/cjkvi/cjkvi-ids
+[cjkvi]: https://github.com/cjkvi/cjkvi-ids
 [learnm]: http://learnm.org/
 [cedict]: https://www.mdbg.net/chinese/dictionary?page=cc-cedict
 [grover]: https://github.com/amake/cjk-decomp
-
 [anki]: https://ankisrs.net/
