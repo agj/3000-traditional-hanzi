@@ -23,9 +23,6 @@ importers:
       pinyin-utils:
         specifier: 2.32.0
         version: 2.32.0
-      promise-all:
-        specifier: ^1.0.0
-        version: 1.0.0
       ramda:
         specifier: 0.25.0
         version: 0.25.0
@@ -66,22 +63,11 @@ packages:
   dot-into@2.0.0:
     resolution: {integrity: sha512-n+zpHJMmpNKmaubPrILSMDyh83HNjclUlRdYxCYNkcHWwOP3fZA3N7Yy2vrzXd6ysEr1qNxcaVNrmMcHSibPeg==}
 
-  is-plain-object@2.0.4:
-    resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
-    engines: {node: '>=0.10.0'}
-
-  isobject@3.0.1:
-    resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
-    engines: {node: '>=0.10.0'}
-
   pinyin-split@1.170.0:
     resolution: {integrity: sha512-7hlVgPSxAg2qDrStiOJy0kSWT1/uxo5jw0FPdqr/yIS1ugR3YXawRR6LWrkBOQCe+FSci1mr4Z1MOiCEG3gi4Q==}
 
   pinyin-utils@2.32.0:
     resolution: {integrity: sha512-jgPlD0lhF9GCxhFkUD+KZ0NEHw3QCIGX1n11DPmPvvgqvrX3YUdlp2p7bdrbejnjmzNK+BJaDwG9uyApw3xL8Q==}
-
-  promise-all@1.0.0:
-    resolution: {integrity: sha512-whAvMcaK4qZNupq4T///1Va3bJ1pNbPfhGseuf3CHRqvCLwA6Ximd6BR5oCLqRooBRMAfRBpmK+jv8zfzD6h/Q==}
 
   ramda@0.25.0:
     resolution: {integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==}
@@ -122,19 +108,9 @@ snapshots:
 
   dot-into@2.0.0: {}
 
-  is-plain-object@2.0.4:
-    dependencies:
-      isobject: 3.0.1
-
-  isobject@3.0.1: {}
-
   pinyin-split@1.170.0: {}
 
   pinyin-utils@2.32.0: {}
-
-  promise-all@1.0.0:
-    dependencies:
-      is-plain-object: 2.0.4
 
   ramda@0.25.0: {}
 
