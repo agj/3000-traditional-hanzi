@@ -1,9 +1,4 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "agj",
-  "license": "MIT",
   "private": true,
   "dependencies": {
     "cedict-lookup": "0.0.2",
