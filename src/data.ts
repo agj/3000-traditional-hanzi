@@ -21,9 +21,23 @@ import * as U from "./utilities.js";
 
 type Unihan = Record<string, string>;
 
+type Readings = {
+  pinyin: string;
+  zhuyin: string;
+  japaneseKun: string;
+  japaneseOn: string;
+  meaning: string;
+};
+
+type Cangjie = { cangjie: string };
+
+type Variants = { simplified: string[] };
+
 type Frequency = { frequencyRank: number; frequencyRaw: number };
 
 type Heisig = { heisigKeyword: string; heisigIndex: string };
+
+type Conflated = { conflated: string[] };
 
 const unicodeToChar = (code: string) =>
   String.fromCodePoint(parseInt(code.substring(2), 16));
@@ -95,10 +109,10 @@ const cangjieKeystoNames = (keys: string) =>
     .map((key) => cangjieKeyToName(asCangjieKey(key)))
     .join("");
 
-export const readings = getUnihanFile(
+export const readings: Record<string, Readings> = getUnihanFile(
   "data/external/unihan/Unihan_Readings.txt",
 ).into((unihan) =>
-  map((o: Unihan) => {
+  map((o: Unihan): Readings => {
     const py = o["kMandarin"] ?? "";
     const pys = py.split(" ");
     const zy = pys.map((py_) => zhuyin.fromPinyin(py_)).join(" ");
@@ -111,25 +125,25 @@ export const readings = getUnihanFile(
       japaneseOn: has("kJapaneseOn", o)
         ? wanakana.toKatakana(o["kJapaneseOn"])
         : "",
-      meaning: o["kDefinition"],
+      meaning: o["kDefinition"] ?? "",
     };
   }, unihan),
 );
-export const cangjie = getUnihanFile(
+export const cangjie: Record<string, Cangjie> = getUnihanFile(
   "data/external/unihan/Unihan_DictionaryLikeData.txt",
 ).into((unihan) =>
   map(
-    (o) => ({
+    (o): Cangjie => ({
       cangjie: o["kCangjie"] ? cangjieKeystoNames(o["kCangjie"]) : "",
     }),
     unihan,
   ),
 );
-export const variants = getUnihanFile(
+export const variants: Record<string, Variants> = getUnihanFile(
   "data/external/unihan/Unihan_Variants.txt",
 ).into((unihan) =>
   mapObjIndexed(
-    (o: Record<string, string>, char) => ({
+    (o: Record<string, string>, char): Variants => ({
       simplified:
         "kSimplifiedVariant" in o
           ? o["kSimplifiedVariant"]
@@ -141,7 +155,9 @@ export const variants = getUnihanFile(
     unihan,
   ),
 );
-export const frequencies = U.getFile("data/external/frequency.txt")
+export const frequencies: Record<string, Frequency> = U.getFile(
+  "data/external/frequency.txt",
+)
   .map(split("\t"))
   .reduce((obj: Record<string, Frequency>, [char, freq, ..._], index) => {
     if (!char || !freq) {
@@ -150,7 +166,9 @@ export const frequencies = U.getFile("data/external/frequency.txt")
     obj[char] = { frequencyRank: index + 1, frequencyRaw: parseInt(freq) };
     return obj;
   }, {});
-export const heisig = U.getFile("data/external/heisig-traditional.txt")
+export const heisig: Record<string, Heisig> = U.getFile(
+  "data/external/heisig-traditional.txt",
+)
   .map(split("\t"))
   .reduce((obj: Record<string, Heisig>, [idx, chr, kwd]) => {
     if (!idx || !chr || !kwd) {
@@ -159,7 +177,9 @@ export const heisig = U.getFile("data/external/heisig-traditional.txt")
     obj[chr] = { heisigKeyword: kwd, heisigIndex: idx };
     return obj;
   }, {});
-export const tocflWords = [1, 2, 3, 4, 5, 6, 7].reduce(
+export const tocflWords: Record<number | "all", string[]> = [
+  1, 2, 3, 4, 5, 6, 7,
+].reduce(
   (r: Record<number | "all", string[]>, level) => {
     r[level] = getTocflFileWords(level).into(without(r.all));
     r.all = r.all.concat(r[level]);
@@ -167,7 +187,9 @@ export const tocflWords = [1, 2, 3, 4, 5, 6, 7].reduce(
   },
   { all: [] },
 );
-export const tocfl = [1, 2, 3, 4, 5, 6, 7].reduce(
+export const tocfl: Record<number | "all", string[]> = [
+  1, 2, 3, 4, 5, 6, 7,
+].reduce(
   (r: Record<number | "all", string[]>, level) => {
     r[level] = getTocflFileCharacters(level).into(without(r.all));
     r.all = r.all.concat(r[level]);
@@ -175,7 +197,9 @@ export const tocfl = [1, 2, 3, 4, 5, 6, 7].reduce(
   },
   { all: [] },
 );
-export const patches = U.getFile("data/patches.txt")
+export const patches: Record<string, Record<string, unknown>> = U.getFile(
+  "data/patches.txt",
+)
   .map(split("\t"))
   .reduce(
     (obj: Record<string, Record<string, unknown>>, [char, key, value]) => {
@@ -187,8 +211,10 @@ export const patches = U.getFile("data/patches.txt")
     },
     {},
   );
-export const exclude = U.getFile("data/exclude.txt");
-export const conflateMap = U.getFile("data/conflate.txt")
+export const exclude: string[] = U.getFile("data/exclude.txt");
+export const conflateMap: Record<string, string> = U.getFile(
+  "data/conflate.txt",
+)
   .map(split("\t"))
   .reduce((obj: Record<string, string>, [char, conf]) => {
     if (!char || !conf) {
@@ -197,11 +223,13 @@ export const conflateMap = U.getFile("data/conflate.txt")
     obj[char] = conf;
     return obj;
   }, {});
-export const conflated = values(conflateMap)
+export const conflated: Record<string, Conflated> = values(conflateMap)
   .into((v) => uniq(v))
   .into((v) => indexBy(identity, v))
   .into(
-    map((char) => ({
-      conflated: conflateMap.into(filter(equals(char))).into(keys),
-    })),
+    map(
+      (char): Conflated => ({
+        conflated: conflateMap.into(filter(equals(char))).into(keys),
+      }),
+    ),
   );

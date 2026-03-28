@@ -96,7 +96,11 @@ const mergeDecompositions = (a: Decomposition, b: Decomposition) => ({
   character: a.character,
   decomposition: concat(a.decomposition, b.decomposition).into(uniq),
 });
-const network = mergeWith(mergeDecompositions, ids, idsAnalysis)
+const network: Record<string, Decomposition> = mergeWith(
+  mergeDecompositions,
+  ids,
+  idsAnalysis,
+)
   .into(mergeWith(mergeDecompositions, cjkDecomp))
   .into(
     map((c: Decomposition) => ({
