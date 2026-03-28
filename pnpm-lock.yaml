@@ -1,0 +1,138 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      cedict-lookup:
+        specifier: 0.0.2
+        version: 0.0.2
+      dot-into:
+        specifier: ^1.0.2
+        version: 1.0.2
+      pinyin-utils:
+        specifier: git+https://git@github.com/agj/pinyin-utils.git#dev
+        version: https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1
+      promise-all:
+        specifier: ^1.0.0
+        version: 1.0.0
+      ramda:
+        specifier: ^0.25.0
+        version: 0.25.0
+      thenify:
+        specifier: ^3.3.0
+        version: 3.3.1
+      wanakana:
+        specifier: ^2.3.4
+        version: 2.3.4
+      xregexp:
+        specifier: ^4.0.0
+        version: 4.4.1
+      zhuyin:
+        specifier: ^1.14.0
+        version: 1.14.0
+
+packages:
+
+  '@babel/runtime-corejs3@7.29.2':
+    resolution: {integrity: sha512-Lc94FOD5+0aXhdb0Tdg3RUtqT6yWbI/BbFWvlaSJ3gAb9Ks+99nHRDKADVqC37er4eCB0fHyWT+y+K3QOvJKbw==}
+    engines: {node: '>=6.9.0'}
+
+  any-promise@1.3.0:
+    resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
+
+  cedict-lookup@0.0.2:
+    resolution: {integrity: sha512-UAZbVlxHMvi0FSQZt63hSTYILgexbCXeIZvDmPBLlpYjzioKi5fJF+0J784kxmRZ+ypnJ4/7xbHiITyI4kD6eg==}
+
+  core-js-pure@3.49.0:
+    resolution: {integrity: sha512-XM4RFka59xATyJv/cS3O3Kml72hQXUeGRuuTmMYFxwzc9/7C8OYTaIR/Ji+Yt8DXzsFLNhat15cE/JP15HrCgw==}
+
+  dot-into@1.0.2:
+    resolution: {integrity: sha512-pU8+AGurBIyfgcmkVbhNtT8jCWtzuIM1veFR9eG7md74P6K1SvT+N4rEcv8hPsVTqR504EUpO9ILLO56jYiuGQ==}
+
+  is-plain-object@2.0.4:
+    resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
+    engines: {node: '>=0.10.0'}
+
+  isobject@3.0.1:
+    resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
+    engines: {node: '>=0.10.0'}
+
+  pinyin-split@1.170.0:
+    resolution: {integrity: sha512-7hlVgPSxAg2qDrStiOJy0kSWT1/uxo5jw0FPdqr/yIS1ugR3YXawRR6LWrkBOQCe+FSci1mr4Z1MOiCEG3gi4Q==}
+
+  pinyin-utils@2.32.0:
+    resolution: {integrity: sha512-jgPlD0lhF9GCxhFkUD+KZ0NEHw3QCIGX1n11DPmPvvgqvrX3YUdlp2p7bdrbejnjmzNK+BJaDwG9uyApw3xL8Q==}
+
+  pinyin-utils@https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1:
+    resolution: {tarball: https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1}
+    version: 1.0.3
+
+  promise-all@1.0.0:
+    resolution: {integrity: sha512-whAvMcaK4qZNupq4T///1Va3bJ1pNbPfhGseuf3CHRqvCLwA6Ximd6BR5oCLqRooBRMAfRBpmK+jv8zfzD6h/Q==}
+
+  ramda@0.25.0:
+    resolution: {integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==}
+
+  thenify@3.3.1:
+    resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
+
+  wanakana@2.3.4:
+    resolution: {integrity: sha512-OcZelffPMb9Rb38sw1n+ywQWxUCI8NTnYJ4PYzsHbUPEjB7bGPd1d5tBxAoZozeLM0HrPRSG7n6BjEtzpRAXpg==}
+
+  xregexp@4.4.1:
+    resolution: {integrity: sha512-2u9HwfadaJaY9zHtRRnH6BY6CQVNQKkYm3oLtC9gJXXzfsbACg5X5e4EZZGVAH+YIfa+QA9lsFQTTe3HURF3ag==}
+
+  zhuyin@1.14.0:
+    resolution: {integrity: sha512-m0gpSLP77jPZj2l+Pyiws01T51/UhZZlpGEtWldGxkulzBF4lCywaFJ1gGhzfSHWrC8uC8qaKLuymld2JvW38A==}
+
+snapshots:
+
+  '@babel/runtime-corejs3@7.29.2':
+    dependencies:
+      core-js-pure: 3.49.0
+
+  any-promise@1.3.0: {}
+
+  cedict-lookup@0.0.2: {}
+
+  core-js-pure@3.49.0: {}
+
+  dot-into@1.0.2: {}
+
+  is-plain-object@2.0.4:
+    dependencies:
+      isobject: 3.0.1
+
+  isobject@3.0.1: {}
+
+  pinyin-split@1.170.0: {}
+
+  pinyin-utils@2.32.0: {}
+
+  pinyin-utils@https://codeload.github.com/agj/pinyin-utils/tar.gz/93a1cdfbba775869f221e5ed385273e6ad047ea1: {}
+
+  promise-all@1.0.0:
+    dependencies:
+      is-plain-object: 2.0.4
+
+  ramda@0.25.0: {}
+
+  thenify@3.3.1:
+    dependencies:
+      any-promise: 1.3.0
+
+  wanakana@2.3.4: {}
+
+  xregexp@4.4.1:
+    dependencies:
+      '@babel/runtime-corejs3': 7.29.2
+
+  zhuyin@1.14.0:
+    dependencies:
+      pinyin-split: 1.170.0
+      pinyin-utils: 2.32.0

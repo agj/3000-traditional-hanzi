@@ -14,9 +14,11 @@
         pkgs = import nixpkgs {system = system;};
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            nodejs_24
-            prettier
+          buildInputs = [
+            pkgs.just
+            pkgs.nodejs-slim_24
+            pkgs.pnpm
+            pkgs.prettier
           ];
         };
       }
