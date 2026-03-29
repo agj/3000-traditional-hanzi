@@ -6,8 +6,8 @@ import {
   indexBy,
   last,
   map,
-  merge,
   mergeAll,
+  mergeRight,
   omit,
   replace,
   take,
@@ -43,7 +43,7 @@ const zhuyinDiacritics = ["ˊ", "ˇ", "`", "˙"];
 
 const patchEntry = (patches: Record<string, data.Patch>) => (entry: Merged) =>
   has(entry.traditional, patches)
-    ? merge(entry, patches[entry.traditional])
+    ? mergeRight(entry, patches[entry.traditional])
     : entry;
 const getVocabulary = (char: string): Vocabulary[] =>
   data.tocflWords

@@ -1,7 +1,7 @@
 import "dot-into";
 import {
   concat,
-  contains,
+  includes,
   filter,
   has,
   map,
@@ -55,7 +55,7 @@ const idsAnalysis = getIdsFile(
     if (!char || !dec) {
       throw new Error("IDs analysis file line has wrong format");
     }
-    return [char, contains(cat, wrongAnalysisCats) ? "" : dec];
+    return [char, includes(cat, wrongAnalysisCats) ? "" : dec];
   },
 );
 const reCjkDecomp = /^(.+):.+\((.+)\)$/u;

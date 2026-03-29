@@ -1,5 +1,5 @@
 import "dot-into";
-import R from "ramda";
+import * as R from "ramda";
 import fs from "fs";
 import * as data from "./src/selection.js";
 

@@ -1,5 +1,5 @@
 import "dot-into";
-import R from "ramda";
+import { last, prop, map, values } from "ramda";
 import fs from "fs";
 import pinyin from "pinyin-utils";
 import characters from "./src/characters";
@@ -11,21 +11,21 @@ const toStringEntry = (o) =>
     o.charactersOnlyStudyOrder,
     o.conflated ? o.conflated.join("") : "",
     o.simplified ? o.simplified.join("") : "",
-    o.pinyin ? o.pinyin.split(" ").into(R.last) : "",
+    o.pinyin ? o.pinyin.split(" ").into(last) : "",
     o.heisigKeyword,
     o.meaning,
-    o.vocabulary.map(R.prop("word")).join(" "),
-    o.vocabulary.map(R.prop("pinyin")).join(" "),
+    o.vocabulary.map(prop("word")).join(" "),
+    o.vocabulary.map(prop("pinyin")).join(" "),
     o.japaneseKun,
     o.japaneseOn,
     "[sound:agj-pinyin-" +
-      pinyinToFile(o.pinyin ? o.pinyin.split(" ").into(R.last) : "") +
+      pinyinToFile(o.pinyin ? o.pinyin.split(" ").into(last) : "") +
       ".mp3]",
     o.frequencyRank,
     o.cangjie,
     o.heisigIndex,
-    o.zhuyin ? o.zhuyin.split(" ").into(R.last) : "",
-    o.vocabulary.map(R.prop("zhuyin")).join("  "),
+    o.zhuyin ? o.zhuyin.split(" ").into(last) : "",
+    o.vocabulary.map(prop("zhuyin")).join("  "),
   ].join("\t");
 const pinyinToFile = (py) => {
   let r = py
@@ -37,8 +37,8 @@ const pinyinToFile = (py) => {
 };
 
 characters
-  .into(R.map(toStringEntry))
-  .into(R.values)
+  .into(map(toStringEntry))
+  .into(values)
   .into((r) => {
     fs.writeFileSync("output/notes.tsv", r.join("\n"), "utf-8");
   });

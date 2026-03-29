@@ -1,7 +1,7 @@
 import {
   append,
   concat,
-  contains,
+  includes,
   curry,
   filter,
   fromPairs,
@@ -36,7 +36,7 @@ export const allNodes =
 const _allNodes =
   (network: Record<string, Decomposition>, stack: string[]) =>
   (char: string): string[] => {
-    if (contains(char, stack)) {
+    if (includes(char, stack)) {
       return [];
     } else {
       if (!network[char]) {
@@ -63,7 +63,7 @@ export const depth =
 const _depth =
   (network: Record<string, Decomposition>, stack: string[]) =>
   (char: string): number =>
-    contains(char, stack)
+    includes(char, stack)
       ? 0
       : !network[char] || network[char].decomposition.length === 0
         ? 0
@@ -100,10 +100,10 @@ const tocfl = data.tocfl;
 const conflateMap = data.conflateMap;
 
 export const heisigCharacters = heisig
-  .into(reject(propEq("heisigIndex", "c")))
+  .into(reject(propEq("c", "heisigIndex")))
   .into(keys);
 export const heisigComponents = heisig
-  .into(filter(propEq("heisigIndex", "c")))
+  .into(filter(propEq("c", "heisigIndex")))
   .into(keys);
 export const tocflCharacters = tocfl.all;
 const frequencies: Record<string, number> = map(
@@ -122,7 +122,7 @@ export const htfCharacters: string[] = heisigCharacters
   .concat(tocflCharacters)
   .concat(frequentCharacters)
   .into((cs) => uniq(cs))
-  .into((cs) => reject((c) => contains(c, data.exclude), cs))
+  .into((cs) => reject((c) => includes(c, data.exclude), cs))
   .into(conflate(conflateMap));
 const htfComponentsRaw: string[] = htfCharacters
   .flatMap(allNodes(network))
