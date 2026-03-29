@@ -2,7 +2,6 @@ import {
   append,
   filter,
   flatten,
-  has,
   indexBy,
   last,
   map,
@@ -22,14 +21,14 @@ import { characterData as selectionData } from "./selection.js";
 
 type Merged = {
   traditional: string;
-  vocabulary: string[];
-} & selection.Character &
+  vocabulary: Vocabulary[];
+} & Partial<selection.Character> &
   data.Readings &
   data.Cangjie &
-  data.Frequency &
+  Partial<data.Frequency> &
   data.Variants &
-  data.Heisig &
-  data.Conflated;
+  Partial<data.Heisig> &
+  Partial<data.Conflated>;
 
 type Vocabulary = {
   word: string;
@@ -41,10 +40,10 @@ const cedict = cedictLookup.loadTraditional("data/external/cedict_ts.u8");
 
 const zhuyinDiacritics = ["ˊ", "ˇ", "`", "˙"];
 
-const patchEntry = (patches: Record<string, data.Patch>) => (entry: Merged) =>
-  has(entry.traditional, patches)
-    ? mergeRight(entry, patches[entry.traditional])
-    : entry;
+const patchEntry = (patches: Record<string, data.Patch>) => (entry: Merged) => {
+  const patch = patches[entry.traditional];
+  return patch ? mergeRight(entry, patch) : entry;
+};
 const getVocabulary = (char: string): Vocabulary[] =>
   data.tocflWords
     .into(omit(["all"]))
@@ -62,9 +61,10 @@ const getVocabulary = (char: string): Vocabulary[] =>
         .split(" ")
         .map(replace(/u:/g, "ü"))
         .map((p) => pinyin.numberToMark(p));
-      const zys = pys
-        .map(zhuyin.fromPinyinSyllable)
-        .map((zy) => (zhuyinDiacritics.includes(last(zy)) ? zy : zy + " "));
+      const zys = pys.map(zhuyin.fromPinyinSyllable).map((zy) => {
+        const lastChar = last(zy);
+        return lastChar && zhuyinDiacritics.includes(lastChar) ? zy : zy + " ";
+      });
       return {
         word: w,
         pinyin: pys.join(""),
@@ -72,18 +72,27 @@ const getVocabulary = (char: string): Vocabulary[] =>
       };
     });
 
-const compileData = (char: string): Merged =>
-  mergeAll([
+const compileData = (char: string): Merged => {
+  const ensureDefined = <T,>(value: T, datum: string) => {
+    if (value === undefined) {
+      throw new Error(
+        `"${datum}" data to compile was not found for character: ${char}`,
+      );
+    }
+    return value;
+  };
+  return mergeAll([
     { traditional: char },
-    selectionData[char],
-    data.readings[char],
-    data.cangjie[char],
-    data.frequencies[char],
-    data.variants[char],
-    data.heisig[char],
-    data.conflated[char],
     { vocabulary: getVocabulary(char) },
+    selectionData[char] ?? {},
+    data.frequencies[char] ?? {},
+    data.variants[char] ?? { simplified: [] },
+    data.heisig[char] ?? {},
+    data.conflated[char] ?? {},
+    ensureDefined(data.readings[char], "readings"),
+    ensureDefined(data.cangjie[char], "cangjie"),
   ]);
+};
 
 const expand = (chars: string[]) =>
   chars
