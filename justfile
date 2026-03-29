@@ -14,7 +14,7 @@ primitives: install
 
 # Formats files.
 format:
-  prettier --write "**/*.{js,md,json}"
+  prettier --write "**/*.{ts,js,md,json}"
 
 [private]
 install:
