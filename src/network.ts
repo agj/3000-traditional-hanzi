@@ -1,33 +1,24 @@
 import "dot-into";
-import {
-  concat,
-  includes,
-  filter,
-  has,
-  map,
-  mergeWith,
-  pipe,
-  replace,
-  split,
-  trim,
-  uniq,
-} from "ramda";
-import fs from "fs";
-import xre from "xregexp";
+import { concat, includes, filter, map, mergeWith, split, uniq } from "ramda";
+import { getFile, stripNonHan } from "./utilities.js";
 
-export type Decomposition = { character: string; decomposition: string[] };
+export type Decomposition = {
+  character: string;
+  decomposition: string[];
+};
 
-const getFile = (filename: string) =>
-  fs.readFileSync(filename, "utf-8").split("\n").filter(notEmptyLine);
-const notEmptyLine = pipe(
-  trim,
-  (line) => line.length > 0 && line[0] !== "#" && !/^\/\*/.test(line),
-);
-const stripNonHan = replace(xre("\\P{Han}", "gA"), "");
+// CJKVI data.
+
+/**
+ * Read IDS (ideographic description sequence) data from file, keyed by
+ * character. Supply a function to preprocess each row (split into an array of
+ * strings), into a tuple
+ * `[character, decomposition]`.
+ */
 const getIdsFile = (
   filename: string,
   preprocess: (s: string[]) => [string, string],
-) =>
+): Record<string, Decomposition> =>
   getFile(filename)
     .map(split("\t"))
     .map(preprocess)
@@ -42,13 +33,29 @@ const getIdsFile = (
       return obj;
     }, {});
 
-const ids = getIdsFile("data/external/ids.txt", ([_, char, ...decs]) => {
-  if (!char) {
-    throw new Error("IDs file line has wrong format");
-  }
-  return [char, decs.reduce(concat, "")];
-});
+/**
+ * All base IDS (ideographic description sequence) decomposition data, keyed
+ * by character.
+ */
+const ids: Record<string, Decomposition> = getIdsFile(
+  "data/external/ids.txt",
+  ([_, char, ...decs]) => {
+    if (!char) {
+      throw new Error("IDs file line has wrong format");
+    }
+    return [char, decs.reduce(concat, "")];
+  },
+);
+
+/**
+ * IDS "analysis" file categories that don't contain decomposition information.
+ */
 const wrongAnalysisCats = ["簡体", "或字"];
+
+/**
+ * All IDS (ideographic description sequence) decomposition data from the
+ * "analysis" file, keyed by character.
+ */
 const idsAnalysis = getIdsFile(
   "data/external/ids-analysis.txt",
   ([_, char, dec, cat]) => {
@@ -58,15 +65,35 @@ const idsAnalysis = getIdsFile(
     return [char, includes(cat, wrongAnalysisCats) ? "" : dec];
   },
 );
+
+// Grover data.
+
+/**
+ * Regex matching components in a Grover decomposition file's line. The first
+ * capture group is the character (or numeric ID), while the second is its
+ * decomposition.
+ */
 const reCjkDecomp = /^(.+):.+\((.+)\)$/u;
-const redefineNumeric =
+
+/**
+ * Grover decomposition data contains many entries which are not themselves
+ * characters but rather are further decompositions, and are specified as
+ * numeric IDs. This function converts such ID "characters" into an array of
+ * components, and for actual characters just returns a singleton array with the
+ * character inside.
+ */
+const redefineCjkNumericId =
   (mapping: Record<string, Decomposition>) =>
   (component: string): string[] =>
     /\d+/.test(component)
       ? (mapping[component]?.decomposition
-          .flatMap(redefineNumeric(mapping))
+          .flatMap(redefineCjkNumericId(mapping))
           .into((v) => uniq(v)) ?? [])
       : [component];
+
+/**
+ * All Grover decomposition data, keyed by character.
+ */
 const cjkDecomp = getFile("data/external/cjk-decomp.txt")
   .map((l): [string, string[]] => [
     l.replace(reCjkDecomp, "$1"),
@@ -83,7 +110,7 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
           (o: Decomposition): Decomposition => ({
             character: o.character,
             decomposition: o.decomposition
-              .flatMap(redefineNumeric(all))
+              .flatMap(redefineCjkNumericId(all))
               .into((v) => uniq(v)),
           }),
           decompositions,
@@ -91,11 +118,20 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
     ),
   );
 
+// Data combination.
+
+/**
+ * Merges two decompositions, ensuring there's no repeated components.
+ */
 const mergeDecompositions = (a: Decomposition, b: Decomposition) => ({
   character: a.character,
   decomposition: concat(a.decomposition, b.decomposition).into(uniq),
 });
 
+/**
+ * Whole character decomposition into components information, keyed by
+ * character.
+ */
 export const network: Record<string, Decomposition> = mergeWith(
   mergeDecompositions,
   ids,
@@ -103,10 +139,12 @@ export const network: Record<string, Decomposition> = mergeWith(
 )
   .into(mergeWith(mergeDecompositions, cjkDecomp))
   .into(
-    map((c: Decomposition) => ({
-      character: c.character,
-      decomposition: c.decomposition.filter(
-        (c) => has(c, ids) || has(c, idsAnalysis) || has(c, cjkDecomp),
-      ),
-    })),
+    map(
+      (dec: Decomposition): Decomposition => ({
+        character: dec.character,
+        decomposition: dec.decomposition.filter(
+          (char) => char in ids || char in idsAnalysis || char in cjkDecomp,
+        ),
+      }),
+    ),
   );
