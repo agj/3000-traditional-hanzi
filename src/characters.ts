@@ -6,7 +6,6 @@ import {
   last,
   map,
   mergeAll,
-  mergeRight,
   omit,
   replace,
   take,
@@ -15,20 +14,39 @@ import {
 import pinyin from "pinyin-utils";
 import * as zhuyin from "zhuyin";
 import cedictLookup from "cedict-lookup";
-import * as selection from "./selection.js";
-import * as data from "./data.js";
-import { characterData as selectionData } from "./selection.js";
+import { type Character } from "./selection.js";
+import {
+  cangjie,
+  conflated,
+  frequencies,
+  heisig,
+  patches,
+  readings,
+  tocflWords,
+  variants,
+  type Cangjie,
+  type Conflated,
+  type Frequency,
+  type Heisig,
+  type Patch,
+  type Readings,
+  type Variants,
+} from "./data.js";
+import {
+  characterData as selectionCharacterData,
+  characters as selectionCharacters,
+} from "./selection.js";
 
 export type Merged = {
   traditional: string;
   vocabulary: Vocabulary[];
-} & Partial<selection.Character> &
-  data.Readings &
-  data.Cangjie &
-  Partial<data.Frequency> &
-  data.Variants &
-  Partial<data.Heisig> &
-  Partial<data.Conflated>;
+} & Partial<Character> &
+  Readings &
+  Cangjie &
+  Partial<Frequency> &
+  Variants &
+  Partial<Heisig> &
+  Partial<Conflated>;
 
 type Vocabulary = {
   word: string;
@@ -40,14 +58,21 @@ const cedict = cedictLookup.loadTraditional("data/external/cedict_ts.u8");
 
 const zhuyinDiacritics = ["ˊ", "ˇ", "`", "˙"];
 
+/**
+ * Puts patched information into a "merged" character data.
+ */
 const patchEntry =
-  (patches: Record<string, data.Patch>) =>
+  (patches: Record<string, Patch>) =>
   (entry: Merged): Merged => {
     const patch = patches[entry.traditional];
     return patch ? mergeAll([entry, patch]) : entry;
   };
+
+/**
+ * Gets vocabulary data for a character.
+ */
 const getVocabulary = (char: string): Vocabulary[] =>
-  data.tocflWords
+  tocflWords
     .into(omit(["all"]))
     .into(values)
     .map(filter((w: string) => w.replace(char, "") !== w))
@@ -74,7 +99,13 @@ const getVocabulary = (char: string): Vocabulary[] =>
       };
     });
 
+/**
+ * Generates a full "merged" set of data for a given character.
+ */
 const compileData = (char: string): Merged => {
+  /**
+   * Throws if the value is undefined, with a relevant error message.
+   */
   const ensureDefined = <T,>(value: T, datum: string) => {
     if (value === undefined) {
       throw new Error(
@@ -83,20 +114,24 @@ const compileData = (char: string): Merged => {
     }
     return value;
   };
+
   return mergeAll([
     { traditional: char },
     { vocabulary: getVocabulary(char) },
-    selectionData[char] ?? {},
-    data.frequencies[char] ?? {},
-    data.variants[char] ?? { simplified: [] },
-    data.heisig[char] ?? {},
-    data.conflated[char] ?? {},
-    ensureDefined(data.readings[char], "readings"),
-    ensureDefined(data.cangjie[char], "cangjie"),
+    selectionCharacterData[char] ?? {},
+    frequencies[char] ?? {},
+    variants[char] ?? { simplified: [] },
+    heisig[char] ?? {},
+    conflated[char] ?? {},
+    ensureDefined(readings[char], "readings"),
+    ensureDefined(cangjie[char], "cangjie"),
   ]);
 };
 
-const expand = (chars: string[]): Merged[] =>
+/**
+ * Expands an array of characters into full "merged" data for each.
+ */
+const compileDataForAll = (chars: string[]): Merged[] =>
   chars
     .into(indexBy((v: string) => v))
     .into((v) => map(compileData, v))
@@ -107,6 +142,9 @@ const expand = (chars: string[]): Merged[] =>
           : o,
       ),
     )
-    .into(map(patchEntry(data.patches)));
+    .into(map(patchEntry(patches)));
 
-export const characters: Merged[] = expand(selection.characters);
+/**
+ * Full compiled data for all (selected) characters.
+ */
+export const characters: Merged[] = compileDataForAll(selectionCharacters);
