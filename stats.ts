@@ -1,30 +1,44 @@
 import "dot-into";
 import { uniq } from "ramda";
 import fs from "fs";
-import * as data from "./src/selection.js";
+import {
+  characters,
+  components,
+  heisigCharacters,
+  htfCharacters,
+  htfComponents,
+  tocflCharacters,
+} from "./src/selection.js";
 
 const { out, print } = (() => {
   let output = "";
+
   return {
+    /**
+     * Queues up a line of output text.
+     */
     out: (...msg: (string | number)[]) =>
       (output = output + msg.join(" ") + "\n"),
+    /**
+     * Recovers all queued output text.
+     */
     print: () => output,
   };
 })();
 
-out("Heisig (H):", data.heisigCharacters.length);
-out("TOCFL (T):", data.tocflCharacters.length);
+out("Heisig (H):", heisigCharacters.length);
+out("TOCFL (T):", tocflCharacters.length);
 out(
   "Heisig + TOCFL:",
-  data.heisigCharacters.concat(data.tocflCharacters).into(uniq).length,
+  heisigCharacters.concat(tocflCharacters).into(uniq).length,
 );
-out("Heisig + TOCFL + 2000 most frequent (F):", data.htfCharacters.length);
-out("H+T+F components:", data.htfComponents.length);
+out("Heisig + TOCFL + 2000 most frequent (F):", htfCharacters.length);
+out("H+T+F components:", htfComponents.length);
 out("");
 out("All H+T+F components sorted:");
-out(data.components.join(""));
+out(components.join(""));
 out("");
 out("All H+T+F characters sorted (no components):");
-out(data.characters.join(""));
+out(characters.join(""));
 
 fs.writeFileSync("output/stats.txt", print(), "utf-8");
