@@ -5,7 +5,7 @@
 # Generate output files.
 build: install
   tsc --noEmit
-  bun ./index.js
+  bun ./index.ts
   bun ./stats.ts
 
 # List all primitives that cannot be decomposed any further.

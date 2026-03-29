@@ -19,7 +19,7 @@ import * as selection from "./selection.js";
 import * as data from "./data.js";
 import { characterData as selectionData } from "./selection.js";
 
-type Merged = {
+export type Merged = {
   traditional: string;
   vocabulary: Vocabulary[];
 } & Partial<selection.Character> &
@@ -40,10 +40,12 @@ const cedict = cedictLookup.loadTraditional("data/external/cedict_ts.u8");
 
 const zhuyinDiacritics = ["ˊ", "ˇ", "`", "˙"];
 
-const patchEntry = (patches: Record<string, data.Patch>) => (entry: Merged) => {
-  const patch = patches[entry.traditional];
-  return patch ? mergeRight(entry, patch) : entry;
-};
+const patchEntry =
+  (patches: Record<string, data.Patch>) =>
+  (entry: Merged): Merged => {
+    const patch = patches[entry.traditional];
+    return patch ? mergeAll([entry, patch]) : entry;
+  };
 const getVocabulary = (char: string): Vocabulary[] =>
   data.tocflWords
     .into(omit(["all"]))
@@ -94,7 +96,7 @@ const compileData = (char: string): Merged => {
   ]);
 };
 
-const expand = (chars: string[]) =>
+const expand = (chars: string[]): Merged[] =>
   chars
     .into(indexBy((v: string) => v))
     .into((v) => map(compileData, v))
@@ -107,4 +109,4 @@ const expand = (chars: string[]) =>
     )
     .into(map(patchEntry(data.patches)));
 
-export default expand(selection.characters);
+export const characters: Merged[] = expand(selection.characters);
