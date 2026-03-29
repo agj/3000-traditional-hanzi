@@ -7,17 +7,15 @@ import {
   keys,
   map,
   mapObjIndexed,
-  replace,
   split,
   uniq,
   values,
   without,
 } from "ramda";
 import wanakana from "wanakana";
-import xre from "xregexp";
 import * as z from "zod";
 import * as zhuyin from "zhuyin";
-import * as U from "./utilities.js";
+import { getFile, stripNonHan } from "./utilities.js";
 
 // Types.
 
@@ -79,7 +77,7 @@ const unicodeToChar = (code: string) =>
  * their Unihan data.
  */
 const getUnihanFile = (filename: string): Record<string, Unihan> =>
-  U.getFile(filename)
+  getFile(filename)
     .map(split("\t"))
     .reduce((obj: Record<string, Unihan>, row) => {
       const parsedRow = unihanRowSchema.safeParse(row);
@@ -97,11 +95,6 @@ const getUnihanFile = (filename: string): Record<string, Unihan> =>
       }
       return obj;
     }, {});
-
-/**
- * Strips all non-hanzi content from a string.
- */
-const removeNonHan = replace(xre("\\P{Han}", "ug"), "");
 
 // Patch utilities.
 
@@ -135,16 +128,14 @@ const patchCangjieValueSchema = z.string();
  * Reads the TOCFL file data for a given level. Returns an array of words.
  */
 const getTocflFileWords = (level: number): string[] =>
-  U.getFile(`data/external/tocfl/vocabulary-${level}.txt`).into((ls) =>
-    uniq(ls),
-  );
+  getFile(`data/external/tocfl/vocabulary-${level}.txt`).into((ls) => uniq(ls));
 
 /**
  * Gets all unique characters used in a given TOCFL level.
  */
 const getTocflFileCharacters = (level: number): string[] =>
-  U.getFile(`data/external/tocfl/vocabulary-${level}.txt`)
-    .flatMap((s) => removeNonHan(s).split(""))
+  getFile(`data/external/tocfl/vocabulary-${level}.txt`)
+    .flatMap((s) => stripNonHan(s).split(""))
     .into((ls) => uniq(ls));
 
 // Cangjie utilities.
@@ -265,7 +256,7 @@ export const variants: Record<string, Variants> = getUnihanFile(
 /**
  * All charavter usage frequency, keyed by character.
  */
-export const frequencies: Record<string, Frequency> = U.getFile(
+export const frequencies: Record<string, Frequency> = getFile(
   "data/external/frequency.txt",
 )
   .map(split("\t"))
@@ -280,7 +271,7 @@ export const frequencies: Record<string, Frequency> = U.getFile(
 /**
  * All Heisig data, keyed by character.
  */
-export const heisig: Record<string, Heisig> = U.getFile(
+export const heisig: Record<string, Heisig> = getFile(
   "data/external/heisig-traditional.txt",
 )
   .map(split("\t"))
@@ -323,7 +314,7 @@ export const tocfl: Record<number | "all", string[]> = [
 /**
  * All character patch information, keyed by character.
  */
-export const patches: Record<string, Patch> = U.getFile("data/patches.txt")
+export const patches: Record<string, Patch> = getFile("data/patches.txt")
   .map(split("\t"))
   .reduce((obj: Record<string, Patch>, row) => {
     const parsedRow = patchRowSchema.safeParse(row);
@@ -347,15 +338,13 @@ export const patches: Record<string, Patch> = U.getFile("data/patches.txt")
 /**
  * All characters to exclude.
  */
-export const exclude: string[] = U.getFile("data/exclude.txt");
+export const exclude: string[] = getFile("data/exclude.txt");
 
 /**
  * Character conflation mappings, where the key is the character to be conflated
  * into the character in the value.
  */
-export const conflateMap: Record<string, string> = U.getFile(
-  "data/conflate.txt",
-)
+export const conflateMap: Record<string, string> = getFile("data/conflate.txt")
   .map(split("\t"))
   .reduce((obj: Record<string, string>, [char, conf]) => {
     if (!char || !conf) {
