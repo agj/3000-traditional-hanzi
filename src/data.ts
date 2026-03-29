@@ -2,7 +2,6 @@ import "dot-into";
 import {
   equals,
   filter,
-  has,
   identity,
   indexBy,
   keys,
@@ -20,7 +19,11 @@ import * as z from "zod";
 import * as zhuyin from "zhuyin";
 import * as U from "./utilities.js";
 
-type Unihan = Record<string, string>;
+type Unihan = {
+  [key in UnihanKey]?: string;
+};
+
+type UnihanKey = z.output<typeof unihanKeySchema>;
 
 export type Readings = {
   pinyin: string;
@@ -42,6 +45,17 @@ export type Conflated = { conflated: string[] };
 
 export type Patch = Cangjie | Variants | { meaning: string };
 
+const unihanRowSchema = z.tuple([z.string(), z.string(), z.string()]);
+
+const unihanKeySchema = z.enum([
+  "kJapaneseKun",
+  "kJapaneseOn",
+  "kMandarin",
+  "kDefinition",
+  "kCangjie",
+  "kSimplifiedVariant",
+]);
+
 const patchRowSchema = z.tuple([
   z.string(),
   z.enum(["meaning", "simplified", "cangjie"]),
@@ -57,15 +71,20 @@ const unicodeToChar = (code: string) =>
 const getUnihanFile = (filename: string): Record<string, Unihan> =>
   U.getFile(filename)
     .map(split("\t"))
-    .reduce((obj: Record<string, Unihan>, [code, key, value]) => {
-      if (!code || !key || !value) {
-        throw new Error("Unihan file line is in wrong format");
+    .reduce((obj: Record<string, Unihan>, row) => {
+      const parsedRow = unihanRowSchema.safeParse(row);
+      if (!parsedRow.success) {
+        throw new Error("Unihan file line has wrong format");
       }
+      const [code, keyRaw, value] = parsedRow.data;
       const char = unicodeToChar(code);
       if (!obj[char]) {
         obj[char] = {};
       }
-      obj[char][key] = value;
+      const keyParsed = unihanKeySchema.safeParse(keyRaw);
+      if (keyParsed.success) {
+        obj[char][keyParsed.data] = value;
+      }
       return obj;
     }, {});
 const removeNonHan = replace(xre("\\P{Han}", "ug"), "");
@@ -126,19 +145,15 @@ export const readings: Record<string, Readings> = getUnihanFile(
   "data/external/unihan/Unihan_Readings.txt",
 ).into((unihan) =>
   map((o: Unihan): Readings => {
-    const py = o["kMandarin"] ?? "";
+    const py = o.kMandarin ?? "";
     const pys = py.split(" ");
     const zy = pys.map((py_) => zhuyin.fromPinyin(py_)).join(" ");
     return {
       pinyin: py,
       zhuyin: zy,
-      japaneseKun: has("kJapaneseKun", o)
-        ? wanakana.toHiragana(o["kJapaneseKun"])
-        : "",
-      japaneseOn: has("kJapaneseOn", o)
-        ? wanakana.toKatakana(o["kJapaneseOn"])
-        : "",
-      meaning: o["kDefinition"] ?? "",
+      japaneseKun: o.kJapaneseKun ? wanakana.toHiragana(o.kJapaneseKun) : "",
+      japaneseOn: o.kJapaneseOn ? wanakana.toKatakana(o.kJapaneseOn) : "",
+      meaning: o.kDefinition ?? "",
     };
   }, unihan),
 );
@@ -147,7 +162,7 @@ export const cangjie: Record<string, Cangjie> = getUnihanFile(
 ).into((unihan) =>
   map(
     (o): Cangjie => ({
-      cangjie: o["kCangjie"] ? cangjieKeystoNames(o["kCangjie"]) : "",
+      cangjie: o.kCangjie ? cangjieKeystoNames(o.kCangjie) : "",
     }),
     unihan,
   ),
@@ -156,14 +171,13 @@ export const variants: Record<string, Variants> = getUnihanFile(
   "data/external/unihan/Unihan_Variants.txt",
 ).into((unihan) =>
   mapObjIndexed(
-    (o: Record<string, string>, char): Variants => ({
-      simplified:
-        "kSimplifiedVariant" in o
-          ? o["kSimplifiedVariant"]
-              .split(" ")
-              .map(unicodeToChar)
-              .filter((c) => c !== char)
-          : [],
+    (o, char): Variants => ({
+      simplified: o.kSimplifiedVariant
+        ? o.kSimplifiedVariant
+            .split(" ")
+            .map(unicodeToChar)
+            .filter((c) => c !== char)
+        : [],
     }),
     unihan,
   ),
