@@ -1,17 +1,16 @@
 import {
   append,
   concat,
-  includes,
-  curry,
   filter,
   fromPairs,
   gte,
+  identity,
+  includes,
   indexBy,
   keys,
   map,
   max,
   prepend,
-  propEq,
   reject,
   sort,
   uniq,
@@ -99,18 +98,22 @@ const heisig = data.heisig;
 const tocfl = data.tocfl;
 const conflateMap = data.conflateMap;
 
-export const heisigCharacters = heisig
-  .into(reject(propEq("c", "heisigIndex")))
-  .into(keys);
-export const heisigComponents = heisig
-  .into(filter(propEq("c", "heisigIndex")))
-  .into(keys);
+export const heisigCharacters: string[] = reject(
+  (hc) => hc.heisigIndex === "c",
+  heisig,
+).into(keys);
+export const heisigComponents = filter(
+  (hc) => hc.heisigIndex === "c",
+  heisig,
+).into(keys);
 export const tocflCharacters = tocfl.all;
 const frequencies: Record<string, number> = map(
   (v) => v.frequencyRank,
   frequenciesRaw,
 );
-const frequentCharacters = filter((f) => f < 2000, frequencies).into(keys);
+const frequentCharacters: string[] = filter((f) => f < 2000, frequencies).into(
+  keys,
+);
 
 const conflate =
   (conflateMap: Record<string, string>) =>
@@ -173,7 +176,8 @@ const componentsSorted: string[] = charactersAndComponentsSorted.filter((c) =>
   htfComponents.includes(c),
 );
 
-const charactersResult: Record<string, Character> = indexBy((v: string) => v)(
+const charactersResult: Record<string, Character> = indexBy(
+  identity,
   charactersAndComponentsSorted,
 ).into((cs) =>
   map(

@@ -1,5 +1,5 @@
 import "dot-into";
-import * as R from "ramda";
+import { uniq } from "ramda";
 import fs from "fs";
 import * as data from "./src/selection.js";
 
@@ -16,7 +16,7 @@ out("Heisig (H):", data.heisigCharacters.length);
 out("TOCFL (T):", data.tocflCharacters.length);
 out(
   "Heisig + TOCFL:",
-  data.heisigCharacters.concat(data.tocflCharacters).into(R.uniq).length,
+  data.heisigCharacters.concat(data.tocflCharacters).into(uniq).length,
 );
 out("Heisig + TOCFL + 2000 most frequent (F):", data.htfCharacters.length);
 out("H+T+F components:", data.htfComponents.length);

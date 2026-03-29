@@ -77,9 +77,8 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
     return obj;
   }, {})
   .into((all: Record<string, Decomposition>) =>
-    all
-      .into(filter((o: Decomposition) => !/\d+/.test(o.character)))
-      .into((decompositions) =>
+    filter((o: Decomposition) => !/\d+/.test(o.character), all).into(
+      (decompositions) =>
         map(
           (o: Decomposition): Decomposition => ({
             character: o.character,
@@ -89,7 +88,7 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
           }),
           decompositions,
         ),
-      ),
+    ),
   );
 
 const mergeDecompositions = (a: Decomposition, b: Decomposition) => ({
