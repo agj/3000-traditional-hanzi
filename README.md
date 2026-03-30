@@ -135,7 +135,7 @@ Databases used:
 
 - Unicode's [Unihan database][unihan]
 - Chih-Tsao Hai's [Frequency and Stroke Counts of Chinese Characters][charfreq]
-- Taiwan Steering Committee for the Test of Proficiency's [8000 Chinese Words][top]
+- Taiwan Steering Committee for the Test of Proficiency - Huayu's [Chinese 8000 Vocabulary][top]
 - Reviewing the Kanji Wiki [spreadsheet][heisig]
 - CJKV Ideograph Database's [ideographic description sequence data][cjkvi]
 - Gavin Grover's (with Aaron Madlon-Kay's contributions) [CJK Decomposition Data][grover]
@@ -147,7 +147,7 @@ Referenced:
 
 [unihan]: https://www.unicode.org/charts/unihan.html
 [charfreq]: http://technology.chtsai.org/charfreq/
-[top]: http://www.sc-top.org.tw/english/download.php
+[top]: https://tocfl.edu.tw/tocfl/index.php/exam/download
 [heisig]: http://rtkwiki.koohii.com/wiki/Remembering_Simplified_Hanzi,_Traditional_Hanzi_and_Kanji_spreadsheet
 [cjkvi]: https://github.com/cjkvi/cjkvi-ids
 [learnm]: http://learnm.org/
