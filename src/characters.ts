@@ -1,7 +1,6 @@
 import {
   append,
   filter,
-  flatten,
   indexBy,
   last,
   map,
@@ -75,8 +74,7 @@ const getVocabulary = (char: string): Vocabulary[] =>
   tocflWords
     .into(omit(["all"]))
     .into(values)
-    .map(filter((w: string) => w.replace(char, "") !== w))
-    .into(flatten)
+    .flatMap(filter((w: string) => w.replace(char, "") !== w))
     .into(filter((w: string) => w.length > 1 && cedict.getMatch(w).length > 0))
     .into(take(3))
     .map((w: string): Vocabulary => {
