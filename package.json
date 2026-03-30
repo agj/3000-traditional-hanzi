@@ -8,9 +8,7 @@
     "dot-into": "2.0.0",
     "pinyin-utils": "2.32.0",
     "ramda": "0.31.3",
-    "thenify": "^3.3.0",
     "wanakana": "5.3.1",
-    "xregexp": "^4.0.0",
     "zhuyin": "^1.14.0",
     "zod": "4.3.6"
   }

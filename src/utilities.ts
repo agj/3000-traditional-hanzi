@@ -1,6 +1,5 @@
 import { tap, pipe, trim, replace } from "ramda";
 import fs from "fs";
-import xre from "xregexp";
 
 /**
  * Prints a value and returns it.
@@ -25,4 +24,4 @@ export const getFile = (filename: string): string[] =>
 /**
  * Strips all non-hanzi content from a string.
  */
-export const stripNonHan = replace(xre("\\P{Han}", "guA"), "");
+export const stripNonHan = replace(/\P{Script=Han}/gv, "");
