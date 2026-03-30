@@ -1,11 +1,13 @@
 import {
   append,
   filter,
+  identity,
   indexBy,
   last,
   map,
   mergeAll,
   omit,
+  pipe,
   replace,
   take,
   values,
@@ -74,10 +76,12 @@ const getVocabulary = (char: string): Vocabulary[] =>
   tocflWords
     .into(omit(["all"]))
     .into(values)
-    .flatMap(filter((w: string) => w.replace(char, "") !== w))
-    .into(filter((w: string) => w.length > 1 && cedict.getMatch(w).length > 0))
-    .into(take(3))
-    .map((w: string): Vocabulary => {
+    .flatMap((v) => filter((w) => w.replace(char, "") !== w, v))
+    .into((v) =>
+      filter((w) => w.length > 1 && cedict.getMatch(w).length > 0, v),
+    )
+    .into((v) => take(3, v))
+    .map((w): Vocabulary => {
       const firstMatch = cedict.getMatch(w)[0];
       if (!firstMatch) {
         throw new Error(`No cedict match found for: ${w}`);
@@ -127,22 +131,24 @@ const compileData = (char: string): Merged => {
 };
 
 /**
+ * Reads conflation information from a "merged" character data and adds it into
+ * the main character's data, still allowing the main character to override
+ * conflated data.
+ */
+const mergeConflated = (o: Merged): Merged =>
+  o.conflated ? mergeAll(o.conflated.map(compileData).into(append(o))) : o;
+
+/**
  * Expands an array of characters into full "merged" data for each.
  */
-const compileDataForAll = (chars: string[]): Merged[] =>
-  chars
-    .into(indexBy((v: string) => v))
-    .into((v) => map(compileData, v))
-    .into(
-      map((o: Merged) =>
-        o.conflated
-          ? o.conflated.map(compileData).into(append(o)).into(mergeAll)
-          : o,
-      ),
-    )
-    .into(map(patchEntry(patches)));
+const compileDataForAll = (chars: string[]): Record<string, Merged> =>
+  map(
+    pipe(compileData, mergeConflated, patchEntry(patches)),
+    indexBy(identity, chars),
+  );
 
 /**
  * Full compiled data for all (selected) characters.
  */
-export const characters: Merged[] = compileDataForAll(selectionCharacters);
+export const characters: Record<string, Merged> =
+  compileDataForAll(selectionCharacters);
