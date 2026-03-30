@@ -5,12 +5,12 @@
 # Generate output files.
 build: install
   tsc --noEmit
-  bun ./index.ts
-  bun ./stats.ts
+  bun ./src/generate-notes.ts
+  bun ./src/generate-stats.ts
 
-# List all primitives that cannot be decomposed any further.
+# Displays all primitives that cannot be decomposed any further.
 primitives: install
-  bun ./list-primitives.ts
+  bun ./src/print-primitives.ts
 
 # Formats files.
 format:

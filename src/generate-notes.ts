@@ -2,7 +2,7 @@ import "dot-into";
 import { last, prop } from "ramda";
 import fs from "fs";
 import pinyin from "pinyin-utils";
-import { characters, type Merged } from "./src/characters.js";
+import { characters, type Merged } from "./characters.js";
 
 /**
  * Converts character data into a TSV row.
