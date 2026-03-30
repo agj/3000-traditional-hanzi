@@ -12,7 +12,7 @@ import {
   values,
   without,
 } from "ramda";
-import wanakana from "wanakana";
+import { toHiragana, toKatakana } from "wanakana";
 import * as z from "zod";
 import * as zhuyin from "zhuyin";
 import { getFile, stripNonHan } from "./utilities.js";
@@ -213,8 +213,8 @@ export const readings: Record<string, Readings> = getUnihanFile(
     return {
       pinyin: py,
       zhuyin: zy,
-      japaneseKun: o.kJapaneseKun ? wanakana.toHiragana(o.kJapaneseKun) : "",
-      japaneseOn: o.kJapaneseOn ? wanakana.toKatakana(o.kJapaneseOn) : "",
+      japaneseKun: o.kJapaneseKun ? toHiragana(o.kJapaneseKun) : "",
+      japaneseOn: o.kJapaneseOn ? toKatakana(o.kJapaneseOn) : "",
       meaning: o.kDefinition ?? "",
     };
   }, unihan),

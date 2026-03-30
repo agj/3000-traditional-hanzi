@@ -104,7 +104,7 @@ const compileData = (char: string): Merged => {
   /**
    * Throws if the value is undefined, with a relevant error message.
    */
-  const ensureDefined = <T,>(value: T, datum: string) => {
+  const ensureDefined = <T>(value: T, datum: string) => {
     if (value === undefined) {
       throw new Error(
         `"${datum}" data to compile was not found for character: ${char}`,
