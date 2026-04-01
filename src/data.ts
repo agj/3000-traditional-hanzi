@@ -128,7 +128,7 @@ const patchCangjieValueSchema = z.string();
  * Reads the TOCFL file data for a given level. Returns an array of words.
  */
 const getTocflFileWords = (level: number): string[] =>
-  getFile(`data/external/tocfl/vocabulary-${level}.txt`).into((ls) => uniq(ls));
+  getFile(`data/external/tocfl/vocabulary-${level}.txt`).into(uniq);
 
 /**
  * Gets all unique characters used in a given TOCFL level.
@@ -136,7 +136,7 @@ const getTocflFileWords = (level: number): string[] =>
 const getTocflFileCharacters = (level: number): string[] =>
   getFile(`data/external/tocfl/vocabulary-${level}.txt`)
     .flatMap((s) => stripNonHan(s).split(""))
-    .into((ls) => uniq(ls));
+    .into(uniq);
 
 // Cangjie utilities.
 
@@ -358,8 +358,8 @@ export const conflateMap: Record<string, string> = getFile("data/conflate.txt")
  * All character conflation data, keyed by character.
  */
 export const conflated: Record<string, Conflated> = values(conflateMap)
-  .into((v) => uniq(v))
-  .into((v) => indexBy(identity, v))
+  .into(uniq)
+  .into(indexBy(identity))
   .into((v) =>
     map(
       (char: string): Conflated => ({

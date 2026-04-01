@@ -12,8 +12,7 @@ export type Decomposition = {
 /**
  * Read IDS (ideographic description sequence) data from file, keyed by
  * character. Supply a function to preprocess each row (split into an array of
- * strings), into a tuple
- * `[character, decomposition]`.
+ * strings), into a tuple `[character, decomposition]`.
  */
 const getIdsFile = (
   filename: string,
@@ -28,7 +27,7 @@ const getIdsFile = (
         decomposition: stripNonHan(dec)
           .split("")
           .filter((c) => c !== char)
-          .into((v) => uniq(v)),
+          .into(uniq),
       };
       return obj;
     }, {});
@@ -88,7 +87,7 @@ const redefineCjkNumericId =
     /\d+/.test(component)
       ? (mapping[component]?.decomposition
           .flatMap(redefineCjkNumericId(mapping))
-          .into((v) => uniq(v)) ?? [])
+          .into(uniq) ?? [])
       : [component];
 
 /**
@@ -99,22 +98,21 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
     l.replace(reCjkDecomp, "$1"),
     l.replace(reCjkDecomp, "$2").split(","),
   ])
-  .reduce((obj: Record<string, Decomposition>, [char, dec]) => {
-    obj[char] = { character: char, decomposition: dec };
-    return obj;
+  .reduce((decompositions: Record<string, Decomposition>, [char, dec]) => {
+    decompositions[char] = { character: char, decomposition: dec };
+    return decompositions;
   }, {})
   .into((all: Record<string, Decomposition>) =>
-    filter((o: Decomposition) => !/\d+/.test(o.character), all).into(
-      (decompositions) =>
-        map(
-          (o: Decomposition): Decomposition => ({
-            character: o.character,
-            decomposition: o.decomposition
-              .flatMap(redefineCjkNumericId(all))
-              .into((v) => uniq(v)),
-          }),
-          decompositions,
-        ),
+    filter((o) => !/\d+/.test(o.character), all).into((decompositions) =>
+      map(
+        (o: Decomposition): Decomposition => ({
+          character: o.character,
+          decomposition: o.decomposition
+            .flatMap(redefineCjkNumericId(all))
+            .into((v) => uniq(v)),
+        }),
+        decompositions,
+      ),
     ),
   );
 
@@ -123,7 +121,10 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
 /**
  * Merges two decompositions, ensuring there's no repeated components.
  */
-const mergeDecompositions = (a: Decomposition, b: Decomposition) => ({
+const mergeDecompositions = (
+  a: Decomposition,
+  b: Decomposition,
+): Decomposition => ({
   character: a.character,
   decomposition: concat(a.decomposition, b.decomposition).into(uniq),
 });

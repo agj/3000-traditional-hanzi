@@ -1,4 +1,5 @@
 import {
+  __,
   append,
   concat,
   filter,
@@ -53,7 +54,7 @@ const _allNodes =
         : network[char].decomposition
             .flatMap(_allNodes(network, append(char, stack)))
             .into(prepend(char))
-            .into((v) => uniq(v));
+            .into(uniq);
     }
   };
 
@@ -75,8 +76,7 @@ const _depth =
         ? 0
         : network[char].decomposition
             .map(_depth(network, append(char, stack)))
-            // The following `as` is due to inexact typing of the `max` function.
-            .reduce((a, b) => max(a, b) as number, 0) + 1;
+            .reduce(max, 0) + 1;
 
 /**
  * Sorts an array of characters by decomposition depth, from lowest to
@@ -153,7 +153,7 @@ const frequentCharacters: string[] = filter((f) => f <= 2000, frequencies).into(
 const conflate =
   (conflateMap: Record<string, string>) =>
   (chars: string[]): string[] =>
-    chars.map((char) => conflateMap[char] ?? char).into((cs) => uniq(cs));
+    chars.map((char) => conflateMap[char] ?? char).into(uniq);
 
 /**
  * All Heisig, TOCFL and most frequent characters combined. Only the characters
@@ -162,8 +162,8 @@ const conflate =
 export const htfCharacters: string[] = heisigCharacters
   .concat(tocflCharacters)
   .concat(frequentCharacters)
-  .into((cs) => uniq(cs))
-  .into((cs) => reject((c) => includes(c, exclude), cs))
+  .into(uniq)
+  .into(reject(includes(__, exclude)))
   .into(conflate(conflateMap));
 
 /**
@@ -173,7 +173,7 @@ export const htfCharacters: string[] = heisigCharacters
 const htfComponentsRaw: string[] = htfCharacters
   .flatMap(allNodes(network))
   .concat(heisigComponents)
-  .into((cs) => uniq(cs))
+  .into(uniq)
   .into(conflate(conflateMap))
   .into(without(htfCharacters));
 
@@ -201,7 +201,7 @@ const htfComponentUse: Record<string, number> = htfComponentsRaw
     char,
     htfComponentUseRaw.reduce((n, c) => (c === char ? n + 1 : n), 0),
   ])
-  .into((ps) => fromPairs(ps));
+  .into(fromPairs);
 
 /**
  * H+T+F indivisible primitive components.
