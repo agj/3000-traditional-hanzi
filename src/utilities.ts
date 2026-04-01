@@ -25,3 +25,32 @@ export const getFile = (filename: string): string[] =>
  * Strips all non-hanzi content from a string.
  */
 export const stripNonHan = replace(/\P{Script=Han}/gv, "");
+
+/**
+ * Merge the values in two objects using a function to combine each value that
+ * shares the same key in both objects.
+ */
+export const mergeWith = <L, R>(
+  combine: (l: L, r: R) => L | R,
+  l: Record<string, L>,
+  r: Record<string, R>,
+): Record<string, L | R> => {
+  const result: Record<string, L | R> = {};
+
+  for (const key in l) {
+    result[key] = key in r ? combine(l[key] as L, r[key] as R) : (l[key] as L);
+  }
+
+  for (const key in r) {
+    if (!(key in result)) {
+      result[key] = r[key] as R;
+    }
+  }
+
+  return result;
+};
+
+/**
+ * Returns the largest among two numbers.
+ */
+export const max = (a: number, b: number): number => (a > b ? a : b);

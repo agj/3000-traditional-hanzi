@@ -1,22 +1,16 @@
 import {
-  __,
-  append,
-  concat,
+  difference,
   filter,
-  fromPairs,
-  gte,
+  fromEntries,
   identity,
-  includes,
   indexBy,
-  keys,
-  map,
-  max,
-  prepend,
-  reject,
+  isIncludedIn,
+  mapValues,
+  omitBy,
+  pickBy,
   sort,
-  uniq,
-  without,
-} from "ramda";
+  unique,
+} from "remeda";
 import {
   conflateMap,
   exclude,
@@ -26,6 +20,7 @@ import {
   type Heisig,
 } from "./data.ts";
 import { network, type Decomposition } from "./network.ts";
+import { max } from "./utilities.ts";
 
 export type Character = {
   studyOrder: number;
@@ -43,7 +38,7 @@ export const allNodes =
 const _allNodes =
   (network: Record<string, Decomposition>, stack: string[]) =>
   (char: string): string[] => {
-    if (includes(char, stack)) {
+    if (isIncludedIn(char, stack)) {
       return [];
     } else {
       if (!network[char]) {
@@ -52,9 +47,9 @@ const _allNodes =
       return network[char].decomposition.length === 0
         ? [char]
         : network[char].decomposition
-            .flatMap(_allNodes(network, append(char, stack)))
-            .into(prepend(char))
-            .into(uniq);
+            .flatMap(_allNodes(network, [...stack, char]))
+            .into((cs) => [char, ...cs])
+            .into(unique());
     }
   };
 
@@ -70,12 +65,12 @@ export const depth =
 const _depth =
   (network: Record<string, Decomposition>, stack: string[]) =>
   (char: string): number =>
-    includes(char, stack)
+    isIncludedIn(char, stack)
       ? 0
       : !network[char] || network[char].decomposition.length === 0
         ? 0
         : network[char].decomposition
-            .map(_depth(network, append(char, stack)))
+            .map(_depth(network, [...stack, char]))
             .reduce(max, 0) + 1;
 
 /**
@@ -84,12 +79,12 @@ const _depth =
  * progressively more complex.
  */
 const sortByDepth = (depths: Record<string, number>) => (chars: string[]) =>
-  sort((a, b) => {
+  sort(chars, (a, b) => {
     if (depths[a] === undefined || depths[b] === undefined) {
       throw new Error(`Missing one of these character depths: ${a}, ${a}`);
     }
     return depths[a] - depths[b];
-  }, chars);
+  });
 
 /**
  * Sorts an array of characters by use frequency rank, from lowest rank (highest
@@ -98,16 +93,14 @@ const sortByDepth = (depths: Record<string, number>) => (chars: string[]) =>
  */
 const sortByFrequency =
   (frequencies: Record<string, number>) => (chars: string[]) => {
-    return sort(
-      (a, b) =>
-        frequencies[a] === undefined && frequencies[b] === undefined
-          ? 0
-          : frequencies[a] === undefined
-            ? 1
-            : frequencies[b] === undefined
-              ? -1
-              : frequencies[a] - frequencies[b],
-      chars,
+    return sort(chars, (a, b) =>
+      frequencies[a] === undefined && frequencies[b] === undefined
+        ? 0
+        : frequencies[a] === undefined
+          ? 1
+          : frequencies[b] === undefined
+            ? -1
+            : frequencies[a] - frequencies[b],
     );
   };
 
@@ -116,15 +109,17 @@ const isHeisigComponent = (hc: Heisig) => hc.heisigIndex === "c";
 /**
  * All Heisig characters, without primitive components.
  */
-export const heisigCharacters: string[] = reject(
-  isHeisigComponent,
+export const heisigCharacters: string[] = omitBy(
   heisig,
-).into(keys);
+  isHeisigComponent,
+).into(Object.keys);
 
 /**
  * All Heisig primitive components without the characters.
  */
-export const heisigComponents = filter(isHeisigComponent, heisig).into(keys);
+export const heisigComponents = pickBy(heisig, isHeisigComponent).into(
+  Object.keys,
+);
 
 /**
  * All TOCFL characters.
@@ -134,17 +129,18 @@ export const tocflCharacters = tocfl.all;
 /**
  * Mapping from character to its frequency rank.
  */
-const frequencies: Record<string, number> = map(
-  (v) => v.frequencyRank,
+const frequencies: Record<string, number> = mapValues(
   frequenciesRaw,
+  (v) => v.frequencyRank,
 );
 
 /**
  * Array of 2000 most frequent characters.
  */
-const frequentCharacters: string[] = filter((f) => f <= 2000, frequencies).into(
-  keys,
-);
+const frequentCharacters: string[] = pickBy(
+  frequencies,
+  (rank) => rank <= 2000,
+).into(Object.keys);
 
 /**
  * Removes "duplicate" characters as determined by the conflate map, which
@@ -153,7 +149,7 @@ const frequentCharacters: string[] = filter((f) => f <= 2000, frequencies).into(
 const conflate =
   (conflateMap: Record<string, string>) =>
   (chars: string[]): string[] =>
-    chars.map((char) => conflateMap[char] ?? char).into(uniq);
+    chars.map((char) => conflateMap[char] ?? char).into(unique());
 
 /**
  * All Heisig, TOCFL and most frequent characters combined. Only the characters
@@ -162,8 +158,8 @@ const conflate =
 export const htfCharacters: string[] = heisigCharacters
   .concat(tocflCharacters)
   .concat(frequentCharacters)
-  .into(uniq)
-  .into(reject(includes(__, exclude)))
+  .into(unique())
+  .into(filter((char) => !exclude.includes(char)))
   .into(conflate(conflateMap));
 
 /**
@@ -173,9 +169,9 @@ export const htfCharacters: string[] = heisigCharacters
 const htfComponentsRaw: string[] = htfCharacters
   .flatMap(allNodes(network))
   .concat(heisigComponents)
-  .into(uniq)
+  .into(unique())
   .into(conflate(conflateMap))
-  .into(without(htfCharacters));
+  .into(difference(htfCharacters));
 
 /**
  * Flat list of all decomposition data for all H+T+F, concatenated
@@ -194,21 +190,23 @@ const htfComponentUseRaw: string[] = htfCharacters
 
 /**
  * Count of usage as component in other characters for every H+T+F character,
- * keyed by character.
+ * keyed by character. 0 means it is never actually used.
  */
 const htfComponentUse: Record<string, number> = htfComponentsRaw
   .map((char): [string, number] => [
     char,
-    htfComponentUseRaw.reduce((n, c) => (c === char ? n + 1 : n), 0),
+    htfComponentUseRaw.filter((c) => c === char).length - 1,
   ])
-  .into(fromPairs);
+  .into(fromEntries());
 
 /**
- * H+T+F indivisible primitive components.
+ * H+T+F indivisible primitive components (only those actually used by a
+ * character).
  */
-export const htfComponents: string[] = htfComponentUse
-  .into(reject(gte(1)))
-  .into(keys);
+export const htfComponents: string[] = pickBy(
+  htfComponentUse,
+  (use) => use > 0,
+).into(Object.keys);
 
 /**
  * Maximum amount of times each H+T+F character can be decomposed into smaller
@@ -217,8 +215,8 @@ export const htfComponents: string[] = htfComponentUse
  */
 const depths: Record<string, number> = htfCharacters
   .concat(htfComponents)
-  .into(indexBy((c: string) => c))
-  .into((cs) => map(depth(network), cs));
+  .into(indexBy(identity()))
+  .into(mapValues(depth(network)));
 
 /**
  * All selected characters and components, sorted by high use frequency.
@@ -231,43 +229,42 @@ const charactersAndComponents: string[] = htfCharacters
  * All selected characters and components, sorted by learning order.
  */
 const charactersAndComponentsSorted: string[] = charactersAndComponents.reduce(
-  (r: string[], char) =>
+  (acc: string[], char) =>
     allNodes(network)(char)
       .filter((c) => charactersAndComponents.includes(c))
-      .into(without(r))
+      .into(difference(acc))
       .into(sortByDepth(depths))
-      .into(concat(r)),
+      .into((cs) => acc.concat(cs)),
   [],
 );
 
 /**
  * All selected characters (no primitive components), sorted by learning order.
  */
-const charactersSorted: string[] = charactersAndComponentsSorted.filter((c) =>
-  htfCharacters.includes(c),
+const charactersSorted: string[] = charactersAndComponentsSorted.filter(
+  isIncludedIn(htfCharacters),
 );
 
 /**
  * All selected primitive components, sorted by learning order.
  */
-const componentsSorted: string[] = charactersAndComponentsSorted.filter((c) =>
-  htfComponents.includes(c),
+const componentsSorted: string[] = charactersAndComponentsSorted.filter(
+  isIncludedIn(htfComponents),
 );
 
 /**
  * All selected characters' study order information, indexed by character.
  */
 const charactersResult: Record<string, Character> = indexBy(
-  identity,
   charactersAndComponentsSorted,
-).into((cs) =>
-  map(
+  identity(),
+).into(
+  mapValues(
     (c): Character => ({
       studyOrder: charactersAndComponentsSorted.indexOf(c) + 1,
       charactersOnlyStudyOrder: charactersSorted.indexOf(c) + 1,
       isComponent: componentsSorted.includes(c),
     }),
-    cs,
   ),
 );
 

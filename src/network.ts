@@ -1,6 +1,6 @@
 import "dot-into";
-import { concat, includes, filter, map, mergeWith, split, uniq } from "ramda";
-import { getFile, stripNonHan } from "./utilities.ts";
+import { isIncludedIn, mapValues, pickBy, split, unique } from "remeda";
+import { getFile, mergeWith, stripNonHan } from "./utilities.ts";
 
 export type Decomposition = {
   character: string;
@@ -27,7 +27,7 @@ const getIdsFile = (
         decomposition: stripNonHan(dec)
           .split("")
           .filter((c) => c !== char)
-          .into(uniq),
+          .into(unique()),
       };
       return obj;
     }, {});
@@ -42,7 +42,7 @@ const ids: Record<string, Decomposition> = getIdsFile(
     if (!char) {
       throw new Error("IDs file line has wrong format");
     }
-    return [char, decs.reduce(concat, "")];
+    return [char, decs.join("")];
   },
 );
 
@@ -61,7 +61,7 @@ const idsAnalysis = getIdsFile(
     if (!char || !dec) {
       throw new Error("IDs analysis file line has wrong format");
     }
-    return [char, includes(cat, wrongAnalysisCats) ? "" : dec];
+    return [char, isIncludedIn(cat, wrongAnalysisCats) ? "" : dec];
   },
 );
 
@@ -87,7 +87,7 @@ const redefineCjkNumericId =
     /\d+/.test(component)
       ? (mapping[component]?.decomposition
           .flatMap(redefineCjkNumericId(mapping))
-          .into(uniq) ?? [])
+          .into(unique()) ?? [])
       : [component];
 
 /**
@@ -103,15 +103,14 @@ const cjkDecomp = getFile("data/external/cjk-decomp.txt")
     return decompositions;
   }, {})
   .into((all: Record<string, Decomposition>) =>
-    filter((o) => !/\d+/.test(o.character), all).into((decompositions) =>
-      map(
-        (o: Decomposition): Decomposition => ({
+    pickBy(all, (o) => !/\d+/.test(o.character)).into(
+      mapValues(
+        (o): Decomposition => ({
           character: o.character,
           decomposition: o.decomposition
             .flatMap(redefineCjkNumericId(all))
-            .into((v) => uniq(v)),
+            .into(unique()),
         }),
-        decompositions,
       ),
     ),
   );
@@ -126,7 +125,7 @@ const mergeDecompositions = (
   b: Decomposition,
 ): Decomposition => ({
   character: a.character,
-  decomposition: concat(a.decomposition, b.decomposition).into(uniq),
+  decomposition: a.decomposition.concat(b.decomposition).into(unique()),
 });
 
 /**
@@ -138,10 +137,10 @@ export const network: Record<string, Decomposition> = mergeWith(
   ids,
   idsAnalysis,
 )
-  .into(mergeWith(mergeDecompositions, cjkDecomp))
+  .into((r) => mergeWith(mergeDecompositions, cjkDecomp, r))
   .into(
-    map(
-      (dec: Decomposition): Decomposition => ({
+    mapValues(
+      (dec): Decomposition => ({
         character: dec.character,
         decomposition: dec.decomposition.filter(
           (char) => char in ids || char in idsAnalysis || char in cjkDecomp,
