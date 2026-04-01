@@ -1,5 +1,5 @@
 import "dot-into";
-import { uniq } from "ramda";
+import { unique } from "remeda";
 import fs from "fs";
 import {
   characters,
@@ -30,7 +30,7 @@ out("Heisig (H):", heisigCharacters.length);
 out("TOCFL (T):", tocflCharacters.length);
 out(
   "Heisig + TOCFL:",
-  heisigCharacters.concat(tocflCharacters).into(uniq).length,
+  heisigCharacters.concat(tocflCharacters).into(unique()).length,
 );
 out("Heisig + TOCFL + 2000 most frequent (F):", htfCharacters.length);
 out("H+T+F components:", htfComponents.length);

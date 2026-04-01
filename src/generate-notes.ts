@@ -1,5 +1,5 @@
 import "dot-into";
-import { last, prop } from "ramda";
+import { last } from "remeda";
 import fs from "fs";
 import pinyin from "pinyin-utils";
 import { characters, type Merged } from "./characters.ts";
@@ -19,19 +19,19 @@ const characterToTsvRow = (o: Merged) => {
     o.charactersOnlyStudyOrder,
     o.conflated ? o.conflated.join("") : "",
     o.simplified ? o.simplified.join("") : "",
-    o.pinyin ? o.pinyin.split(" ").into(last) : "",
+    o.pinyin ? o.pinyin.split(" ").into(last()) : "",
     o.heisigKeyword,
     o.meaning,
-    o.vocabulary.map(prop("word")).join(" "),
-    o.vocabulary.map(prop("pinyin")).join(" "),
+    o.vocabulary.map((v) => v.word).join(" "),
+    o.vocabulary.map((v) => v.pinyin).join(" "),
     o.japaneseKun,
     o.japaneseOn,
     "[sound:agj-pinyin-" + pinyinToFile(lastPinyin) + ".mp3]",
     o.frequencyRank,
     o.cangjie,
     o.heisigIndex,
-    o.zhuyin ? o.zhuyin.split(" ").into(last) : "",
-    o.vocabulary.map(prop("zhuyin")).join("  "),
+    o.zhuyin ? o.zhuyin.split(" ").into(last()) : "",
+    o.vocabulary.map((v) => v.zhuyin).join("  "),
   ].join("\t");
 };
 

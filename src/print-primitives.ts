@@ -1,24 +1,23 @@
 import "dot-into";
 import {
-  equals,
-  filter,
   identity,
   indexBy,
+  isStrictEqual,
   join,
-  keys,
-  map,
-  uniq,
-} from "ramda";
+  mapValues,
+  pickBy,
+  unique,
+} from "remeda";
 import { log } from "./utilities.ts";
 import { allNodes, characters, depth } from "./selection.ts";
 import { network } from "./network.ts";
 
 characters
   .flatMap(allNodes(network))
-  .into(uniq)
-  .into(indexBy(identity))
-  .into((cs) => map(depth(network), cs))
-  .into(filter(equals(0)))
-  .into(keys)
+  .into(unique())
+  .into(indexBy(identity()))
+  .into(mapValues(depth(network)))
+  .into(pickBy(isStrictEqual(0)))
+  .into(Object.keys)
   .into(join(""))
   .into(log);

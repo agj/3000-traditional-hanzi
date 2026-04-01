@@ -26,6 +26,9 @@ importers:
       ramda:
         specifier: 0.31.3
         version: 0.31.3
+      remeda:
+        specifier: ^2.33.7
+        version: 2.33.7
       wanakana:
         specifier: 5.3.1
         version: 5.3.1
@@ -58,6 +61,9 @@ packages:
 
   ramda@0.31.3:
     resolution: {integrity: sha512-xKADKRNnqmDdX59PPKLm3gGmk1ZgNnj3k7DryqWwkamp4TJ6B36DdpyKEQ0EoEYmH2R62bV4Q+S0ym2z8N2f3Q==}
+
+  remeda@2.33.7:
+    resolution: {integrity: sha512-cXlyjevWx5AcslOUEETG4o8XYi9UkoCXcJmj7XhPFVbla+ITuOBxv6ijBrmbeg+ZhzmDThkNdO+iXKUfrJep1w==}
 
   ts-toolbelt@9.6.0:
     resolution: {integrity: sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==}
@@ -97,6 +103,8 @@ snapshots:
   pinyin-utils@2.32.0: {}
 
   ramda@0.31.3: {}
+
+  remeda@2.33.7: {}
 
   ts-toolbelt@9.6.0: {}
 
