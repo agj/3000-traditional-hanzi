@@ -15,7 +15,7 @@ import {
 import pinyin from "pinyin-utils";
 import * as zhuyin from "zhuyin";
 import cedictLookup from "cedict-lookup";
-import { type Character } from "./selection.js";
+import { type Character } from "./selection.ts";
 import {
   cangjie,
   conflated,
@@ -32,11 +32,11 @@ import {
   type Patch,
   type Readings,
   type Variants,
-} from "./data.js";
+} from "./data.ts";
 import {
   characterData as selectionCharacterData,
   characters as selectionCharacters,
-} from "./selection.js";
+} from "./selection.ts";
 
 export type Merged = {
   traditional: string;

@@ -15,7 +15,7 @@ import {
 import { toHiragana, toKatakana } from "wanakana";
 import * as z from "zod";
 import * as zhuyin from "zhuyin";
-import { getFile, stripNonHan } from "./utilities.js";
+import { getFile, stripNonHan } from "./utilities.ts";
 
 // Types.
 

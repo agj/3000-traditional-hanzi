@@ -16,6 +16,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    "rewriteRelativeImportExtensions": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -28,6 +29,7 @@
     // "noUnusedParameters": true,
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
+    "erasableSyntaxOnly": true,
 
     // Recommended Options
     "strict": true,
@@ -36,6 +38,9 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    // Other
+    "allowImportingTsExtensions": true
   }
 }

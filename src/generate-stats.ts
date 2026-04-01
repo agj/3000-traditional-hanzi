@@ -8,7 +8,7 @@ import {
   htfCharacters,
   htfComponents,
   tocflCharacters,
-} from "./selection.js";
+} from "./selection.ts";
 
 const { out, print } = (() => {
   let output = "";

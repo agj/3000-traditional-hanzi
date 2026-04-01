@@ -1,6 +1,6 @@
 import "dot-into";
 import { concat, includes, filter, map, mergeWith, split, uniq } from "ramda";
-import { getFile, stripNonHan } from "./utilities.js";
+import { getFile, stripNonHan } from "./utilities.ts";
 
 export type Decomposition = {
   character: string;

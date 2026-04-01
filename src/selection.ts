@@ -23,8 +23,8 @@ import {
   heisig,
   tocfl,
   type Heisig,
-} from "./data.js";
-import { network, type Decomposition } from "./network.js";
+} from "./data.ts";
+import { network, type Decomposition } from "./network.ts";
 
 export type Character = {
   studyOrder: number;

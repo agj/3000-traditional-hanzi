@@ -1,8 +1,8 @@
 import "dot-into";
 import { equals, filter, indexBy, join, keys, map, uniq } from "ramda";
-import { log } from "./utilities.js";
-import { allNodes, characters, depth } from "./selection.js";
-import { network } from "./network.js";
+import { log } from "./utilities.ts";
+import { allNodes, characters, depth } from "./selection.ts";
+import { network } from "./network.ts";
 
 characters
   .flatMap(allNodes(network))
