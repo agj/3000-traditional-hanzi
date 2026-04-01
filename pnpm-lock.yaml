@@ -18,8 +18,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       dot-into:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 3.0.0
+        version: 3.0.0
       pinyin-utils:
         specifier: 2.32.0
         version: 2.32.0
@@ -47,8 +47,8 @@ packages:
   cedict-lookup@0.0.2:
     resolution: {integrity: sha512-UAZbVlxHMvi0FSQZt63hSTYILgexbCXeIZvDmPBLlpYjzioKi5fJF+0J784kxmRZ+ypnJ4/7xbHiITyI4kD6eg==}
 
-  dot-into@2.0.0:
-    resolution: {integrity: sha512-n+zpHJMmpNKmaubPrILSMDyh83HNjclUlRdYxCYNkcHWwOP3fZA3N7Yy2vrzXd6ysEr1qNxcaVNrmMcHSibPeg==}
+  dot-into@3.0.0:
+    resolution: {integrity: sha512-qgvNGYei6550WDNo+qILO0Wh5yHO/kd9Cba8KuvpLNRbxCsoYToIlF6r7rN7uqZnihtEQg6Cw1z9Zpg3ISjCVQ==}
 
   pinyin-split@1.170.0:
     resolution: {integrity: sha512-7hlVgPSxAg2qDrStiOJy0kSWT1/uxo5jw0FPdqr/yIS1ugR3YXawRR6LWrkBOQCe+FSci1mr4Z1MOiCEG3gi4Q==}
@@ -90,7 +90,7 @@ snapshots:
 
   cedict-lookup@0.0.2: {}
 
-  dot-into@2.0.0: {}
+  dot-into@3.0.0: {}
 
   pinyin-split@1.170.0: {}
 
