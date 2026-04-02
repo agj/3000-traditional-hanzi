@@ -15,10 +15,25 @@ data file.
 
 ## Unreleased
 
+### Added
+
+- `CONTRIBUTING.md` file with local setup instructions.
+
 ### Changed
 
+- Anki sound file column now uses the fifth (neutral) tone when appropriate,
+  instead of swapping it to first (high) tone.
+- Migrated JavaScript code to TypeScript and refactored it for clarity and
+  maintainability. Also documented it thoroughly.
+- Set up Nix flake to manage dependencies, also in the name of maintainability.
 - Improved changelog formatting to match keepachangelog.com, renaming file from
   `changes.md` to `CHANGELOG.md`.
+
+### Fixed
+
+- Several characters had wrong zhuyin data, due to a library bug. They are now
+  fixed.
+- A few incorrect tones in vocabulary were fixed.
 
 ### Removed
 
