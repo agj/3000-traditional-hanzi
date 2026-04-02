@@ -1,0 +1,94 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@types/node':
+        specifier: 24.12.0
+        version: 24.12.0
+      cedict-lookup:
+        specifier: 0.0.2
+        version: 0.0.2
+      dot-into:
+        specifier: 3.0.0
+        version: 3.0.0
+      pinyin-utils:
+        specifier: 2.32.0
+        version: 2.32.0
+      remeda:
+        specifier: ^2.33.7
+        version: 2.33.7
+      wanakana:
+        specifier: 5.3.1
+        version: 5.3.1
+      zhuyin:
+        specifier: ^1.14.0
+        version: 1.14.0
+      zod:
+        specifier: 4.3.6
+        version: 4.3.6
+
+packages:
+
+  '@types/node@24.12.0':
+    resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
+
+  cedict-lookup@0.0.2:
+    resolution: {integrity: sha512-UAZbVlxHMvi0FSQZt63hSTYILgexbCXeIZvDmPBLlpYjzioKi5fJF+0J784kxmRZ+ypnJ4/7xbHiITyI4kD6eg==}
+
+  dot-into@3.0.0:
+    resolution: {integrity: sha512-qgvNGYei6550WDNo+qILO0Wh5yHO/kd9Cba8KuvpLNRbxCsoYToIlF6r7rN7uqZnihtEQg6Cw1z9Zpg3ISjCVQ==}
+
+  pinyin-split@1.170.0:
+    resolution: {integrity: sha512-7hlVgPSxAg2qDrStiOJy0kSWT1/uxo5jw0FPdqr/yIS1ugR3YXawRR6LWrkBOQCe+FSci1mr4Z1MOiCEG3gi4Q==}
+
+  pinyin-utils@2.32.0:
+    resolution: {integrity: sha512-jgPlD0lhF9GCxhFkUD+KZ0NEHw3QCIGX1n11DPmPvvgqvrX3YUdlp2p7bdrbejnjmzNK+BJaDwG9uyApw3xL8Q==}
+
+  remeda@2.33.7:
+    resolution: {integrity: sha512-cXlyjevWx5AcslOUEETG4o8XYi9UkoCXcJmj7XhPFVbla+ITuOBxv6ijBrmbeg+ZhzmDThkNdO+iXKUfrJep1w==}
+
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
+  wanakana@5.3.1:
+    resolution: {integrity: sha512-OSDqupzTlzl2LGyqTdhcXcl6ezMiFhcUwLBP8YKaBIbMYW1wAwDvupw2T9G9oVaKT9RmaSpyTXjxddFPUcFFIw==}
+    engines: {node: '>=12'}
+
+  zhuyin@1.14.0:
+    resolution: {integrity: sha512-m0gpSLP77jPZj2l+Pyiws01T51/UhZZlpGEtWldGxkulzBF4lCywaFJ1gGhzfSHWrC8uC8qaKLuymld2JvW38A==}
+
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+
+snapshots:
+
+  '@types/node@24.12.0':
+    dependencies:
+      undici-types: 7.16.0
+
+  cedict-lookup@0.0.2: {}
+
+  dot-into@3.0.0: {}
+
+  pinyin-split@1.170.0: {}
+
+  pinyin-utils@2.32.0: {}
+
+  remeda@2.33.7: {}
+
+  undici-types@7.16.0: {}
+
+  wanakana@5.3.1: {}
+
+  zhuyin@1.14.0:
+    dependencies:
+      pinyin-split: 1.170.0
+      pinyin-utils: 2.32.0
+
+  zod@4.3.6: {}

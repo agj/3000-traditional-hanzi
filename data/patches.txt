@@ -1,3 +1,9 @@
+# Character data to patch (replace). `data.ts` contains schemas that validate
+# that the data here matches the expected shape, so if a new kind of field were
+# to be added here, it should also be added to the schemas.
+
+# Character | Field to patch | Patched data (JSON)
+
 薩	meaning	"transliteration used in 'bodhisattva,' etc."
 蘇	meaning	"revive, resurrect; a species of thyme"
 唐	meaning	"a dynasty; Chinese"
