@@ -41,7 +41,7 @@ data file.
 
 ## [7.0.0][7.0.0] (2021-02-06)
 
-[7.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v7.0.0
+[7.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v6.0.0..v7.0.0
 
 ### Added
 
@@ -57,7 +57,7 @@ data file.
 
 ## [6.0.0][6.0.0] (2020-10-07)
 
-[6.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v6.0.0
+[6.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v5.2.1..v6.0.0
 
 ### Added
 
@@ -80,7 +80,7 @@ data file.
 
 ## [5.2.1][5.2.1] (2018-04-24)
 
-[5.2.1]: https://github.com/agj/3000-traditional-hanzi/tree/v5.2.1
+[5.2.1]: https://github.com/agj/3000-traditional-hanzi/compare/v5.2.0..v5.2.1
 
 ### Changed
 
@@ -92,7 +92,7 @@ data file.
 
 ## [5.2.0][5.2.0] (2018-03-20)
 
-[5.2.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.2.0
+[5.2.0]: https://github.com/agj/3000-traditional-hanzi/compare/v5.1.0..v5.2.0
 
 ### Changed
 
@@ -113,7 +113,7 @@ data file.
 
 ## [5.1.0][5.1.0] (2018-02-15)
 
-[5.1.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.1.0
+[5.1.0]: https://github.com/agj/3000-traditional-hanzi/compare/v5.0.0..v5.1.0
 
 ### Added
 
@@ -127,7 +127,7 @@ data file.
 
 ## [5.0.0][5.0.0] (2018-02-11)
 
-[5.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v5.0.0
+[5.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v4.0.0..v5.0.0
 
 ### Added
 
@@ -139,7 +139,7 @@ data file.
 
 ## [4.0.0][4.0.0] (2018-01-17)
 
-[4.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v4.0.0
+[4.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v3.0.0..v4.0.0
 
 ### Added
 
@@ -159,7 +159,7 @@ data file.
 
 ## [3.0.0][3.0.0] (2018-01-17)
 
-[3.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v3.0.0
+[3.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v2.0.0..v3.0.0
 
 ### Changed
 
@@ -172,7 +172,7 @@ data file.
 
 ## [2.0.0][2.0.0] (2018-01-16)
 
-[2.0.0]: https://github.com/agj/3000-traditional-hanzi/tree/v2.0.0
+[2.0.0]: https://github.com/agj/3000-traditional-hanzi/compare/v1.0.0..v2.0.0
 
 ### Changed
 
