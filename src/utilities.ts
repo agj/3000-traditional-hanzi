@@ -7,7 +7,7 @@ import { tap } from "remeda";
 export const log = tap(console.log);
 
 /**
- * Checks if a line of a data file is empty or is a comment.
+ * Confirms that a line of a data file is neither empty nor is it a comment.
  */
 const notEmptyLine = (line: string) => {
   const trimmed = line.trim();
