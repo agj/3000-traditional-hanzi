@@ -3,11 +3,9 @@
   "type": "module",
   "dependencies": {
     "@types/node": "24.12.0",
-    "@types/ramda": "0.31.1",
     "cedict-lookup": "0.0.2",
     "dot-into": "3.0.0",
     "pinyin-utils": "2.32.0",
-    "ramda": "0.31.3",
     "remeda": "^2.33.7",
     "wanakana": "5.3.1",
     "zhuyin": "^1.14.0",

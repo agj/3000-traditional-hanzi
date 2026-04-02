@@ -11,9 +11,6 @@ importers:
       '@types/node':
         specifier: 24.12.0
         version: 24.12.0
-      '@types/ramda':
-        specifier: 0.31.1
-        version: 0.31.1
       cedict-lookup:
         specifier: 0.0.2
         version: 0.0.2
@@ -23,9 +20,6 @@ importers:
       pinyin-utils:
         specifier: 2.32.0
         version: 2.32.0
-      ramda:
-        specifier: 0.31.3
-        version: 0.31.3
       remeda:
         specifier: ^2.33.7
         version: 2.33.7
@@ -44,9 +38,6 @@ packages:
   '@types/node@24.12.0':
     resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
 
-  '@types/ramda@0.31.1':
-    resolution: {integrity: sha512-Vt6sFXnuRpzaEj+yeutA0q3bcAsK7wdPuASIzR9LXqL4gJPyFw8im9qchlbp4ltuf3kDEIRmPJTD/Fkg60dn7g==}
-
   cedict-lookup@0.0.2:
     resolution: {integrity: sha512-UAZbVlxHMvi0FSQZt63hSTYILgexbCXeIZvDmPBLlpYjzioKi5fJF+0J784kxmRZ+ypnJ4/7xbHiITyI4kD6eg==}
 
@@ -59,17 +50,8 @@ packages:
   pinyin-utils@2.32.0:
     resolution: {integrity: sha512-jgPlD0lhF9GCxhFkUD+KZ0NEHw3QCIGX1n11DPmPvvgqvrX3YUdlp2p7bdrbejnjmzNK+BJaDwG9uyApw3xL8Q==}
 
-  ramda@0.31.3:
-    resolution: {integrity: sha512-xKADKRNnqmDdX59PPKLm3gGmk1ZgNnj3k7DryqWwkamp4TJ6B36DdpyKEQ0EoEYmH2R62bV4Q+S0ym2z8N2f3Q==}
-
   remeda@2.33.7:
     resolution: {integrity: sha512-cXlyjevWx5AcslOUEETG4o8XYi9UkoCXcJmj7XhPFVbla+ITuOBxv6ijBrmbeg+ZhzmDThkNdO+iXKUfrJep1w==}
-
-  ts-toolbelt@9.6.0:
-    resolution: {integrity: sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==}
-
-  types-ramda@0.31.0:
-    resolution: {integrity: sha512-vaoC35CRC3xvL8Z6HkshDbi6KWM1ezK0LHN0YyxXWUn9HKzBNg/T3xSGlJZjCYspnOD3jE7bcizsp0bUXZDxnQ==}
 
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
@@ -90,10 +72,6 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/ramda@0.31.1':
-    dependencies:
-      types-ramda: 0.31.0
-
   cedict-lookup@0.0.2: {}
 
   dot-into@3.0.0: {}
@@ -102,15 +80,7 @@ snapshots:
 
   pinyin-utils@2.32.0: {}
 
-  ramda@0.31.3: {}
-
   remeda@2.33.7: {}
-
-  ts-toolbelt@9.6.0: {}
-
-  types-ramda@0.31.0:
-    dependencies:
-      ts-toolbelt: 9.6.0
 
   undici-types@7.16.0: {}
 
