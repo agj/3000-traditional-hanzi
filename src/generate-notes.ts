@@ -1,3 +1,8 @@
+//
+// This script generates the `notes.tsv` output file, which contains all the
+// 3000+ traditional Chinese character data.
+//
+
 import "dot-into";
 import { last } from "remeda";
 import fs from "fs";

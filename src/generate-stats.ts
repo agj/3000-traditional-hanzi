@@ -1,3 +1,8 @@
+//
+// This script generates the `stats.txt` output file, which as the name suggests
+// contains some statistics and details about the compiled character data.
+//
+
 import "dot-into";
 import { unique } from "remeda";
 import fs from "fs";

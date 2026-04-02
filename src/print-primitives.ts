@@ -1,3 +1,9 @@
+//
+// This script prints all primitives, components with a network depth of 0, i.e.
+// those which cannot be themselves decomposed any further, at least according
+// to the data.
+//
+
 import "dot-into";
 import { identity, indexBy, join, mapValues, pickBy, unique } from "remeda";
 import { log } from "./utilities.ts";
