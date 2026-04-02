@@ -1,5 +1,5 @@
-import { tap, pipe, trim, replace } from "ramda";
 import fs from "fs";
+import { tap } from "remeda";
 
 /**
  * Prints a value and returns it.
@@ -9,10 +9,10 @@ export const log = tap(console.log);
 /**
  * Checks if a line of a data file is empty or is a comment.
  */
-const notEmptyLine = pipe(
-  trim,
-  (line) => line.length > 0 && line[0] !== "#" && !/^\/\*/.test(line),
-);
+const notEmptyLine = (line: string) => {
+  const trimmed = line.trim();
+  return trimmed.length > 0 && trimmed[0] !== "#" && !/^\/\*/.test(trimmed);
+};
 
 /**
  * Reads a text file by its filename, and returns it split into lines. It gets
@@ -24,7 +24,8 @@ export const getFile = (filename: string): string[] =>
 /**
  * Strips all non-hanzi content from a string.
  */
-export const stripNonHan = replace(/\P{Script=Han}/gv, "");
+export const stripNonHan = (string: string) =>
+  string.replace(/\P{Script=Han}/gv, "");
 
 /**
  * Merge the values in two objects using a function to combine each value that
@@ -54,3 +55,9 @@ export const mergeWith = <L, R>(
  * Returns the largest among two numbers.
  */
 export const max = (a: number, b: number): number => (a > b ? a : b);
+
+/**
+ * Gets the last character in a string.
+ */
+export const stringLastChar = (string: string): string | undefined =>
+  string[string.length - 1];

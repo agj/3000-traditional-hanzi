@@ -1,17 +1,14 @@
 import {
-  append,
   filter,
   identity,
   indexBy,
-  last,
-  map,
+  mapValues,
+  merge,
   mergeAll,
   omit,
   pipe,
-  replace,
   take,
-  values,
-} from "ramda";
+} from "remeda";
 import pinyin from "pinyin-utils";
 import * as zhuyin from "zhuyin";
 import cedictLookup from "cedict-lookup";
@@ -37,6 +34,7 @@ import {
   characterData as selectionCharacterData,
   characters as selectionCharacters,
 } from "./selection.ts";
+import { stringLastChar } from "./utilities.ts";
 
 export type Merged = {
   traditional: string;
@@ -66,7 +64,7 @@ const patchEntry =
   (patches: Record<string, Patch>) =>
   (entry: Merged): Merged => {
     const patch = patches[entry.traditional];
-    return patch ? mergeAll([entry, patch]) : entry;
+    return patch ? merge(entry, patch) : entry;
   };
 
 /**
@@ -75,12 +73,10 @@ const patchEntry =
 const getVocabulary = (char: string): Vocabulary[] =>
   tocflWords
     .into(omit(["all"]))
-    .into(values)
-    .flatMap((v) => filter((w) => w.replace(char, "") !== w, v))
-    .into((v) =>
-      filter((w) => w.length > 1 && cedict.getMatch(w).length > 0, v),
-    )
-    .into((v) => take(3, v))
+    .into((v) => Object.values(v))
+    .flatMap(filter((w) => w.includes(char)))
+    .into(filter((w) => w.length > 1 && cedict.getMatch(w).length > 0))
+    .into(take(3))
     .map((w): Vocabulary => {
       const firstMatch = cedict.getMatch(w)[0];
       if (!firstMatch) {
@@ -88,10 +84,10 @@ const getVocabulary = (char: string): Vocabulary[] =>
       }
       const pys = firstMatch.pinyin
         .split(" ")
-        .map(replace(/u:/g, "ü"))
+        .map((p) => p.replace(/u:/g, "ü"))
         .map((p) => pinyin.numberToMark(p));
       const zys = pys.map(zhuyin.fromPinyinSyllable).map((zy) => {
-        const lastChar = last(zy);
+        const lastChar = stringLastChar(zy);
         return lastChar && zhuyinDiacritics.includes(lastChar) ? zy : zy + " ";
       });
       return {
@@ -136,15 +132,17 @@ const compileData = (char: string): Merged => {
  * conflated data.
  */
 const mergeConflated = (o: Merged): Merged =>
-  o.conflated ? mergeAll(o.conflated.map(compileData).into(append(o))) : o;
+  o.conflated
+    ? // This is regrettable…
+      (mergeAll([...o.conflated.map(compileData), o]) as Merged)
+    : o;
 
 /**
  * Expands an array of characters into full "merged" data for each.
  */
 const compileDataForAll = (chars: string[]): Record<string, Merged> =>
-  map(
-    pipe(compileData, mergeConflated, patchEntry(patches)),
-    indexBy(identity, chars),
+  mapValues(indexBy(chars, identity()), (char) =>
+    pipe(char, compileData, mergeConflated, patchEntry(patches)),
   );
 
 /**
