@@ -13,7 +13,9 @@ modification, be it an addition, removal or reordering. A minor version
 represents other changes that don't involve the contents of the main output
 data file.
 
-## Unreleased
+## [7.1.0][7.1.0] (2026-04-02)
+
+[7.1.0]: https://github.com/agj/3000-traditional-hanzi/compare/v7.0.0..v7.1.0
 
 ### Added
 

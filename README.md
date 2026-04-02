@@ -6,7 +6,7 @@ traditional Chinese characters and their information, into a tab-separated
 values file for importing and use in the [Anki][anki] flashcard reviewing
 software (or similar).
 
-_Version 7.0.0_
+_Version 7.1.0_
 
 ## How the characters are selected
 
