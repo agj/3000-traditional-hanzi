@@ -1,17 +1,13 @@
 import "dot-into";
 import {
-  equals,
-  filter,
+  difference,
   identity,
   indexBy,
-  keys,
-  map,
-  mapObjIndexed,
+  mapValues,
+  pickBy,
   split,
-  uniq,
-  values,
-  without,
-} from "ramda";
+  unique,
+} from "remeda";
 import { toHiragana, toKatakana } from "wanakana";
 import * as z from "zod";
 import * as zhuyin from "zhuyin";
@@ -128,7 +124,7 @@ const patchCangjieValueSchema = z.string();
  * Reads the TOCFL file data for a given level. Returns an array of words.
  */
 const getTocflFileWords = (level: number): string[] =>
-  getFile(`data/external/tocfl/vocabulary-${level}.txt`).into(uniq);
+  getFile(`data/external/tocfl/vocabulary-${level}.txt`).into(unique());
 
 /**
  * Gets all unique characters used in a given TOCFL level.
@@ -136,7 +132,7 @@ const getTocflFileWords = (level: number): string[] =>
 const getTocflFileCharacters = (level: number): string[] =>
   getFile(`data/external/tocfl/vocabulary-${level}.txt`)
     .flatMap((s) => stripNonHan(s).split(""))
-    .into(uniq);
+    .into(unique());
 
 // Cangjie utilities.
 
@@ -203,10 +199,9 @@ const cangjieKeysToNames = (keys: string) =>
 /**
  * All Unihan readings keyed by character.
  */
-export const readings: Record<string, Readings> = getUnihanFile(
-  "data/external/unihan/Unihan_Readings.txt",
-).into((unihan) =>
-  map((o: Unihan): Readings => {
+export const readings: Record<string, Readings> = mapValues(
+  getUnihanFile("data/external/unihan/Unihan_Readings.txt"),
+  (o): Readings => {
     const py = o.kMandarin ?? "";
     const pys = py.split(" ");
     const zy = pys.map((py_) => zhuyin.fromPinyin(py_)).join(" ");
@@ -217,40 +212,32 @@ export const readings: Record<string, Readings> = getUnihanFile(
       japaneseOn: o.kJapaneseOn ? toKatakana(o.kJapaneseOn) : "",
       meaning: o.kDefinition ?? "",
     };
-  }, unihan),
+  },
 );
 
 /**
  * All cangjie information, keyed by character.
  */
-export const cangjie: Record<string, Cangjie> = getUnihanFile(
-  "data/external/unihan/Unihan_DictionaryLikeData.txt",
-).into((unihan) =>
-  map(
-    (o): Cangjie => ({
-      cangjie: o.kCangjie ? cangjieKeysToNames(o.kCangjie) : "",
-    }),
-    unihan,
-  ),
+export const cangjie: Record<string, Cangjie> = mapValues(
+  getUnihanFile("data/external/unihan/Unihan_DictionaryLikeData.txt"),
+  (o): Cangjie => ({
+    cangjie: o.kCangjie ? cangjieKeysToNames(o.kCangjie) : "",
+  }),
 );
 
 /**
  * All character variant information, keyed by character.
  */
-export const variants: Record<string, Variants> = getUnihanFile(
-  "data/external/unihan/Unihan_Variants.txt",
-).into((unihan) =>
-  mapObjIndexed(
-    (o, char): Variants => ({
-      simplified: o.kSimplifiedVariant
-        ? o.kSimplifiedVariant
-            .split(" ")
-            .map(unicodeToChar)
-            .filter((c) => c !== char)
-        : [],
-    }),
-    unihan,
-  ),
+export const variants: Record<string, Variants> = mapValues(
+  getUnihanFile("data/external/unihan/Unihan_Variants.txt"),
+  (o, char): Variants => ({
+    simplified: o.kSimplifiedVariant
+      ? o.kSimplifiedVariant
+          .split(" ")
+          .map(unicodeToChar)
+          .filter((c) => c !== char)
+      : [],
+  }),
 );
 
 /**
@@ -264,7 +251,10 @@ export const frequencies: Record<string, Frequency> = getFile(
     if (!char || !freq) {
       throw new Error("Some frequency data has the wrong format");
     }
-    obj[char] = { frequencyRank: index + 1, frequencyRaw: parseInt(freq) };
+    obj[char] = {
+      frequencyRank: index + 1,
+      frequencyRaw: Number.parseInt(freq),
+    };
     return obj;
   }, {});
 
@@ -290,7 +280,7 @@ export const tocflWords: Record<number | "all", string[]> = [
   1, 2, 3, 4, 5, 6, 7,
 ].reduce(
   (r: Record<number | "all", string[]>, level) => {
-    r[level] = getTocflFileWords(level).into(without(r.all));
+    r[level] = getTocflFileWords(level).into(difference(r.all));
     r.all = r.all.concat(r[level]);
     return r;
   },
@@ -304,7 +294,7 @@ export const tocfl: Record<number | "all", string[]> = [
   1, 2, 3, 4, 5, 6, 7,
 ].reduce(
   (r: Record<number | "all", string[]>, level) => {
-    r[level] = getTocflFileCharacters(level).into(without(r.all));
+    r[level] = getTocflFileCharacters(level).into(difference(r.all));
     r.all = r.all.concat(r[level]);
     return r;
   },
@@ -357,14 +347,15 @@ export const conflateMap: Record<string, string> = getFile("data/conflate.txt")
 /**
  * All character conflation data, keyed by character.
  */
-export const conflated: Record<string, Conflated> = values(conflateMap)
-  .into(uniq)
-  .into(indexBy(identity))
-  .into((v) =>
-    map(
-      (char: string): Conflated => ({
-        conflated: conflateMap.into(filter(equals(char))).into(keys),
+export const conflated: Record<string, Conflated> = Object.values(conflateMap)
+  .into(unique())
+  .into(indexBy(identity()))
+  .into(
+    mapValues(
+      (char): Conflated => ({
+        conflated: conflateMap
+          .into(pickBy((c) => c === char))
+          .into(Object.keys),
       }),
-      v,
     ),
   );

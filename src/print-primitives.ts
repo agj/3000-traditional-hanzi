@@ -1,13 +1,5 @@
 import "dot-into";
-import {
-  identity,
-  indexBy,
-  isStrictEqual,
-  join,
-  mapValues,
-  pickBy,
-  unique,
-} from "remeda";
+import { identity, indexBy, join, mapValues, pickBy, unique } from "remeda";
 import { log } from "./utilities.ts";
 import { allNodes, characters, depth } from "./selection.ts";
 import { network } from "./network.ts";
@@ -17,7 +9,7 @@ characters
   .into(unique())
   .into(indexBy(identity()))
   .into(mapValues(depth(network)))
-  .into(pickBy(isStrictEqual(0)))
+  .into(pickBy((depth) => depth === 0))
   .into(Object.keys)
   .into(join(""))
   .into(log);
